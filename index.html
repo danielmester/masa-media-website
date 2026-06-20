@@ -44,21 +44,21 @@ section{position:relative}
 .btn:hover .arr{transform:translateX(-4px)}
 
 /* ============================ NAV ============================ */
-header.nav{position:sticky;top:0;z-index:60;backdrop-filter:saturate(180%) blur(14px);background:rgba(251,251,252,.72);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-header.nav.scrolled{border-color:var(--line);background:rgba(251,251,252,.92)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:18px}
-.brand{display:flex;align-items:center}
-.logo-badge{display:inline-flex;align-items:center;justify-content:center;background:#0b0e22;border-radius:12px;padding:7px 13px}
-.logo-badge img{height:38px;width:auto;display:block}
-nav.links{display:flex;gap:22px;font-weight:600;font-size:.94rem;color:var(--ink-2);align-items:center}
-nav.links > a,nav.links > .has-mega > span{position:relative;padding:6px 0;transition:color .2s;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
-nav.links > a::after{content:"";position:absolute;inset-inline:0;bottom:-2px;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease)}
-nav.links > a:hover{color:var(--ink)}
-nav.links > a:hover::after{transform:scaleX(1)}
+header.nav{position:sticky;top:0;z-index:60;padding:13px 0;transition:padding .35s var(--ease)}
+header.nav.scrolled{padding:7px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;gap:14px;padding-inline:8px 10px;background:rgba(255,255,255,.6);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border:1px solid rgba(255,255,255,.55);border-radius:999px;box-shadow:0 6px 24px -12px rgba(20,28,60,.18),inset 0 1px 0 rgba(255,255,255,.5);transition:box-shadow .35s var(--ease),background .35s}
+header.nav.scrolled .nav-inner{background:rgba(255,255,255,.85);box-shadow:0 14px 44px -16px rgba(20,28,60,.30),inset 0 1px 0 rgba(255,255,255,.6);border-color:var(--line)}
+.brand{display:flex;align-items:center;padding-inline-start:6px}
+.logo-badge{display:inline-flex;align-items:center;justify-content:center;background:#0b0e22;border-radius:999px;padding:8px 15px;transition:transform .3s var(--ease)}
+.brand:hover .logo-badge{transform:translateY(-1px) scale(1.02)}
+.logo-badge img{height:33px;width:auto;display:block}
+nav.links{display:flex;gap:3px;font-weight:600;font-size:.93rem;color:var(--ink-2);align-items:center}
+nav.links > a,nav.links > .has-mega > span{position:relative;padding:8px 13px;border-radius:999px;transition:color .2s,background .25s;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:var(--ink-2)}
+nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:var(--grad-soft)}
 .has-mega{position:static}
 .caret{width:7px;height:7px;border-inline-end:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:.3s}
 .has-mega:hover .caret{transform:rotate(-135deg);margin-top:2px}
-.mega{position:absolute;inset-inline:0;top:70px;margin-inline:auto;max-width:980px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lg);padding:26px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.28s var(--ease);display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px}
+.mega{position:absolute;inset-inline:0;top:calc(100% - 4px);margin-inline:auto;max-width:1000px;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-lg);padding:28px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.28s var(--ease);display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px}
 .has-mega:hover .mega{opacity:1;visibility:visible;transform:translateY(0)}
 .mega h5{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;font-weight:800;grid-column:1/-1}
 .mega .col{display:flex;flex-direction:column;gap:2px}
@@ -112,9 +112,9 @@ nav.links > a:hover::after{transform:scaleX(1)}
 .clients{padding:26px 0 8px}
 .clients .cap{text-align:center;color:var(--muted);font-weight:600;font-size:.9rem;margin-bottom:24px}
 .logo-marquee{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.logo-track{display:flex;gap:30px;align-items:center;width:max-content;animation:scroll 40s linear infinite}
+.logo-track{display:flex;align-items:center;width:max-content;animation:scroll 48s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
-.logo-track .lg{height:96px;min-width:178px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 26px;box-shadow:var(--shadow-sm);transition:.3s var(--ease)}
+.logo-track .lg{height:96px;min-width:178px;margin-inline-start:30px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 26px;box-shadow:var(--shadow-sm);transition:.3s var(--ease)}
 .logo-track .lg:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
 .logo-track .lg img{height:60px;width:auto;max-width:142px;object-fit:contain;opacity:.95;transition:.3s}
 .logo-track .lg:hover img{opacity:1}
@@ -220,14 +220,15 @@ nav.links > a:hover::after{transform:scaleX(1)}
 .quote .who b{display:block;font-size:.95rem}
 .quote .who span{color:var(--muted);font-size:.84rem}
 .review-marquee{margin-top:40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
-.review-row{display:flex;gap:20px;width:max-content}
-.review-row.r1{animation:revscroll 70s linear infinite}
-.review-row.r2{animation:revscroll 90s linear infinite reverse}
+.review-row{display:flex;align-items:flex-start;width:max-content}
+.review-row.r1{animation:revscroll 64s linear infinite}
+.review-row.r2{animation:revscroll 80s linear infinite reverse}
 .review-marquee:hover .review-row{animation-play-state:paused}
 @keyframes revscroll{to{transform:translateX(-50%)}}
-.review-row .quote{width:360px;flex:none;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.review-row .quote{width:340px;flex:none;margin-inline-start:20px;padding:24px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
 .review-row .quote:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
-.review-row .quote p{font-size:.98rem;line-height:1.65}
+.review-row .quote p{font-size:.96rem;line-height:1.6;flex:0 1 auto}
+.review-row .quote .who{margin-top:16px}
 @media(max-width:600px){.review-row .quote{width:82vw}}
 
 /* PRICING */
@@ -327,6 +328,30 @@ footer ul a:hover{color:#fff}
 .drawer.open .panel{transform:translateX(0)}
 .drawer .panel a{padding:13px 4px;font-weight:700;font-size:1.05rem;border-bottom:1px solid var(--line)}
 .drawer .panel .btn{margin-top:16px;justify-content:center}
+/* VIDEO */
+.video-wrap{max-width:920px;margin-inline:auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);position:relative;aspect-ratio:16/9;background:#0b0e22}
+.video-facade{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background-size:cover;background-position:center;display:grid;place-items:center;padding:0}
+.video-facade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,34,.12),rgba(11,14,34,.5))}
+.video-facade .play{position:relative;z-index:2;width:86px;height:86px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 14px 44px -8px rgba(79,91,242,.7);transition:transform .3s var(--ease)}
+.video-facade .play::before{content:"";border-left:21px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:5px}
+.video-facade:hover .play{transform:scale(1.09)}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* PROSE */
+.prose{max-width:770px;margin-inline:auto}
+.prose p{color:var(--ink-2);font-size:1.06rem;line-height:1.85;margin-bottom:18px}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--ink);font-weight:800}
+/* DIFFERENTIATORS */
+.diff{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+/* BLOG */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
+.post:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+.post .tagline{font-size:.76rem;font-weight:800;letter-spacing:.03em;color:var(--c-blue);margin-bottom:12px}
+.post h3{font-size:1.06rem;line-height:1.45;margin-bottom:16px;flex:1}
+.post .more{font-weight:700;color:var(--c-blue);font-size:.88rem;display:inline-flex;gap:6px;align-items:center}
+@media(max-width:900px){.diff,.posts{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.diff,.posts{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -578,6 +603,16 @@ footer ul a:hover{color:#fff}
   </div>
 </section>
 
+<!-- ============================ VIDEO ============================ -->
+<section class="sec" id="video">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="kicker">הציגו את האתר שלכם לקהל האיכותי ביותר</span><h2>חברת קידום אתרים שמייצרת תוצאות</h2><p>דמיינו את האתר שלכם מופיע בדיוק היכן שהלקוחות האיכותיים ביותר מחפשים את השירות או המוצר שלכם — בראש תוצאות החיפוש בגוגל או כהמלצה מובילה ב-ChatGPT. אם אתם שם, אתם מרוויחים את הלקוחות האיכותיים והחמים ביותר.</p></div>
+    <div class="video-wrap reveal" data-d="1">
+      <button class="video-facade" id="ytFacade" data-id="PjqpcZRaFVg" style="background-image:url('https://i.ytimg.com/vi/PjqpcZRaFVg/maxresdefault.jpg')" aria-label="נגן את סרטון מסה מדיה"><span class="play"></span></button>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ RESULTS ============================ -->
 <section class="sec" id="results" style="background:var(--bg-warm)">
   <div class="wrap">
@@ -609,39 +644,9 @@ footer ul a:hover{color:#fff}
         <div class="desc">״לראשונה, רואים תוצאות משמעותיות מההשקעה בשיווק הדיגיטלי שמחזירה את עצמה בענק״. אורגני + ממומן.</div>
       </div>
       <div class="res-card reveal" data-d="2">
-        <div class="tag">ביאמבה</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="183" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
-        <div class="desc">״עלייה אקספוננציאלית של 183% בטראפיק האורגני לאחר שנה של פעילות״ — כ-36,000 לקוחות פוטנציאליים בשנה.</div>
-      </div>
-      <div class="res-card reveal">
-        <div class="tag">בינת תקשורת מחשבים</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="104" data-suffix="%">0</span></span><span class="unit">מילות מפתח בעמ׳ 1</span></div>
-        <div class="desc">״שינוי אדיר בתקופת זמן קצרה על פני מגוון תחומים תחרותיים מאוד״ — והופעות ב-93 שאילתות AI Overview.</div>
-      </div>
-      <div class="res-card reveal" data-d="1">
-        <div class="tag">דליס</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="77" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
-        <div class="desc">״עצירת הנפילה של האתר והיפוך מגמה מוחלט תוך שנה של קידום אורגני״ — 110 מילות מפתח חדשות בעמוד הראשון.</div>
-      </div>
-      <div class="res-card reveal" data-d="2">
-        <div class="tag"><img src="assets/clients/reshet-hagana.jpg" alt="רשת הגנה"> רשת הגנה</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="71" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
-        <div class="desc">״עלייה של 71% בטראפיק האורגני וביסוס השליטה בתחום״ — לצד שיפורים טכניים מקיפים באתר.</div>
-      </div>
-      <div class="res-card reveal">
-        <div class="tag">Muscle &amp; Motion · בינלאומי</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="52" data-suffix="%">0</span></span><span class="unit">מבקרים ייחודיים</span></div>
-        <div class="desc">״עלייה דרמטית בטראפיק ובכמות ההורדות של האפליקציות״ — מ-105K ל-160K מבקרים ייחודיים בשנה.</div>
-      </div>
-      <div class="res-card reveal" data-d="1">
         <div class="tag">פורטל הבריאות מדיקו</div>
         <div class="metric"><span class="big grad-text"><span data-count="645">0</span>K+</span><span class="unit">גולשים חדשים בשנה</span></div>
         <div class="desc">״יותר מ-645 אלף גולשים אורגניים חדשים במהלך השנה״ — דירוג ל-30+ מונחים רפואיים מובילים.</div>
-      </div>
-      <div class="res-card reveal" data-d="2">
-        <div class="tag">Shopping IO</div>
-        <div class="metric"><span class="big grad-text"><span data-count="21539">0</span></span><span class="unit">מבקרים בחודש הרביעי</span></div>
-        <div class="desc">״21,539 מבקרים אורגניים באתר כבר מהחודש הרביעי לפעילות״ — תוכן קריפטו איכותי בקנה מידה גדול.</div>
       </div>
       <div class="res-card reveal">
         <div class="tag">תקשוב</div>
@@ -653,30 +658,10 @@ footer ul a:hover{color:#fff}
         <div class="metric"><span class="big grad-text">+<span data-count="154" data-suffix="%">0</span></span><span class="unit">שיחות נכנסות</span></div>
         <div class="desc">״הוזלה דרמטית בעלויות הלידים במקביל לצמיחה אדירה בכמות הפניות ושיפור משמעותי באיכותן״ — גוגל + פייסבוק.</div>
       </div>
-      <div class="res-card reveal" data-d="2">
-        <div class="tag"><img src="assets/clients/gilad-narkis.jpg" alt="גלעד נרקיס"> משרד עו״ד גלעד נרקיס</div>
-        <div class="metric"><span class="big grad-text"><span data-count="520">0</span></span><span class="unit">לידים בשנה</span></div>
-        <div class="desc">״שליטה מוחלטת בתחומי חדלות פירעון, פשיטות רגל ודיני בנקים״ — 520 לידים בשנה והמחיר לליד יורד בהתמדה.</div>
-      </div>
-      <div class="res-card reveal">
-        <div class="tag">עמותת נטע</div>
-        <div class="metric"><span class="big grad-text"><span data-count="1570">0</span></span><span class="unit">לידים בשנה הראשונה</span></div>
-        <div class="desc">״שיפור ניכר בנראות ובמספר הפניות לעמותה״ — 1,570 לידים בשנה הראשונה לצד בניית אתר חדש.</div>
-      </div>
-      <div class="res-card reveal" data-d="1">
-        <div class="tag"><img src="assets/clients/jack-kuba.jpg" alt="Jack Kuba"> ג׳ק קובה</div>
-        <div class="metric"><span class="big grad-text"><span data-count="100">0</span>+</span><span class="unit">מילות מפתח בעמ׳ 1</span></div>
-        <div class="desc">״למעלה מ-100 מילות מפתח בעמוד הראשון של גוגל״ — בניית נוכחות אורגנית למותג מוכר ללא תנועה אורגנית.</div>
-      </div>
-      <div class="res-card reveal" data-d="2">
-        <div class="tag">Top Air Systems</div>
-        <div class="metric"><span class="big grad-text"><span data-count="1122">0</span></span><span class="unit">גולשים תוך 11 חודשים</span></div>
-        <div class="desc">״ממספר דו-ספרתי של גולשים אורגניים מדי חודש ל-1,122 גולשים תוך 11 חודשים״.</div>
-      </div>
       <div class="res-card cta reveal">
-        <h3>עוד עשרות הצלחות</h3>
-        <p>רקורד עשיר של לקוחות שהגיעו לעמוד הראשון בתחומים תחרותיים — בישראל ובעולם, משנת 2014.</p>
-        <a class="more" href="https://www.masamedia.co.il/casestudy/">לכל מקרי הבוחן <span class="arr">←</span></a>
+        <h3>עוד 13 מקרי בוחן</h3>
+        <p>רקורד עשיר של לקוחות שהגיעו לעמוד הראשון בתחומים תחרותיים — בישראל ובעולם, משנת 2014. אלו רק כמה מהבולטים.</p>
+        <a class="more" href="https://www.masamedia.co.il/casestudy/">לכל 18 מקרי הבוחן <span class="arr">←</span></a>
       </div>
     </div>
   </div>
@@ -704,6 +689,32 @@ footer ul a:hover{color:#fff}
       <div class="quote" data-d="2"><div class="stars">★★★★★</div><p>"עברתי כמה חברות דיגיטל לפני שהגעתי למסה מדיה, וההבדל פשוט מורגש."</p><div class="who"><span class="av">ע</span><div><b>עמה בניואן</b><span>ביקורת בגוגל</span></div></div></div>
       <div class="quote"><div class="stars">★★★★★</div><p>"העבודה עם מסה מדיה כבר נהייתה חלק מובנה אצלנו בשיווק."</p><div class="who"><span class="av">ל</span><div><b>ליאן אשטון</b><span>ביקורת בגוגל</span></div></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY / DIFFERENCE ============================ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="kicker">איכות עושה את ההבדל</span><h2>חברת קידום אתרים איכותית — ההבדל בין כישלון להצלחה</h2></div>
+    <div class="prose reveal" data-d="1">
+      <p>חברות ובעלי עסקים רבים חוששים מתחום ה-SEO או חושבים שקידום אתרים אורגני לא באמת עובד. יש כאלו שאף ירחיקו לכת ויאמרו שמדובר באחיזת עיניים ותו לא.</p>
+      <p>התפיסה השגויה הזו לא מגיעה יש מאין. עסקים לא מעטים ניסו לקדם את האתר שלהם עם מקדם אתרים או חברה לקידום אתרים אבל נכשלו, לפעמים יותר מפעם אחת — וכל ניסיון כזה היה כרוך בהרבה זמן וכסף שירדו לטמיון.</p>
+      <p>אנחנו יודעים, זו הרגשה מתסכלת. אבל האמת היא שאם נבחן את האתר שלכם, נגלה שהוא לא שונה בהרבה מהאתרים שנמצאים היום בעמוד הראשון בגוגל. <strong>הסיבה לחוסר ההצלחה של קמפיין קידום אתרים טמונה כמעט תמיד במקדם עצמו, בתקציב ובזמן שעמדו לרשותו.</strong></p>
+      <p>איך משנים את המצב לטובתכם? על ידי הפקדת עבודת הקידום האורגני בידי חברת קידום אתרים מנוסה עם הצלחות מוכחות, שיודעת לבנות תהליך מסודר לפרויקט בהתאם למטרות, לבצע תיאום ציפיות ריאלי, ולהוציא את הדברים לפועל בצורה מקצועית.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DIFFERENTIATORS ============================ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="kicker">למה מסה מדיה</span><h2>חברה לקידום אתרים שעובדת אחרת</h2></div>
+    <div class="diff">
+      <div class="tile reveal"><div class="ic">🤝</div><h3>ללא התחייבות</h3><p>הסכם ההתקשרות בינינו תקף כל עוד אתם מרוצים. בלי אותיות קטנות ובלי כוכביות.</p></div>
+      <div class="tile reveal" data-d="1"><div class="ic">🎯</div><h3>שיטות עבודה ייחודיות</h3><p>אנו בונים תוכנית עבודה ייחודית לכם ומיישמים את האסטרטגיות היעילות ביותר להשגת המטרות שהוגדרו.</p></div>
+      <div class="tile reveal" data-d="2"><div class="ic">🏪</div><h3>One Stop Shop</h3><p>צוות ייעודי המורכב מהאנשים המקצועיים ביותר בתעשייה יספק עבורכם כל פתרון ברמה הגבוהה ביותר.</p></div>
+      <div class="tile reveal" data-d="3"><div class="ic">🔍</div><h3>שקיפות מלאה</h3><p>הלקוחות שלנו תמיד מעודכנים בכל מה שחשוב לדעת על הפעילות שלהם בדיגיטל.</p></div>
     </div>
   </div>
 </section>
@@ -810,6 +821,26 @@ footer ul a:hover{color:#fff}
       <details><summary>איך AI משפיע על קידום אתרים? <span class="pm">+</span></summary><div class="ans">בינה מלאכותית משנה את עולם ה-SEO. כלים כמו ChatGPT, Gemini, Perplexity ו-Claude הופכים למנועי חיפוש בפני עצמם ואחוז גדל והולך של משתמשים פונים לכלים הללו לפני גוגל. לכן, שיטות העבודה בקידום אורגני מתעדכנות ואנו לוקחים בחשבון גם את האפיקים הנוספים שיש ביכולתם להזרים תנועה אורגנית לאתר. יש צורך להתאים את התוכן לשאילתות שיחה, למודלים שפתיים (LLMO), ולנראות בתוצאות שמבוססות על תשובות ישירות של AI.</div></details>
       <details><summary>מה ההבדל בין LLMO, AIO, GEO ו-AI SEO? <span class="pm">+</span></summary><div class="ans">כולם קשורים לקידום אתרים בעידן של חיפושים מבוססי בינה מלאכותית, אבל כל אחד מתמקד בזווית שונה: AI SEO – שימוש בבינה מלאכותית כדי לבצע קידום אתרים חכם יותר: מחקר מילות מפתח, יצירת תוכן וניתוח ביצועים. AIO (AI Optimization) – כתיבת תוכן שמדבר בשפה שקל למנועי AI כמו ChatGPT ו-Gemini להבין ולהציג בתשובות שלהם. LLMO (Large Language Model Optimization) – התאמת תוכן כך שיופיע בתוך תשובות של מודלים שפתיים, לא רק בתוצאות חיפוש רגילות. GEO (Generative Engine Optimization) – אופטימיזציה למנועי חיפוש מבוססי בינה מלאכותית שמייצרים תשובות במקום להציג רשימת קישורים. בשורה התחתונה, כל המונחים האלו מייצגים את המעבר מקידום קלאסי בגוגל לקידום שמטרתו להופיע גם בתשובות ובתכנים שמופקים ישירות על ידי בינה מלאכותית.</div></details>
     </div>
+  </div>
+</section>
+
+<!-- ============================ BLOG ============================ -->
+<section class="sec" id="blog" style="background:var(--bg-warm)">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">מידע מקצועי</span><h2>פוסטים אחרונים מהבלוג שלנו</h2><p>כל מה שצריך לדעת על קידום אתרים בעידן ה-AI — ישירות מהשטח.</p></div>
+    <div class="posts">
+      <a class="post reveal" href="https://www.masamedia.co.il/ai-seo/ai-tools-for-seo/"><div class="tagline">AI SEO</div><h3>כלי AI לקידום אתרים: 7 כלים שיחסכו לכם זמן וכסף</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/llms-txt/"><div class="tagline">AI SEO</div><h3>מה זה קובץ LLMs.txt והאם צריך כזה באתר לקידום ב-AI?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/ai-seo/gemini-seo/"><div class="tagline">AI SEO</div><h3>קידום בג'מיני (Gemini): איך מופיעים בתשובות הבינה המלאכותית של גוגל?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" href="https://www.masamedia.co.il/website-optimization/vibe-coding-seo/"><div class="tagline">בניית אתרים ו-AI</div><h3>SEO לאתרי AI ו-Vibe Coding: איך לבנות אתר עם בינה מלאכותית שמתקדם בגוגל</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/query-fan-out/"><div class="tagline">AI SEO</div><h3>מה זה פיזור שאילתות (Query Fan-out) ואיך הוא משנה את כללי המשחק של חיפוש ב-AI?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/advanced-seo/google-preferred-sources/"><div class="tagline">קידום מתקדם</div><h3>מקורות מועדפים בגוגל: האם משתמשים יכולים להשפיע על מיקומי האתר שלכם?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" href="https://www.masamedia.co.il/advanced-seo/extreme-traffic-lose/"><div class="tagline">קידום מתקדם</div><h3>לא התוכן ולא הקישורים: מה גרם לאובדן 97% מהטראפיק באתר מוביל?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/ai-mode-vs-google-organic/"><div class="tagline">AI SEO</div><h3>המשתמשים הפסיקו להשוות: איך AI Mode משנה את החיפוש בגוגל</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/advanced-seo/win-zero-click/"><div class="tagline">קידום מתקדם</div><h3>17 סוגי תוכן שגוגל עדיין אוהב: איך לשמור ולהגדיל את הטראפיק בעידן ה-AI</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" href="https://www.masamedia.co.il/ai-seo/geo/"><div class="tagline">AI SEO</div><h3>AI SEO: איך גורמים לאתר להופיע ב-ChatGPT, Gemini, Perplexity ועוד?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+    </div>
+    <div class="reveal" style="margin-top:32px;text-align:center"><a class="btn btn-ghost" href="https://www.masamedia.co.il/blog/">לכל המאמרים <span class="arr">←</span></a></div>
   </div>
 </section>
 
@@ -920,6 +951,18 @@ const track=document.getElementById('logoTrack');
 if(track){track.innerHTML+=track.innerHTML;}
 /* duplicate review rows for seamless marquee */
 ['reviewRow1','reviewRow2'].forEach(id=>{const r=document.getElementById(id);if(r)r.innerHTML+=r.innerHTML;});
+
+/* click-to-play YouTube facade (lazy load) */
+const ytFacade=document.getElementById('ytFacade');
+if(ytFacade){ytFacade.addEventListener('click',()=>{
+  const id=ytFacade.dataset.id;
+  const f=document.createElement('iframe');
+  f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+  f.title='סרטון מסה מדיה';
+  f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen=true;
+  ytFacade.replaceWith(f);
+});}
 
 function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='תודה! נחזור אליכם בקרוב ✓';b.style.pointerEvents='none';return false;}
 </script>
