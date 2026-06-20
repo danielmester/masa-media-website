@@ -72,8 +72,10 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .menu-btn span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
 
 /* ============================ HERO ============================ */
-.hero{padding:60px 0 80px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero{padding:60px 0 80px;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(34% 46% at 82% 8%,rgba(18,194,233,.13),transparent 70%),radial-gradient(40% 48% at 12% 96%,rgba(142,45,226,.11),transparent 70%);animation:meshDrift 22s ease-in-out infinite}
+@keyframes meshDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-2%,2%) scale(1.07)}}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;position:relative;z-index:1}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.8rem;letter-spacing:.01em;padding:.45em .9em;border-radius:999px;background:var(--grad-soft);border:1px solid rgba(79,91,242,.18);color:#3a3f8f;margin-bottom:22px}
 .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--grad)}
 .hero h1{font-size:clamp(2rem,4.2vw,3.3rem);font-weight:900;line-height:1.16;margin-bottom:18px}
@@ -88,10 +90,11 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .orb.a{width:320px;height:320px;background:radial-gradient(circle,#12C2E9,transparent 70%);top:-30px;inset-inline-start:-20px}
 .orb.b{width:300px;height:300px;background:radial-gradient(circle,#8E2DE2,transparent 70%);bottom:-20px;inset-inline-end:-10px;animation-delay:-5s}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(0,-26px)}}
-.glass-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);padding:19px 21px}
-.card-search{top:14px;inset-inline-end:0;width:320px}
-.card-ai{bottom:10px;inset-inline-start:0;width:320px}
-.card-metric{top:188px;inset-inline-end:36px;width:184px;padding:17px 19px}
+.glass-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);padding:19px 21px;animation:cardFloat 6.5s ease-in-out infinite}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+.card-search{top:14px;inset-inline-end:0;width:320px;animation-delay:-1.2s}
+.card-ai{bottom:10px;inset-inline-start:0;width:320px;animation-delay:-4s}
+.card-metric{top:188px;inset-inline-end:36px;width:184px;padding:17px 19px;animation-delay:-2.6s}
 .search-bar{display:flex;align-items:center;gap:10px;background:var(--bg-cool);border-radius:999px;padding:10px 15px;font-size:.9rem;color:var(--ink-2);font-weight:600}
 .search-bar .mg{width:15px;height:15px;border:2px solid var(--c-blue);border-radius:50%;position:relative;flex:none}
 .search-bar .mg::after{content:"";position:absolute;width:7px;height:2px;background:var(--c-blue);transform:rotate(45deg);bottom:-2px;inset-inline-start:10px}
@@ -305,7 +308,7 @@ footer ul a:hover{color:#fff}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 .reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.orb,.logo-track,.review-row{animation:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.orb,.logo-track,.review-row,.glass-card,.steps::after{animation:none}.hero::before{animation:none}}
 
 /* RESPONSIVE */
 @media(max-width:1024px){nav.links{gap:16px;font-size:.88rem}.nav-phone{display:none}}
@@ -372,6 +375,15 @@ footer ul a:hover{color:#fff}
 .post .more{font-weight:700;color:var(--c-blue);font-size:.88rem;display:inline-flex;gap:6px;align-items:center}
 @media(max-width:900px){.diff,.posts,.approach{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.diff,.posts{grid-template-columns:1fr}}
+/* WOW: case-study spotlight hover */
+.res-card::after{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,0%),rgba(79,91,242,.13),transparent 62%);opacity:0;transition:opacity .35s;pointer-events:none}
+.res-card:hover::after{opacity:1}
+.res-card.cta::after{display:none}
+/* WOW: glowing recommended pricing plan */
+.plan.pop{position:relative}
+.plan.pop::before{content:"";position:absolute;inset:-2px;border-radius:calc(var(--radius) + 3px);background:linear-gradient(135deg,#12C2E9,#4F5BF2,#8E2DE2);z-index:-1;animation:popGlow 3.2s ease-in-out infinite}
+@keyframes popGlow{0%,100%{opacity:.5;filter:blur(8px)}50%{opacity:.9;filter:blur(15px)}}
+@media(prefers-reduced-motion:reduce){.plan.pop::before{animation:none;opacity:.6}}
 </style>
 </head>
 <body>
@@ -480,7 +492,7 @@ footer ul a:hover{color:#fff}
         </div>
       </div>
       <div class="glass-card card-metric">
-        <div class="big grad-text">+530%</div>
+        <div class="big grad-text">+<span data-count="530" data-suffix="%">0</span></div>
         <div class="lbl">כניסות אורגניות · לקוח Merkel</div>
         <svg class="spark-line" viewBox="0 0 160 28" preserveAspectRatio="none"><polyline points="0,26 30,22 60,18 90,12 120,7 160,2" fill="none" stroke="url(#mGrad)" stroke-width="3" stroke-linecap="round"/></svg>
       </div>
@@ -968,6 +980,36 @@ if(ytFacade){ytFacade.addEventListener('click',()=>{
   f.allowFullscreen=true;
   ytFacade.replaceWith(f);
 });}
+
+/* WOW: spotlight that follows the cursor on result cards */
+document.querySelectorAll('.res-card:not(.cta)').forEach(c=>{
+  c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});
+});
+
+/* WOW: live "AI is generating" typewriter for the GEO answer */
+(function(){
+  const el=document.getElementById('typedAns');
+  if(!el) return;
+  const chars=[];
+  el.childNodes.forEach(n=>{
+    const cite=n.nodeType===1 && n.classList && n.classList.contains('cite');
+    (n.textContent||'').split('').forEach(ch=>chars.push({ch,cite}));
+  });
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  function render(n){
+    let html='',inCite=false,buf='';
+    for(let k=0;k<n;k++){const c=chars[k];
+      if(c.cite!==inCite){html+=inCite?'<span class="cite">'+esc(buf)+'</span>':esc(buf);buf='';inCite=c.cite;}
+      buf+=c.ch;}
+    html+=inCite?'<span class="cite">'+esc(buf)+'</span>':esc(buf);
+    el.innerHTML=html;
+  }
+  let started=false;
+  const run=()=>{started=true;el.innerHTML='';let i=0;
+    (function tick(){i++;render(i);if(i<chars.length)setTimeout(tick,20);})();};
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!started){run();io.disconnect();}}),{threshold:.55});
+  io.observe(el);
+})();
 
 function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='תודה! נחזור אליכם בקרוב ✓';b.style.pointerEvents='none';return false;}
 </script>
