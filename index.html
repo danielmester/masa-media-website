@@ -173,10 +173,11 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 @keyframes blink{50%{opacity:0}}
 
 /* APPROACH */
-.approach{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.approach{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .app-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:26px;transition:.3s}
 .app-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
-.app-card .ic{font-size:1.7rem;margin-bottom:14px}
+.app-card .ic{width:48px;height:48px;border-radius:13px;background:var(--grad-soft);display:grid;place-items:center;margin-bottom:16px}
+.ic svg{width:26px;height:26px}
 .app-card h3{font-size:1.16rem;margin-bottom:8px}
 .app-card p{color:var(--muted);font-size:.95rem}
 
@@ -367,7 +368,7 @@ footer ul a:hover{color:#fff}
 .post .tagline{font-size:.76rem;font-weight:800;letter-spacing:.03em;color:var(--c-blue);margin-bottom:10px}
 .post h3{font-size:1.04rem;line-height:1.5;margin-bottom:16px;flex:1}
 .post .more{font-weight:700;color:var(--c-blue);font-size:.88rem;display:inline-flex;gap:6px;align-items:center}
-@media(max-width:900px){.diff,.posts{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.diff,.posts,.approach{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.diff,.posts{grid-template-columns:1fr}}
 </style>
 </head>
@@ -512,13 +513,27 @@ footer ul a:hover{color:#fff}
 </section>
 
 <!-- ============================ STATS ============================ -->
-<section class="sec" style="padding-block:70px">
+<section class="sec has-wave" style="padding:70px 0 98px">
   <div class="wrap"><div class="stats">
     <div class="stat reveal"><div class="n grad-text" data-count="2014" data-raw="1">0</div><div class="l">פעילים מאז</div></div>
     <div class="stat reveal" data-d="1"><div class="n grad-text" data-count="5" data-suffix=".0">0</div><div class="l">דירוג בגוגל</div></div>
     <div class="stat reveal" data-d="2"><div class="n grad-text" data-count="69">0</div><div class="l">ביקורות אמיתיות</div></div>
     <div class="stat reveal" data-d="3"><div class="n grad-text">+<span data-count="530" data-suffix="%">0</span></div><div class="l">שיא גידול בתנועה אורגנית</div></div>
   </div></div>
+  <div class="wave-sep" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 V32 C240,4 480,4 720,24 C960,44 1200,46 1440,20 V70 Z" fill="#e7ebfa"/></svg></div>
+</section>
+
+<!-- ============================ WHY / DIFFERENCE ============================ -->
+<section class="sec tint">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="kicker">איכות עושה את ההבדל</span><h2>חברת קידום אתרים איכותית — ההבדל בין כישלון להצלחה</h2></div>
+    <div class="prose reveal" data-d="1">
+      <p>חברות ובעלי עסקים רבים חוששים מתחום ה-SEO או חושבים שקידום אתרים אורגני לא באמת עובד. יש כאלו שאף ירחיקו לכת ויאמרו שמדובר באחיזת עיניים ותו לא.</p>
+      <p>התפיסה השגויה הזו לא מגיעה יש מאין. עסקים לא מעטים ניסו לקדם את האתר שלהם עם מקדם אתרים או חברה לקידום אתרים אבל נכשלו, לפעמים יותר מפעם אחת — וכל ניסיון כזה היה כרוך בהרבה זמן וכסף שירדו לטמיון.</p>
+      <p>אנחנו יודעים, זו הרגשה מתסכלת. אבל האמת היא שאם נבחן את האתר שלכם, נגלה שהוא לא שונה בהרבה מהאתרים שנמצאים היום בעמוד הראשון בגוגל. <strong>הסיבה לחוסר ההצלחה של קמפיין קידום אתרים טמונה כמעט תמיד במקדם עצמו, בתקציב ובזמן שעמדו לרשותו.</strong></p>
+      <p>איך משנים את המצב לטובתכם? על ידי הפקדת עבודת הקידום האורגני בידי חברת קידום אתרים מנוסה עם הצלחות מוכחות, שיודעת לבנות תהליך מסודר לפרויקט בהתאם למטרות, לבצע תיאום ציפיות ריאלי, ולהוציא את הדברים לפועל בצורה מקצועית.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ============================ SERVICES ============================ -->
@@ -531,33 +546,33 @@ footer ul a:hover{color:#fff}
     </div>
     <div class="bento">
       <a class="tile reveal" href="https://www.masamedia.co.il/organic-seo/">
-        <div class="ic">🔍</div><h3>קידום אתרים אורגני</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></div><h3>קידום אתרים אורגני</h3>
         <p>אופטימיזציה טכנית, תוכן וניהול קישורים פנימיים שמביאים אתכם לראש תוצאות גוגל — ומחזיקים אתכם שם לאורך זמן.</p>
         <span class="more">לפרטים <span class="arr">←</span></span>
       </a>
       <a class="tile feat reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/geo/">
         <span class="badge">הדבר הבא — כבר כאן</span><div class="glow"></div>
-        <div class="ic">✦</div><h3>GEO · אופטימיזציה למנועי AI</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></div><h3>GEO · אופטימיזציה למנועי AI</h3>
         <p>נוכחות בתוך התשובות של ChatGPT, Gemini ו-AI Overviews בגוגל — שהמותג שלכם יהיה זה שה-AI מצטט וממליץ.</p>
         <span class="more">איך זה עובד <span class="arr">←</span></span>
       </a>
       <a class="tile reveal" data-d="2" href="https://www.masamedia.co.il/ai-seo/links-for-ai/">
-        <div class="ic">🔗</div><h3>בניית קישורים חכמה</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><h3>בניית קישורים חכמה</h3>
         <p>בניית סמכות ואזכורים איכותיים בעידן ה-AI וה-LLM — הבסיס לדירוג יציב לאורך זמן.</p>
         <span class="more">לפרטים <span class="arr">←</span></span>
       </a>
       <a class="tile reveal" href="https://www.masamedia.co.il/ppc/">
-        <div class="ic">🎯</div><h3>פרסום ממומן בגוגל</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/></svg></div><h3>פרסום ממומן בגוגל</h3>
         <p>קמפיינים ממוקדי המרה — תנועה איכותית וממוקדת כבר מהיום הראשון.</p>
         <span class="more">לפרטים <span class="arr">←</span></span>
       </a>
       <a class="tile reveal" data-d="1" href="https://www.masamedia.co.il/web-development/">
-        <div class="ic">🧩</div><h3>בניית אתרים</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div><h3>בניית אתרים</h3>
         <p>אתרים מהירים, נגישים ובנויים לקידום מהיסוד — תשתית שעובדת בשבילכם.</p>
         <span class="more">לפרטים <span class="arr">←</span></span>
       </a>
       <a class="tile reveal" data-d="2" href="https://www.masamedia.co.il/reputation-management/">
-        <div class="ic">🛡️</div><h3>ניהול מוניטין ובקרת מדיה</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>ניהול מוניטין ובקרת מדיה</h3>
         <p>שליטה בנרטיב סביב המותג שלכם בתוצאות החיפוש ובמדיה.</p>
         <span class="more">לפרטים <span class="arr">←</span></span>
       </a>
@@ -597,12 +612,14 @@ footer ul a:hover{color:#fff}
 <!-- ============================ APPROACH ============================ -->
 <section class="sec" style="background:var(--bg-warm)">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="kicker">למה מסה מדיה</span><h2>חדשנית, אישית, שקופה — ומוכחת</h2></div>
+    <div class="sec-head center reveal"><span class="kicker">למה מסה מדיה</span><h2>חברה לקידום אתרים שעובדת אחרת</h2><p>שותפה מוסמכת של גוגל, פעילה מאז 2014, עם רקורד הצלחות עשיר — והדרך שלנו לעבוד היא מה שעושה את ההבדל.</p></div>
     <div class="approach">
-      <div class="app-card reveal"><div class="ic">🏅</div><h3>שותפה מוסמכת של גוגל</h3><p>חברה חדשנית הפעילה מאז 2014, עם רקורד הצלחות עשיר במגוון תחומים.</p></div>
-      <div class="app-card reveal" data-d="1"><div class="ic">🎯</div><h3>התאמה אישית</h3><p>שירות בהתאמה אישית לכל עסק — בישראל ובעולם. בלי חבילות מדף.</p></div>
-      <div class="app-card reveal" data-d="2"><div class="ic">🔬</div><h3>שקיפות מלאה</h3><p>דו״ח ביצועים חודשי ומערכת CRM — אתם רואים בדיוק מה נעשה ולמה.</p></div>
-      <div class="app-card reveal" data-d="3"><div class="ic">📈</div><h3>תוצאות מדידות</h3><p>תנועה, לידים ודירוגים שאפשר לראות במספרים — לא הבטחות.</p></div>
+      <div class="app-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></div><h3>שותפה מוסמכת של גוגל</h3><p>חברה חדשנית הפעילה מאז 2014, עם רקורד הצלחות עשיר במגוון תחומים בישראל ובעולם.</p></div>
+      <div class="app-card reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div><h3>ללא התחייבות</h3><p>הסכם ההתקשרות תקף כל עוד אתם מרוצים. בלי אותיות קטנות ובלי כוכביות.</p></div>
+      <div class="app-card reveal" data-d="2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"/><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"/><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"/></svg></div><h3>One Stop Shop</h3><p>צוות ייעודי מהאנשים המקצועיים בתעשייה — כל פתרון דיגיטלי תחת קורת גג אחת.</p></div>
+      <div class="app-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></div><h3>התאמה אישית</h3><p>תוכנית עבודה ייחודית לכל עסק. אסטרטגיה לפי המטרות שלכם — בלי חבילות מדף.</p></div>
+      <div class="app-card reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></div><h3>שקיפות מלאה</h3><p>דו״ח ביצועים חודשי ומערכת CRM. אתם תמיד יודעים בדיוק מה נעשה ולמה.</p></div>
+      <div class="app-card reveal" data-d="2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></div><h3>תוצאות מדידות</h3><p>תנועה, לידים ודירוגים שאפשר לראות במספרים — לא הבטחות.</p></div>
     </div>
   </div>
 </section>
@@ -685,7 +702,7 @@ footer ul a:hover{color:#fff}
 </section>
 
 <!-- ============================ TESTIMONIALS ============================ -->
-<section class="sec has-wave">
+<section class="sec">
   <div class="wrap">
     <div class="t-top">
       <div class="sec-head reveal" style="margin-bottom:0"><span class="kicker">מה הלקוחות אומרים</span><h2>אנשים שכבר בצמרת</h2></div>
@@ -706,33 +723,6 @@ footer ul a:hover{color:#fff}
       <div class="quote" data-d="2"><div class="stars">★★★★★</div><p>"עברתי כמה חברות דיגיטל לפני שהגעתי למסה מדיה, וההבדל פשוט מורגש."</p><div class="who"><span class="av">ע</span><div><b>עמה בניואן</b><span>ביקורת בגוגל</span></div></div></div>
       <div class="quote"><div class="stars">★★★★★</div><p>"העבודה עם מסה מדיה כבר נהייתה חלק מובנה אצלנו בשיווק."</p><div class="who"><span class="av">ל</span><div><b>ליאן אשטון</b><span>ביקורת בגוגל</span></div></div></div>
       </div>
-    </div>
-  </div>
-  <div class="wave-sep" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 V32 C240,4 480,4 720,24 C960,44 1200,46 1440,20 V70 Z" fill="#e7ebfa"/></svg></div>
-</section>
-
-<!-- ============================ WHY / DIFFERENCE ============================ -->
-<section class="sec tint">
-  <div class="wrap">
-    <div class="sec-head center reveal"><span class="kicker">איכות עושה את ההבדל</span><h2>חברת קידום אתרים איכותית — ההבדל בין כישלון להצלחה</h2></div>
-    <div class="prose reveal" data-d="1">
-      <p>חברות ובעלי עסקים רבים חוששים מתחום ה-SEO או חושבים שקידום אתרים אורגני לא באמת עובד. יש כאלו שאף ירחיקו לכת ויאמרו שמדובר באחיזת עיניים ותו לא.</p>
-      <p>התפיסה השגויה הזו לא מגיעה יש מאין. עסקים לא מעטים ניסו לקדם את האתר שלהם עם מקדם אתרים או חברה לקידום אתרים אבל נכשלו, לפעמים יותר מפעם אחת — וכל ניסיון כזה היה כרוך בהרבה זמן וכסף שירדו לטמיון.</p>
-      <p>אנחנו יודעים, זו הרגשה מתסכלת. אבל האמת היא שאם נבחן את האתר שלכם, נגלה שהוא לא שונה בהרבה מהאתרים שנמצאים היום בעמוד הראשון בגוגל. <strong>הסיבה לחוסר ההצלחה של קמפיין קידום אתרים טמונה כמעט תמיד במקדם עצמו, בתקציב ובזמן שעמדו לרשותו.</strong></p>
-      <p>איך משנים את המצב לטובתכם? על ידי הפקדת עבודת הקידום האורגני בידי חברת קידום אתרים מנוסה עם הצלחות מוכחות, שיודעת לבנות תהליך מסודר לפרויקט בהתאם למטרות, לבצע תיאום ציפיות ריאלי, ולהוציא את הדברים לפועל בצורה מקצועית.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ DIFFERENTIATORS ============================ -->
-<section class="sec tint" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head center reveal"><span class="kicker">למה מסה מדיה</span><h2>חברה לקידום אתרים שעובדת אחרת</h2></div>
-    <div class="diff">
-      <div class="tile reveal"><div class="ic">🤝</div><h3>ללא התחייבות</h3><p>הסכם ההתקשרות בינינו תקף כל עוד אתם מרוצים. בלי אותיות קטנות ובלי כוכביות.</p></div>
-      <div class="tile reveal" data-d="1"><div class="ic">🎯</div><h3>שיטות עבודה ייחודיות</h3><p>אנו בונים תוכנית עבודה ייחודית לכם ומיישמים את האסטרטגיות היעילות ביותר להשגת המטרות שהוגדרו.</p></div>
-      <div class="tile reveal" data-d="2"><div class="ic">🏪</div><h3>One Stop Shop</h3><p>צוות ייעודי המורכב מהאנשים המקצועיים ביותר בתעשייה יספק עבורכם כל פתרון ברמה הגבוהה ביותר.</p></div>
-      <div class="tile reveal" data-d="3"><div class="ic">🔍</div><h3>שקיפות מלאה</h3><p>הלקוחות שלנו תמיד מעודכנים בכל מה שחשוב לדעת על הפעילות שלהם בדיגיטל.</p></div>
     </div>
   </div>
 </section>
