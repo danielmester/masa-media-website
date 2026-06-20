@@ -114,9 +114,10 @@ nav.links > a:hover::after{transform:scaleX(1)}
 .logo-marquee{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .logo-track{display:flex;gap:30px;align-items:center;width:max-content;animation:scroll 40s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
-.logo-track .lg{height:78px;min-width:150px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 22px}
-.logo-track .lg img{height:46px;width:auto;max-width:120px;object-fit:contain;filter:grayscale(1);opacity:.72;transition:.3s}
-.logo-track .lg:hover img{filter:none;opacity:1}
+.logo-track .lg{height:96px;min-width:178px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 26px;box-shadow:var(--shadow-sm);transition:.3s var(--ease)}
+.logo-track .lg:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.logo-track .lg img{height:60px;width:auto;max-width:142px;object-fit:contain;opacity:.95;transition:.3s}
+.logo-track .lg:hover img{opacity:1}
 @keyframes scroll{to{transform:translateX(-50%)}}
 
 /* ============================ SECTIONS ============================ */
@@ -188,16 +189,22 @@ nav.links > a:hover::after{transform:scaleX(1)}
 .step p{color:var(--muted);font-size:.94rem}
 
 /* RESULTS */
-.results{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.res-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.35s;display:flex;flex-direction:column}
-.res-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.res-card .tag{display:flex;align-items:center;gap:10px;font-size:.85rem;font-weight:700;color:var(--ink-2);margin-bottom:16px}
-.res-card .tag img{height:30px;width:auto;max-width:66px;object-fit:contain}
-.res-card .big{font-family:"Heebo";font-weight:900;font-size:3rem;line-height:1}
-.res-card .desc{color:var(--ink-2);margin-top:10px;font-size:.98rem;flex:1}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.res-card{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 28px 26px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;display:flex;flex-direction:column}
+.res-card::before{content:"";position:absolute;top:0;inset-inline:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:inline-end;transition:transform .45s var(--ease)}
+.res-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.res-card:hover::before{transform:scaleX(1)}
+.res-card .tag{display:flex;align-items:center;gap:10px;font-size:.86rem;font-weight:700;color:var(--ink-2);margin-bottom:18px;min-height:36px}
+.res-card .tag img{height:34px;width:auto;max-width:72px;object-fit:contain;border-radius:7px}
+.res-card .metric{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.res-card .big{font-family:"Heebo";font-weight:900;font-size:3.1rem;line-height:.95;letter-spacing:-.02em}
+.res-card .unit{font-size:.8rem;font-weight:700;color:var(--muted)}
+.res-card .desc{color:var(--ink-2);margin-top:14px;font-size:.96rem;line-height:1.6;flex:1}
 .res-card.cta{background:linear-gradient(120deg,#0d1230,#241a52);color:#fff;justify-content:center;align-items:flex-start}
+.res-card.cta::before{display:none}
+.res-card.cta:hover{transform:translateY(-6px)}
 .res-card.cta h3{font-size:1.5rem;margin-bottom:10px}
-.res-card.cta p{color:rgba(255,255,255,.75);margin-bottom:20px}
+.res-card.cta p{color:rgba(255,255,255,.75);margin-bottom:20px;font-size:.97rem}
 .res-card.cta .more{color:#7fe3ff;font-weight:700;display:inline-flex;gap:7px;align-items:center}
 
 /* TESTIMONIALS */
@@ -212,6 +219,16 @@ nav.links > a:hover::after{transform:scaleX(1)}
 .quote .av{width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
 .quote .who b{display:block;font-size:.95rem}
 .quote .who span{color:var(--muted);font-size:.84rem}
+.review-marquee{margin-top:40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.review-row{display:flex;gap:20px;width:max-content}
+.review-row.r1{animation:revscroll 70s linear infinite}
+.review-row.r2{animation:revscroll 90s linear infinite reverse}
+.review-marquee:hover .review-row{animation-play-state:paused}
+@keyframes revscroll{to{transform:translateX(-50%)}}
+.review-row .quote{width:360px;flex:none;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.review-row .quote:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+.review-row .quote p{font-size:.98rem;line-height:1.65}
+@media(max-width:600px){.review-row .quote{width:82vw}}
 
 /* PRICING */
 .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
@@ -280,7 +297,7 @@ footer ul a:hover{color:#fff}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 .reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.orb,.logo-track{animation:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.orb,.logo-track,.review-row{animation:none}}
 
 /* RESPONSIVE */
 @media(max-width:1024px){nav.links{gap:16px;font-size:.88rem}.nav-phone{display:none}}
@@ -568,92 +585,92 @@ footer ul a:hover{color:#fff}
     <div class="results">
       <div class="res-card reveal">
         <div class="tag"><img src="assets/clients/merkel.jpg" alt="Merkel"> Merkel Technologies</div>
-        <div class="big grad-text">+530%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="530" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״שיפור של 530% בכמות הכניסות האורגניות לאתר וטרנספורמציה מוחלטת של נראות החברה בתוצאות החיפוש״</div>
       </div>
       <div class="res-card reveal" data-d="1">
         <div class="tag">מחמדי · רפואה וטרינרית</div>
-        <div class="big grad-text">+750%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="750" data-suffix="%">0</span></span><span class="unit">צמיחה בחצי שנה</span></div>
         <div class="desc">״מאפס מבקרים אורגניים באתר ל-1,579 בחודש״ — קידום הוליסטי המשלב אורגני, ממומן ופייסבוק.</div>
       </div>
       <div class="res-card reveal" data-d="2">
         <div class="tag">DNG Medical</div>
-        <div class="big grad-text">+436%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="436" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״מעוד קליניקה להשתלת שיער — לשם דבר בתחום״. דירוג בטופ 10 זינק מ-23 ל-105 מילות מפתח.</div>
       </div>
       <div class="res-card reveal">
         <div class="tag">עו״ד עמית ורד</div>
-        <div class="big grad-text">+300%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="300" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״ממצב של כ-5,500–6,500 מבקרים אורגניים מדי חודש ללמעלה מ-21,000 מבקרים״ — והתאוששות מעונש גוגל.</div>
       </div>
       <div class="res-card reveal" data-d="1">
         <div class="tag">Outdoor · קבוצת אאוטדור</div>
-        <div class="big grad-text">+220%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="220" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״לראשונה, רואים תוצאות משמעותיות מההשקעה בשיווק הדיגיטלי שמחזירה את עצמה בענק״. אורגני + ממומן.</div>
       </div>
       <div class="res-card reveal" data-d="2">
         <div class="tag">ביאמבה</div>
-        <div class="big grad-text">+183%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="183" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״עלייה אקספוננציאלית של 183% בטראפיק האורגני לאחר שנה של פעילות״ — כ-36,000 לקוחות פוטנציאליים בשנה.</div>
       </div>
       <div class="res-card reveal">
         <div class="tag">בינת תקשורת מחשבים</div>
-        <div class="big grad-text">+104%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="104" data-suffix="%">0</span></span><span class="unit">מילות מפתח בעמ׳ 1</span></div>
         <div class="desc">״שינוי אדיר בתקופת זמן קצרה על פני מגוון תחומים תחרותיים מאוד״ — והופעות ב-93 שאילתות AI Overview.</div>
       </div>
       <div class="res-card reveal" data-d="1">
         <div class="tag">דליס</div>
-        <div class="big grad-text">+77%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="77" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״עצירת הנפילה של האתר והיפוך מגמה מוחלט תוך שנה של קידום אורגני״ — 110 מילות מפתח חדשות בעמוד הראשון.</div>
       </div>
       <div class="res-card reveal" data-d="2">
         <div class="tag"><img src="assets/clients/reshet-hagana.jpg" alt="רשת הגנה"> רשת הגנה</div>
-        <div class="big grad-text">+71%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="71" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״עלייה של 71% בטראפיק האורגני וביסוס השליטה בתחום״ — לצד שיפורים טכניים מקיפים באתר.</div>
       </div>
       <div class="res-card reveal">
         <div class="tag">Muscle &amp; Motion · בינלאומי</div>
-        <div class="big grad-text">+52%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="52" data-suffix="%">0</span></span><span class="unit">מבקרים ייחודיים</span></div>
         <div class="desc">״עלייה דרמטית בטראפיק ובכמות ההורדות של האפליקציות״ — מ-105K ל-160K מבקרים ייחודיים בשנה.</div>
       </div>
       <div class="res-card reveal" data-d="1">
         <div class="tag">פורטל הבריאות מדיקו</div>
-        <div class="big grad-text">645K+</div>
+        <div class="metric"><span class="big grad-text"><span data-count="645">0</span>K+</span><span class="unit">גולשים חדשים בשנה</span></div>
         <div class="desc">״יותר מ-645 אלף גולשים אורגניים חדשים במהלך השנה״ — דירוג ל-30+ מונחים רפואיים מובילים.</div>
       </div>
       <div class="res-card reveal" data-d="2">
         <div class="tag">Shopping IO</div>
-        <div class="big grad-text">21,539</div>
+        <div class="metric"><span class="big grad-text"><span data-count="21539">0</span></span><span class="unit">מבקרים בחודש הרביעי</span></div>
         <div class="desc">״21,539 מבקרים אורגניים באתר כבר מהחודש הרביעי לפעילות״ — תוכן קריפטו איכותי בקנה מידה גדול.</div>
       </div>
       <div class="res-card reveal">
         <div class="tag">תקשוב</div>
-        <div class="big grad-text">14,784</div>
+        <div class="metric"><span class="big grad-text"><span data-count="14784">0</span></span><span class="unit">לידים בשנה</span></div>
         <div class="desc">״14,784 לידים בשנה במחיר של ₪8.40 כל אחד״ — קמפיין ממומן ממוקד לארבעה קהלי יעד.</div>
       </div>
       <div class="res-card reveal" data-d="1">
         <div class="tag"><img src="assets/clients/triple-c.png" alt="Triple C"> טריפל סי</div>
-        <div class="big grad-text">+154%</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="154" data-suffix="%">0</span></span><span class="unit">שיחות נכנסות</span></div>
         <div class="desc">״הוזלה דרמטית בעלויות הלידים במקביל לצמיחה אדירה בכמות הפניות ושיפור משמעותי באיכותן״ — גוגל + פייסבוק.</div>
       </div>
       <div class="res-card reveal" data-d="2">
         <div class="tag"><img src="assets/clients/gilad-narkis.jpg" alt="גלעד נרקיס"> משרד עו״ד גלעד נרקיס</div>
-        <div class="big grad-text">520</div>
+        <div class="metric"><span class="big grad-text"><span data-count="520">0</span></span><span class="unit">לידים בשנה</span></div>
         <div class="desc">״שליטה מוחלטת בתחומי חדלות פירעון, פשיטות רגל ודיני בנקים״ — 520 לידים בשנה והמחיר לליד יורד בהתמדה.</div>
       </div>
       <div class="res-card reveal">
         <div class="tag">עמותת נטע</div>
-        <div class="big grad-text">1,570</div>
+        <div class="metric"><span class="big grad-text"><span data-count="1570">0</span></span><span class="unit">לידים בשנה הראשונה</span></div>
         <div class="desc">״שיפור ניכר בנראות ובמספר הפניות לעמותה״ — 1,570 לידים בשנה הראשונה לצד בניית אתר חדש.</div>
       </div>
       <div class="res-card reveal" data-d="1">
         <div class="tag"><img src="assets/clients/jack-kuba.jpg" alt="Jack Kuba"> ג׳ק קובה</div>
-        <div class="big grad-text">100+</div>
+        <div class="metric"><span class="big grad-text"><span data-count="100">0</span>+</span><span class="unit">מילות מפתח בעמ׳ 1</span></div>
         <div class="desc">״למעלה מ-100 מילות מפתח בעמוד הראשון של גוגל״ — בניית נוכחות אורגנית למותג מוכר ללא תנועה אורגנית.</div>
       </div>
       <div class="res-card reveal" data-d="2">
         <div class="tag">Top Air Systems</div>
-        <div class="big grad-text">1,122</div>
+        <div class="metric"><span class="big grad-text"><span data-count="1122">0</span></span><span class="unit">גולשים תוך 11 חודשים</span></div>
         <div class="desc">״ממספר דו-ספרתי של גולשים אורגניים מדי חודש ל-1,122 גולשים תוך 11 חודשים״.</div>
       </div>
       <div class="res-card cta reveal">
@@ -672,17 +689,21 @@ footer ul a:hover{color:#fff}
       <div class="sec-head reveal" style="margin-bottom:0"><span class="kicker">מה הלקוחות אומרים</span><h2>אנשים שכבר בצמרת</h2></div>
       <div class="rating-badge reveal" data-d="1"><div class="score grad-text">5.0</div><div><div class="stars">★★★★★</div><div style="font-size:.84rem;color:var(--muted);font-weight:600">מתוך 69 ביקורות בגוגל</div></div></div>
     </div>
-    <div class="quotes">
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"אז נתתי לו את המפתחות ותוך זמן קצר האתר התחיל לטפס בחזרה ובגדול. אחת ההחלטות הכי חכמות שעשיתי בשנים האחרונות. תפסיקו להתלבט ודברו עם דניאל. מומלץ בחום מטורף 🔥"</p><div class="who"><span class="av">א</span><div><b>אוראל יום טוב</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal" data-d="1"><div class="stars">★★★★★</div><p>"כשהתחלתי לעבוד עם מסה מדיה, לא האמנתי שדברים יכולים להשתנות כל כך מהר. דניאל והצוות שלו הפיחו חיים חדשים באתר שלי, הכניסו המון פניות איכותיות, והיחס האישי היה מעבר למצופה!"</p><div class="who"><span class="av">ר</span><div><b>רועי שם טוב</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal" data-d="2"><div class="stars">★★★★★</div><p>"מסה מדיה היא לא רק חברה לקידום אתרים, הם הופכים להיות חלק מהצוות שלך! אני מרגישה שיש לי שותפים אמיתיים שמבינים אותי ואת הצרכים של העסק שלי. ממליצה בחום!"</p><div class="who"><span class="av">כ</span><div><b>כרמית גלילי</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"מאז שהגעתי למסגרת הזאת, האתר שלי רק הלך ותפס גובה! צוות מקצועי, אכפתי וזמין בכל שלב. בהחלט אחת ההחלטות הכי טובות שלי!"</p><div class="who"><span class="av">נ</span><div><b>נתן הנדלר</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal" data-d="1"><div class="stars">★★★★★</div><p>"למרות שבחרתי במסה מדיה רק לאחר מחקר מעמיק, אני אומר בלב שלם שזו הייתה בחירה נכונה שתשנה את פני העסק שלי. יחס אישי והשקעה בלתי נגמרת, תוצאות מדהימות שהשאירו אותי פשוט ללא מילים."</p><div class="who"><span class="av">ד</span><div><b>דניאל ג.</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal" data-d="2"><div class="stars">★★★★★</div><p>"המלצה חמה! אני לא נוהג לתת ביקורות בקלות, אך אחרי 9 חודשים עם מסה מדיה אני מרגיש חובה לשתף. הצוות פשוט מדהים, והם פשוט עוזרים לנו לפרוץ גבולות!"</p><div class="who"><span class="av">נ</span><div><b>נתן</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"הוא באמת השקיע וקידם את האתר שלי עם הרבה רגש. אין עליהם!"</p><div class="who"><span class="av">ה</span><div><b>הודיה עגמון</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal" data-d="1"><div class="stars">★★★★★</div><p>"הם תמיד זמינים לשאלות ומספקים פתרונות יצירתיים לכל אתגר. השירות והמקצועיות הם משהו שלא רואים כל יום."</p><div class="who"><span class="av">נ</span><div><b>נהוראי גברי</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal" data-d="2"><div class="stars">★★★★★</div><p>"עברתי כמה חברות דיגיטל לפני שהגעתי למסה מדיה, וההבדל פשוט מורגש."</p><div class="who"><span class="av">ע</span><div><b>עמה בניואן</b><span>ביקורת בגוגל</span></div></div></div>
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"העבודה עם מסה מדיה כבר נהייתה חלק מובנה אצלנו בשיווק."</p><div class="who"><span class="av">ל</span><div><b>ליאן אשטון</b><span>ביקורת בגוגל</span></div></div></div>
+    <div class="review-marquee reveal" data-d="1">
+      <div class="review-row r1" id="reviewRow1">
+      <div class="quote"><div class="stars">★★★★★</div><p>"אז נתתי לו את המפתחות ותוך זמן קצר האתר התחיל לטפס בחזרה ובגדול. אחת ההחלטות הכי חכמות שעשיתי בשנים האחרונות. תפסיקו להתלבט ודברו עם דניאל. מומלץ בחום מטורף 🔥"</p><div class="who"><span class="av">א</span><div><b>אוראל יום טוב</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote" data-d="1"><div class="stars">★★★★★</div><p>"כשהתחלתי לעבוד עם מסה מדיה, לא האמנתי שדברים יכולים להשתנות כל כך מהר. דניאל והצוות שלו הפיחו חיים חדשים באתר שלי, הכניסו המון פניות איכותיות, והיחס האישי היה מעבר למצופה!"</p><div class="who"><span class="av">ר</span><div><b>רועי שם טוב</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote" data-d="2"><div class="stars">★★★★★</div><p>"מסה מדיה היא לא רק חברה לקידום אתרים, הם הופכים להיות חלק מהצוות שלך! אני מרגישה שיש לי שותפים אמיתיים שמבינים אותי ואת הצרכים של העסק שלי. ממליצה בחום!"</p><div class="who"><span class="av">כ</span><div><b>כרמית גלילי</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"מאז שהגעתי למסגרת הזאת, האתר שלי רק הלך ותפס גובה! צוות מקצועי, אכפתי וזמין בכל שלב. בהחלט אחת ההחלטות הכי טובות שלי!"</p><div class="who"><span class="av">נ</span><div><b>נתן הנדלר</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote" data-d="1"><div class="stars">★★★★★</div><p>"למרות שבחרתי במסה מדיה רק לאחר מחקר מעמיק, אני אומר בלב שלם שזו הייתה בחירה נכונה שתשנה את פני העסק שלי. יחס אישי והשקעה בלתי נגמרת, תוצאות מדהימות שהשאירו אותי פשוט ללא מילים."</p><div class="who"><span class="av">ד</span><div><b>דניאל ג.</b><span>ביקורת בגוגל</span></div></div></div>
+      </div>
+      <div class="review-row r2" id="reviewRow2">
+      <div class="quote" data-d="2"><div class="stars">★★★★★</div><p>"המלצה חמה! אני לא נוהג לתת ביקורות בקלות, אך אחרי 9 חודשים עם מסה מדיה אני מרגיש חובה לשתף. הצוות פשוט מדהים, והם פשוט עוזרים לנו לפרוץ גבולות!"</p><div class="who"><span class="av">נ</span><div><b>נתן</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"הוא באמת השקיע וקידם את האתר שלי עם הרבה רגש. אין עליהם!"</p><div class="who"><span class="av">ה</span><div><b>הודיה עגמון</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote" data-d="1"><div class="stars">★★★★★</div><p>"הם תמיד זמינים לשאלות ומספקים פתרונות יצירתיים לכל אתגר. השירות והמקצועיות הם משהו שלא רואים כל יום."</p><div class="who"><span class="av">נ</span><div><b>נהוראי גברי</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote" data-d="2"><div class="stars">★★★★★</div><p>"עברתי כמה חברות דיגיטל לפני שהגעתי למסה מדיה, וההבדל פשוט מורגש."</p><div class="who"><span class="av">ע</span><div><b>עמה בניואן</b><span>ביקורת בגוגל</span></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"העבודה עם מסה מדיה כבר נהייתה חלק מובנה אצלנו בשיווק."</p><div class="who"><span class="av">ל</span><div><b>ליאן אשטון</b><span>ביקורת בגוגל</span></div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -884,7 +905,7 @@ drawer.addEventListener('click',e=>{if(e.target===drawer||e.target.tagName==='A'
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-const fmt=(v,suf,raw)=> raw? String(Math.round(v)) : (suf==='.0'?(v).toFixed(1):Math.round(v)+(suf||''));
+const fmt=(v,suf,raw)=> raw? String(Math.round(v)) : (suf==='.0'?(v).toFixed(1):Math.round(v).toLocaleString('en-US')+(suf||''));
 const countIO=new IntersectionObserver(es=>{es.forEach(e=>{
   if(!e.isIntersecting)return;
   const el=e.target,target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',raw=el.dataset.raw;
@@ -897,6 +918,8 @@ document.querySelectorAll('[data-count]').forEach(el=>countIO.observe(el));
 /* duplicate logo track for seamless marquee */
 const track=document.getElementById('logoTrack');
 if(track){track.innerHTML+=track.innerHTML;}
+/* duplicate review rows for seamless marquee */
+['reviewRow1','reviewRow2'].forEach(id=>{const r=document.getElementById(id);if(r)r.innerHTML+=r.innerHTML;});
 
 function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='תודה! נחזור אליכם בקרוב ✓';b.style.pointerEvents='none';return false;}
 </script>
