@@ -111,7 +111,7 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 /* ============================ CLIENTS MARQUEE ============================ */
 .clients{padding:26px 0 8px}
 .clients .cap{text-align:center;color:var(--muted);font-weight:600;font-size:.9rem;margin-bottom:24px}
-.logo-marquee{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.logo-marquee{overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .logo-track{display:flex;align-items:center;width:max-content;animation:scroll 48s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
 .logo-track .lg{height:96px;min-width:178px;margin-inline-start:30px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 26px;box-shadow:var(--shadow-sm);transition:.3s var(--ease)}
@@ -219,13 +219,13 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .quote .av{width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
 .quote .who b{display:block;font-size:.95rem}
 .quote .who span{color:var(--muted);font-size:.84rem}
-.review-marquee{margin-top:40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.review-marquee{margin-top:40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
 .review-row{display:flex;align-items:flex-start;width:max-content}
 .review-row.r1{animation:revscroll 64s linear infinite}
 .review-row.r2{animation:revscroll 80s linear infinite reverse}
 .review-marquee:hover .review-row{animation-play-state:paused}
 @keyframes revscroll{to{transform:translateX(-50%)}}
-.review-row .quote{width:340px;flex:none;margin-inline-start:20px;padding:24px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.review-row .quote{width:340px;flex:none;margin-left:20px;direction:rtl;text-align:right;padding:24px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
 .review-row .quote:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
 .review-row .quote p{font-size:.96rem;line-height:1.6;flex:0 1 auto}
 .review-row .quote .who{margin-top:16px}
@@ -345,10 +345,12 @@ footer ul a:hover{color:#fff}
 .diff{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 /* BLOG */
 .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
-.post:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
-.post .tagline{font-size:.76rem;font-weight:800;letter-spacing:.03em;color:var(--c-blue);margin-bottom:12px}
-.post h3{font-size:1.06rem;line-height:1.45;margin-bottom:16px;flex:1}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
+.post:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.post .post-img{aspect-ratio:16/9;background-size:cover;background-position:center;background-color:var(--bg-warm)}
+.post .post-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.post .tagline{font-size:.76rem;font-weight:800;letter-spacing:.03em;color:var(--c-blue);margin-bottom:10px}
+.post h3{font-size:1.04rem;line-height:1.5;margin-bottom:16px;flex:1}
 .post .more{font-weight:700;color:var(--c-blue);font-size:.88rem;display:inline-flex;gap:6px;align-items:center}
 @media(max-width:900px){.diff,.posts{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.diff,.posts{grid-template-columns:1fr}}
@@ -829,16 +831,12 @@ footer ul a:hover{color:#fff}
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">מידע מקצועי</span><h2>פוסטים אחרונים מהבלוג שלנו</h2><p>כל מה שצריך לדעת על קידום אתרים בעידן ה-AI — ישירות מהשטח.</p></div>
     <div class="posts">
-      <a class="post reveal" href="https://www.masamedia.co.il/ai-seo/ai-tools-for-seo/"><div class="tagline">AI SEO</div><h3>כלי AI לקידום אתרים: 7 כלים שיחסכו לכם זמן וכסף</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/llms-txt/"><div class="tagline">AI SEO</div><h3>מה זה קובץ LLMs.txt והאם צריך כזה באתר לקידום ב-AI?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/ai-seo/gemini-seo/"><div class="tagline">AI SEO</div><h3>קידום בג'מיני (Gemini): איך מופיעים בתשובות הבינה המלאכותית של גוגל?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" href="https://www.masamedia.co.il/website-optimization/vibe-coding-seo/"><div class="tagline">בניית אתרים ו-AI</div><h3>SEO לאתרי AI ו-Vibe Coding: איך לבנות אתר עם בינה מלאכותית שמתקדם בגוגל</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/query-fan-out/"><div class="tagline">AI SEO</div><h3>מה זה פיזור שאילתות (Query Fan-out) ואיך הוא משנה את כללי המשחק של חיפוש ב-AI?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/advanced-seo/google-preferred-sources/"><div class="tagline">קידום מתקדם</div><h3>מקורות מועדפים בגוגל: האם משתמשים יכולים להשפיע על מיקומי האתר שלכם?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" href="https://www.masamedia.co.il/advanced-seo/extreme-traffic-lose/"><div class="tagline">קידום מתקדם</div><h3>לא התוכן ולא הקישורים: מה גרם לאובדן 97% מהטראפיק באתר מוביל?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/ai-mode-vs-google-organic/"><div class="tagline">AI SEO</div><h3>המשתמשים הפסיקו להשוות: איך AI Mode משנה את החיפוש בגוגל</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/advanced-seo/win-zero-click/"><div class="tagline">קידום מתקדם</div><h3>17 סוגי תוכן שגוגל עדיין אוהב: איך לשמור ולהגדיל את הטראפיק בעידן ה-AI</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
-      <a class="post reveal" href="https://www.masamedia.co.il/ai-seo/geo/"><div class="tagline">AI SEO</div><h3>AI SEO: איך גורמים לאתר להופיע ב-ChatGPT, Gemini, Perplexity ועוד?</h3><span class="more">קראו עוד <span class="arr">←</span></span></a>
+      <a class="post reveal" href="https://www.masamedia.co.il/website-optimization/vibe-coding-seo/"><div class="post-img" style="background-image:url('https://www.masamedia.co.il/wp-content/uploads/2026/06/SEO-%D7%9C%D7%90%D7%AA%D7%A8%D7%99-AI-%D7%95-Vibe-Coding.jpg')"></div><div class="post-body"><div class="tagline">בניית אתרים ו-AI</div><h3>SEO לאתרי AI ו-Vibe Coding: איך לבנות אתר עם בינה מלאכותית שמתקדם בגוגל</h3><span class="more">קראו עוד <span class="arr">←</span></span></div></a>
+      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/query-fan-out/"><div class="post-img" style="background-image:url('https://www.masamedia.co.il/wp-content/uploads/2026/06/Query-Fan-out.jpg')"></div><div class="post-body"><div class="tagline">AI SEO</div><h3>מה זה פיזור שאילתות (Query Fan-out) ואיך הוא משנה את כללי המשחק של חיפוש ב-AI?</h3><span class="more">קראו עוד <span class="arr">←</span></span></div></a>
+      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/advanced-seo/google-preferred-sources/"><div class="post-img" style="background-image:url('https://www.masamedia.co.il/wp-content/uploads/2026/05/%D7%9E%D7%A7%D7%95%D7%A8%D7%95%D7%AA-%D7%9E%D7%95%D7%A2%D7%93%D7%A4%D7%99%D7%9D-%D7%91%D7%92%D7%95%D7%92%D7%9C.jpg')"></div><div class="post-body"><div class="tagline">קידום מתקדם</div><h3>מקורות מועדפים בגוגל: האם משתמשים יכולים להשפיע על מיקומי האתר שלכם?</h3><span class="more">קראו עוד <span class="arr">←</span></span></div></a>
+      <a class="post reveal" href="https://www.masamedia.co.il/advanced-seo/extreme-traffic-lose/"><div class="post-img" style="background-image:url('https://www.masamedia.co.il/wp-content/uploads/2026/05/Major-traffic-drop.jpg')"></div><div class="post-body"><div class="tagline">קידום מתקדם</div><h3>לא התוכן ולא הקישורים: מה גרם לאובדן 97% מהטראפיק באתר מוביל?</h3><span class="more">קראו עוד <span class="arr">←</span></span></div></a>
+      <a class="post reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/ai-mode-vs-google-organic/"><div class="post-img" style="background-image:url('https://www.masamedia.co.il/wp-content/uploads/2026/05/AI-Mode-%D7%9E%D7%A9%D7%A0%D7%94-%D7%90%D7%AA-%D7%94%D7%97%D7%99%D7%A4%D7%95%D7%A9-%D7%91%D7%92%D7%95%D7%92%D7%9C.jpg')"></div><div class="post-body"><div class="tagline">AI SEO</div><h3>המשתמשים הפסיקו להשוות: איך AI Mode משנה את החיפוש בגוגל</h3><span class="more">קראו עוד <span class="arr">←</span></span></div></a>
+      <a class="post reveal" data-d="2" href="https://www.masamedia.co.il/advanced-seo/win-zero-click/"><div class="post-img" style="background-image:url('https://www.masamedia.co.il/wp-content/uploads/2026/05/%D7%A1%D7%95%D7%92%D7%99-%D7%AA%D7%95%D7%9B%D7%9F-%D7%95%D7%90%D7%AA%D7%A8%D7%99%D7%9D-%D7%A9%D7%92%D7%95%D7%92%D7%9C-%D7%90%D7%95%D7%94%D7%91.jpg')"></div><div class="post-body"><div class="tagline">קידום מתקדם</div><h3>17 סוגי תוכן שגוגל עדיין אוהב: איך לשמור ולהגדיל את הטראפיק בעידן ה-AI</h3><span class="more">קראו עוד <span class="arr">←</span></span></div></a>
     </div>
     <div class="reveal" style="margin-top:32px;text-align:center"><a class="btn btn-ghost" href="https://www.masamedia.co.il/blog/">לכל המאמרים <span class="arr">←</span></a></div>
   </div>
