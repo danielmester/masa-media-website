@@ -343,6 +343,21 @@ footer ul a:hover{color:#fff}
 .prose strong{color:var(--ink);font-weight:800}
 /* DIFFERENTIATORS */
 .diff{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+/* SECTION RHYTHM & SPECIAL TRANSITIONS */
+.sec.dark-sec{background:linear-gradient(160deg,#0b0e22,#161235 58%,#26195a);color:#fff;position:relative;overflow:hidden}
+.sec.dark-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(38% 60% at 12% 18%,rgba(18,194,233,.22),transparent),radial-gradient(40% 60% at 88% 92%,rgba(142,45,226,.26),transparent);opacity:.7;pointer-events:none}
+.sec.dark-sec .wrap{position:relative;z-index:2}
+.sec.dark-sec .kicker{color:#7fe3ff}
+.sec.dark-sec .sec-head h2{color:#fff}
+.sec.dark-sec .sec-head p{color:rgba(255,255,255,.82)}
+.sec.angled{clip-path:polygon(0 46px,100% 0,100% 100%,0 100%);padding-top:124px}
+@media(max-width:700px){.sec.angled{clip-path:polygon(0 24px,100% 0,100% 100%,0 100%);padding-top:84px}}
+.sec.tint{background:linear-gradient(135deg,rgba(18,194,233,.16),rgba(142,45,226,.14))}
+/* wavy divider: place as last child of a section; fill = NEXT section bg */
+.wave-sep{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;line-height:0;pointer-events:none}
+.wave-sep svg{display:block;width:100%;height:100%}
+.has-wave{position:relative}
+@media(max-width:700px){.wave-sep{height:42px}}
 /* BLOG */
 .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
@@ -606,7 +621,7 @@ footer ul a:hover{color:#fff}
 </section>
 
 <!-- ============================ VIDEO ============================ -->
-<section class="sec" id="video">
+<section class="sec dark-sec angled" id="video">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="kicker">הציגו את האתר שלכם לקהל האיכותי ביותר</span><h2>חברת קידום אתרים שמייצרת תוצאות</h2><p>דמיינו את האתר שלכם מופיע בדיוק היכן שהלקוחות האיכותיים ביותר מחפשים את השירות או המוצר שלכם — בראש תוצאות החיפוש בגוגל או כהמלצה מובילה ב-ChatGPT. אם אתם שם, אתם מרוויחים את הלקוחות האיכותיים והחמים ביותר.</p></div>
     <div class="video-wrap reveal" data-d="1">
@@ -670,7 +685,7 @@ footer ul a:hover{color:#fff}
 </section>
 
 <!-- ============================ TESTIMONIALS ============================ -->
-<section class="sec">
+<section class="sec has-wave">
   <div class="wrap">
     <div class="t-top">
       <div class="sec-head reveal" style="margin-bottom:0"><span class="kicker">מה הלקוחות אומרים</span><h2>אנשים שכבר בצמרת</h2></div>
@@ -693,10 +708,11 @@ footer ul a:hover{color:#fff}
       </div>
     </div>
   </div>
+  <div class="wave-sep" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 V32 C240,4 480,4 720,24 C960,44 1200,46 1440,20 V70 Z" fill="#e7ebfa"/></svg></div>
 </section>
 
 <!-- ============================ WHY / DIFFERENCE ============================ -->
-<section class="sec">
+<section class="sec tint">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="kicker">איכות עושה את ההבדל</span><h2>חברת קידום אתרים איכותית — ההבדל בין כישלון להצלחה</h2></div>
     <div class="prose reveal" data-d="1">
@@ -709,7 +725,7 @@ footer ul a:hover{color:#fff}
 </section>
 
 <!-- ============================ DIFFERENTIATORS ============================ -->
-<section class="sec" style="padding-top:0">
+<section class="sec tint" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="kicker">למה מסה מדיה</span><h2>חברה לקידום אתרים שעובדת אחרת</h2></div>
     <div class="diff">
