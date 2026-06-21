@@ -75,10 +75,10 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .hero{padding:60px 0 80px;overflow:hidden;position:relative}
 .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(34% 46% at 82% 8%,rgba(18,194,233,.13),transparent 70%),radial-gradient(40% 48% at 12% 96%,rgba(142,45,226,.11),transparent 70%);animation:meshDrift 22s ease-in-out infinite}
 @keyframes meshDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-2%,2%) scale(1.07)}}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;position:relative;z-index:1}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.8rem;letter-spacing:.01em;padding:.45em .9em;border-radius:999px;background:var(--grad-soft);border:1px solid rgba(79,91,242,.18);color:#3a3f8f;margin-bottom:22px}
 .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--grad)}
-.hero h1{font-size:clamp(2rem,4.2vw,3.3rem);font-weight:900;line-height:1.16;margin-bottom:18px}
+.hero h1{font-size:clamp(1.7rem,3.3vw,2.55rem);font-weight:900;line-height:1.22;margin-bottom:18px}
 .hero h1 em{font-style:normal}
 .hero p.lead{font-size:clamp(1rem,1.3vw,1.14rem);color:var(--ink-2);max-width:46ch;margin-bottom:28px}
 .hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
@@ -94,11 +94,10 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
 .card-search{top:14px;inset-inline-end:0;width:320px;animation-delay:-1.2s}
 .card-ai{bottom:10px;inset-inline-start:0;width:320px;animation-delay:-4s}
-.card-metric{top:118px;inset-inline-end:22px;width:214px;padding:15px 17px;animation-delay:-2.6s}
-.card-metric .cr-title{font-size:.72rem;font-weight:800;color:var(--muted);margin-bottom:7px;letter-spacing:.02em}
-.card-metric .cr-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:5px 0;border-top:1px solid var(--line)}
-.card-metric .cr-row b{font-family:"Heebo";font-weight:900;font-size:1.18rem;flex:none}
-.card-metric .cr-row span{font-size:.72rem;color:var(--ink-2);font-weight:600;text-align:start}
+.mini-stats{position:absolute;top:150px;inset-inline:0;display:flex;gap:11px;justify-content:center;animation:cardFloat 6.5s ease-in-out infinite;animation-delay:-2.6s}
+.mini-stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:15px 13px;text-align:center;min-width:96px}
+.mini-stat b{font-family:"Heebo";font-weight:900;font-size:1.5rem;display:block;line-height:1}
+.mini-stat span{font-size:.7rem;color:var(--muted);font-weight:700;display:block;margin-top:5px;white-space:nowrap}
 .search-bar{display:flex;align-items:center;gap:10px;background:var(--bg-cool);border-radius:999px;padding:10px 15px;font-size:.9rem;color:var(--ink-2);font-weight:600}
 .search-bar .mg{width:15px;height:15px;border:2px solid var(--c-blue);border-radius:50%;position:relative;flex:none}
 .search-bar .mg::after{content:"";position:absolute;width:7px;height:2px;background:var(--c-blue);transform:rotate(45deg);bottom:-2px;inset-inline-start:10px}
@@ -119,17 +118,14 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 /* ============================ CLIENTS MARQUEE ============================ */
 .clients{padding:26px 0 8px}
 .clients .cap{text-align:center;color:var(--ink-2);font-weight:800;font-size:clamp(1.05rem,1.7vw,1.32rem);margin-bottom:26px}
-.tools-strip{margin-top:40px}
-.tools-cap{text-align:center;color:var(--muted);font-weight:700;font-size:.82rem;letter-spacing:.03em;margin-bottom:18px}
-.tools-marquee{overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.tools-track{display:flex;align-items:center;width:max-content;animation:scroll 40s linear infinite}
-.tools-marquee:hover .tools-track{animation-play-state:paused}
-.tlogo{display:inline-flex;align-items:center;gap:11px;margin-inline-start:50px;color:var(--ink-2);font-weight:800;font-size:1.04rem;white-space:nowrap;opacity:.7;transition:opacity .3s,color .3s}
+.tools-strip{margin-top:54px;border-top:1px solid var(--line);padding-top:34px}
+.tools-cap{text-align:center;color:var(--ink-2);font-weight:700;font-size:.95rem;margin-bottom:22px}
+.tools-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 40px}
+.tlogo{display:inline-flex;align-items:center;gap:10px;color:var(--ink-2);font-weight:800;font-size:1.02rem;white-space:nowrap;opacity:.8;transition:opacity .3s,color .3s}
 .tlogo:hover{opacity:1;color:var(--ink)}
-.tlogo svg{width:27px;height:27px;flex:none}
+.tlogo svg{width:26px;height:26px;flex:none}
 .tlogo .si{fill:currentColor}
 .tlogo .lu{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-@media(prefers-reduced-motion:reduce){.tools-track{animation:none}}
 .logo-marquee{overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .logo-track{display:flex;align-items:center;width:max-content;animation:scroll 48s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
@@ -143,6 +139,8 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .sec{padding:90px 0}
 .sec-head{max-width:680px;margin-bottom:50px}
 .sec-head.center{margin-inline:auto;text-align:center}
+.sec-head.wide{max-width:none;margin-inline:auto;text-align:center}
+.sec-head.wide p{max-width:760px;margin-inline:auto}
 .kicker{font-weight:800;font-size:.84rem;letter-spacing:.05em;color:var(--c-blue);margin-bottom:13px;display:inline-block}
 .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.95rem);font-weight:900;line-height:1.22;margin-bottom:16px}
 .sec-head p{font-size:1.1rem;line-height:1.75;color:var(--ink-2)}
@@ -165,8 +163,9 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .tile.feat .ic{background:rgba(255,255,255,.14)}
 .tile.feat p{color:rgba(255,255,255,.78)}
 .tile.feat .more{color:#7fe3ff}
-.tile.feat .badge{position:absolute;top:22px;inset-inline-start:28px;font-size:.72rem;font-weight:800;letter-spacing:.03em;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff}
-.tile.feat .ic{margin-top:34px}
+.tile.feat .badge{font-size:.72rem;font-weight:800;letter-spacing:.03em;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;white-space:nowrap}
+.feat-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.feat-top .ic{margin-bottom:0}
 .tile.feat .glow{position:absolute;inset-inline-end:-60px;bottom:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(18,194,233,.6),transparent 70%);filter:blur(30px)}
 
 /* GEO */
@@ -279,7 +278,7 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .plan.pop .feats li{color:rgba(255,255,255,.85)}
 .plan .feats .ck{color:var(--c-blue);font-weight:900;flex:none}
 .plan.pop .feats .ck{color:#7fe3ff}
-.plan .ribbon{align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.03em;padding:5px 12px;border-radius:999px;background:var(--grad);color:#fff;margin-bottom:14px}
+.plan .ribbon{position:absolute;top:-13px;inset-inline:0;margin-inline:auto;width:fit-content;font-size:.72rem;font-weight:800;letter-spacing:.03em;padding:6px 14px;border-radius:999px;background:var(--grad);color:#fff;box-shadow:0 8px 20px -5px rgba(79,91,242,.55)}
 .plan .btn{width:100%;justify-content:center;margin-top:4px}
 .plan.pop .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.2)}
 .price-note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:24px}
@@ -498,7 +497,7 @@ footer ul a:hover{color:#fff}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow reveal"><span class="dot"></span> שותפה מוסמכת של גוגל · פעילים מאז 2014</span>
-      <h1 class="reveal" data-d="1">חברת קידום אתרים <em class="grad-text">SEO &amp; GEO</em><br>להוביל את תוצאות החיפוש בגוגל ובמנועי ה-AI</h1>
+      <h1 class="reveal" data-d="1">חברת קידום אתרים <em class="grad-text">SEO &amp; GEO</em> להוביל את תוצאות החיפוש בגוגל ובמנועי ה-AI</h1>
       <p class="lead reveal" data-d="2">היי, אנחנו מסה מדיה דיגיטל, סוכנות בוטיק המתמחה בהגדלת החשיפה של חברות וארגונים בתוצאות החיפוש של גוגל ובמנועי בינה מלאכותית. אנו משלבים בין קידום אתרים (SEO) לבין אסטרטגיות מתקדמות להגדלת הנראות במנועי AI (GEO), כדי לייצר צמיחה אמיתית, לחזק את הנוכחות הדיגיטלית שלכם ולהשיג את היעדים העסקיים החשובים לכם.</p>
       <div class="hero-cta reveal" data-d="2">
         <a href="#contact" class="btn btn-primary">בואו נדבר על האתר שלכם <span class="arr">←</span></a>
@@ -520,11 +519,10 @@ footer ul a:hover{color:#fff}
           <div class="row dim"><span class="rank">3</span><span class="bar" style="max-width:140px"></span></div>
         </div>
       </div>
-      <div class="glass-card card-metric">
-        <div class="cr-title">תוצאות לקוחות נבחרות</div>
-        <div class="cr-row"><b class="grad-text">+530%</b><span>Merkel · תנועה אורגנית</span></div>
-        <div class="cr-row"><b class="grad-text">+436%</b><span>DNG Medical</span></div>
-        <div class="cr-row"><b class="grad-text">645K+</b><span>מדיקו · גולשים בשנה</span></div>
+      <div class="mini-stats reveal">
+        <div class="mini-stat"><b class="grad-text">+436%</b><span>DNG Medical</span></div>
+        <div class="mini-stat"><b class="grad-text">+220%</b><span>Outdoor</span></div>
+        <div class="mini-stat"><b class="grad-text">+104%</b><span>בינת תקשורת</span></div>
       </div>
       <div class="glass-card card-ai">
         <div class="ai-head"><span class="spark">✦</span> תשובת AI</div>
@@ -556,15 +554,13 @@ footer ul a:hover{color:#fff}
   </div>
   <div class="tools-strip reveal" data-d="2">
     <p class="tools-cap">הכלים והטכנולוגיות שאיתם אנחנו עובדים</p>
-    <div class="tools-marquee">
-      <div class="tools-track" id="toolTrack">
+    <div class="tools-row">
         <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></svg>Google Analytics</span>
         <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M8.548 1.156L6.832 2.872v1.682h1.716zm0 3.398v.035H6.832v-.035H3.386L0 7.844v3.577h2.826V8.94c0-.525.429-.954.954-.954h16.476c.525 0 .954.43.954.954v2.48h2.754V7.844l-3.386-3.29H17.3v.035h-1.717v-.035zm7.035 0H17.3V2.872l-1.717-1.716zM8.679 1.188V2.84h6.773V1.188zm11.471 7.07a.834.834 0 00-.132.01l-.543.002c-5.216.014-10.432-.008-15.648.01-.435-.063-.794.436-.716.883v2.264h17.812c-.016-.888.045-1.782-.034-2.666-.104-.342-.427-.502-.739-.502zm-15.422.634a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zm2.134 0a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zM.036 11.645v9.156c0 1.05.858 1.908 1.907 1.908h.883V11.645zm21.174 0v11.064h.882c1.05 0 1.908-.858 1.908-1.908v-9.156zM4.057 13.133v6.85h6.137v-6.85zm13.243.021v3.777l-1.708.977-1.708-.977v-3.758a4.006 4.006 0 000 7.23v2.441h3.457v-2.442a4.006 4.006 0 00-.041-7.248zm-13.243 8.26v1.43h7.925v-1.43z"/></svg>Search Console</span>
         <span class="tlogo"><svg viewBox="0 0 24 24" class="lu" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Ahrefs</span>
         <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/></svg>Google Ads</span>
         <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M12.003 0a3 3 0 0 0-2.121 5.121l6.865 6.865-4.446 4.541 1.745 1.836a3.432 3.432 0 0 1 .7.739l.012.011-.001.002a3.432 3.432 0 0 1 .609 1.953 3.432 3.432 0 0 1-.09.78l7.75-7.647c.031-.029.067-.05.098-.08.023-.023.038-.052.06-.076a2.994 2.994 0 0 0-.06-4.166l-9-9A2.99 2.99 0 0 0 12.003 0zM8.63 2.133L.88 9.809a2.998 2.998 0 0 0 0 4.238l7.7 7.75a3.432 3.432 0 0 1-.077-.729 3.432 3.432 0 0 1 3.431-3.431 3.432 3.432 0 0 1 .826.101l-5.523-5.81 4.371-4.373-2.08-2.08c-.903-.904-1.193-2.183-.898-3.342zm3.304 16.004a2.932 2.932 0 0 0-2.931 2.931A2.932 2.932 0 0 0 11.934 24a2.932 2.932 0 0 0 2.932-2.932 2.932 2.932 0 0 0-2.932-2.931z"/></svg>Google Tag Manager</span>
         <span class="tlogo"><svg viewBox="0 0 24 24" class="lu" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>Google Merchant</span>
-      </div>
     </div>
   </div>
 </section>
@@ -595,7 +591,7 @@ footer ul a:hover{color:#fff}
 <!-- ============================ SERVICES ============================ -->
 <section class="sec" id="services" style="padding-top:20px">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head wide reveal">
       <span class="kicker">השירותים שלנו</span>
       <h2>שירותי קידום אתרים ודיגיטל, הכל תחת קורת גג אחת</h2>
       <p>היום כבר לא מחפשים רק בגוגל, אלא שואלים גם את ChatGPT, את Gemini ואת Perplexity. כחברה לקידום אתרים שמשלבת SEO ו-GEO, נדאג שהעסק שלכם יופיע בדיוק במקום שבו הלקוחות מחפשים אתכם, עם קידום אורגני שמביא תוצאות מדידות.</p>
@@ -607,8 +603,8 @@ footer ul a:hover{color:#fff}
         <span class="more">לפרטים <span class="arr">←</span></span>
       </a>
       <a class="tile feat reveal" data-d="1" href="https://www.masamedia.co.il/ai-seo/geo/">
-        <span class="badge">הדבר הבא, כבר כאן</span><div class="glow"></div>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></div><h3>GEO · אופטימיזציה למנועי AI</h3>
+        <div class="glow"></div>
+        <div class="feat-top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></div><span class="badge">הדבר הבא, כבר כאן</span></div><h3>GEO · אופטימיזציה למנועי AI</h3>
         <p>נוכחות בתוך התשובות של ChatGPT, Gemini ו-AI Overviews בגוגל, כך שהמותג שלכם יהיה זה שה-AI מצטט וממליץ.</p>
         <span class="more">איך זה עובד <span class="arr">←</span></span>
       </a>
@@ -683,7 +679,7 @@ footer ul a:hover{color:#fff}
 <!-- ============================ PROCESS ============================ -->
 <section class="sec" id="process">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="kicker">איך עובדים איתנו</span><h2>תהליך ברור, מהאבחון ועד הצמרת</h2></div>
+    <div class="sec-head wide reveal"><span class="kicker">איך עובדים איתנו</span><h2>תהליך ברור, מהאבחון ועד הצמרת</h2></div>
     <div class="steps">
       <div class="step reveal"><div class="no">01</div><h3>אבחון ואסטרטגיה</h3><p>מחקר מילות מפתח ומתחרים, ניתוח האתר ובניית תוכנית עבודה מותאמת.</p></div>
       <div class="step reveal" data-d="1"><div class="no">02</div><h3>אופטימיזציה ותוכן</h3><p>שיפורים טכניים ותוכן איכותי שמדבר גם לגוגל וגם למנועי ה-AI.</p></div>
@@ -717,47 +713,47 @@ footer ul a:hover{color:#fff}
     <div class="sec-head reveal"><span class="kicker">תוצאות אמיתיות</span><h2>מספרים שמדברים בעד עצמם</h2><p>תוצאות אמיתיות של לקוחות שלנו. למקרי הבוחן המלאים, קפצו לעמוד הקייס סטאדיז.</p></div>
     <div class="results">
       <div class="res-card reveal">
-        <div class="tag"><img src="assets/clients/merkel.jpg" alt="Merkel"> Merkel Technologies</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="530" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
-        <div class="desc">״שיפור של 530% בכמות הכניסות האורגניות לאתר וטרנספורמציה מוחלטת של נראות החברה בתוצאות החיפוש״</div>
+        <div class="tag">בינת תקשורת מחשבים</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="104" data-suffix="%">0</span></span><span class="unit">מילות מפתח בעמ׳ 1</span></div>
+        <div class="desc">״שינוי אדיר בתקופת זמן קצרה על פני מגוון תחומים תחרותיים מאוד״, והופעות ב-93 שאילתות AI Overview.</div>
       </div>
       <div class="res-card reveal" data-d="1">
-        <div class="tag">מחמדי · רפואה וטרינרית</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="750" data-suffix="%">0</span></span><span class="unit">צמיחה בחצי שנה</span></div>
-        <div class="desc">״מאפס מבקרים אורגניים באתר ל-1,579 בחודש״, קידום הוליסטי המשלב אורגני, ממומן ופייסבוק.</div>
-      </div>
-      <div class="res-card reveal" data-d="2">
         <div class="tag">DNG Medical</div>
         <div class="metric"><span class="big grad-text">+<span data-count="436" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
         <div class="desc">״מעוד קליניקה להשתלת שיער, לשם דבר בתחום״. דירוג בטופ 10 זינק מ-23 ל-105 מילות מפתח.</div>
       </div>
-      <div class="res-card reveal">
-        <div class="tag">עו״ד עמית ורד</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="300" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
-        <div class="desc">״ממצב של כ-5,500–6,500 מבקרים אורגניים מדי חודש ללמעלה מ-21,000 מבקרים״, והתאוששות מעונש גוגל.</div>
-      </div>
-      <div class="res-card reveal" data-d="1">
+      <div class="res-card reveal" data-d="2">
         <div class="tag">Outdoor · קבוצת אאוטדור</div>
         <div class="metric"><span class="big grad-text">+<span data-count="220" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
-        <div class="desc">״לראשונה, רואים תוצאות משמעותיות מההשקעה בשיווק הדיגיטלי שמחזירה את עצמה בענק״. אורגני + ממומן.</div>
-      </div>
-      <div class="res-card reveal" data-d="2">
-        <div class="tag">פורטל הבריאות מדיקו</div>
-        <div class="metric"><span class="big grad-text"><span data-count="645">0</span>K+</span><span class="unit">גולשים חדשים בשנה</span></div>
-        <div class="desc">״יותר מ-645 אלף גולשים אורגניים חדשים במהלך השנה״, דירוג ל-30+ מונחים רפואיים מובילים.</div>
+        <div class="desc">״לראשונה, רואים תוצאות משמעותיות מההשקעה בשיווק הדיגיטלי שמחזירה את עצמה בענק״. אורגני וממומן.</div>
       </div>
       <div class="res-card reveal">
-        <div class="tag">תקשוב</div>
-        <div class="metric"><span class="big grad-text"><span data-count="14784">0</span></span><span class="unit">לידים בשנה</span></div>
-        <div class="desc">״14,784 לידים בשנה במחיר של ₪8.40 כל אחד״, קמפיין ממומן ממוקד לארבעה קהלי יעד.</div>
+        <div class="tag"><img src="assets/clients/reshet-hagana.jpg" alt="רשת הגנה"> רשת הגנה</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="71" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
+        <div class="desc">״עלייה של 71% בטראפיק האורגני וביסוס השליטה בתחום״, לצד שיפורים טכניים מקיפים באתר.</div>
       </div>
       <div class="res-card reveal" data-d="1">
-        <div class="tag"><img src="assets/clients/triple-c.png" alt="Triple C"> טריפל סי</div>
-        <div class="metric"><span class="big grad-text">+<span data-count="154" data-suffix="%">0</span></span><span class="unit">שיחות נכנסות</span></div>
-        <div class="desc">״הוזלה דרמטית בעלויות הלידים במקביל לצמיחה אדירה בכמות הפניות ושיפור משמעותי באיכותן״, גוגל + פייסבוק.</div>
+        <div class="tag"><img src="assets/clients/merkel.jpg" alt="Merkel"> Merkel Technologies</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="530" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
+        <div class="desc">״שיפור של 530% בכמות הכניסות האורגניות לאתר וטרנספורמציה מוחלטת של נראות החברה בתוצאות החיפוש״.</div>
+      </div>
+      <div class="res-card reveal" data-d="2">
+        <div class="tag">Muscle &amp; Motion · בינלאומי</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="52" data-suffix="%">0</span></span><span class="unit">מבקרים ייחודיים</span></div>
+        <div class="desc">״עלייה דרמטית בטראפיק ובכמות ההורדות של האפליקציות״, מ-105K ל-160K מבקרים ייחודיים בשנה.</div>
+      </div>
+      <div class="res-card reveal">
+        <div class="tag">דליס</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="77" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
+        <div class="desc">״עצירת הנפילה של האתר והיפוך מגמה מוחלט תוך שנה של קידום אורגני״, 110 מילות מפתח חדשות בעמ׳ 1.</div>
+      </div>
+      <div class="res-card reveal" data-d="1">
+        <div class="tag">ביאמבה</div>
+        <div class="metric"><span class="big grad-text">+<span data-count="183" data-suffix="%">0</span></span><span class="unit">תנועה אורגנית</span></div>
+        <div class="desc">״עלייה אקספוננציאלית של 183% בטראפיק האורגני לאחר שנה של פעילות״, כ-36,000 לקוחות פוטנציאליים בשנה.</div>
       </div>
       <div class="res-card cta reveal">
-        <h3>עוד 13 מקרי בוחן</h3>
+        <h3>עוד 10 מקרי בוחן</h3>
         <p>רקורד עשיר של לקוחות שהגיעו לעמוד הראשון בתחומים תחרותיים, בישראל ובעולם, משנת 2014. אלו רק כמה מהבולטים.</p>
         <a class="more" href="https://www.masamedia.co.il/casestudy/">לכל 18 מקרי הבוחן <span class="arr">←</span></a>
       </div>
@@ -1015,8 +1011,6 @@ document.querySelectorAll('[data-count]').forEach(el=>countIO.observe(el));
 /* duplicate logo track for seamless marquee */
 const track=document.getElementById('logoTrack');
 if(track){track.innerHTML+=track.innerHTML;}
-const toolTrack=document.getElementById('toolTrack');
-if(toolTrack){toolTrack.innerHTML=toolTrack.innerHTML+toolTrack.innerHTML+toolTrack.innerHTML+toolTrack.innerHTML;}
 /* duplicate review rows for seamless marquee */
 ['reviewRow1','reviewRow2'].forEach(id=>{const r=document.getElementById(id);if(r)r.innerHTML+=r.innerHTML;});
 
