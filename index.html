@@ -82,6 +82,13 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .hero h1 em{font-style:normal}
 .hero p.lead{font-size:clamp(1rem,1.3vw,1.14rem);color:var(--ink-2);max-width:46ch;margin-bottom:28px}
 .hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+.audit{display:flex;gap:8px;align-items:stretch;max-width:480px;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:6px;box-shadow:0 14px 40px -16px rgba(79,91,242,.32);transition:border-color .2s,box-shadow .2s}
+.audit:focus-within{border-color:var(--brand-2);box-shadow:0 16px 44px -14px rgba(79,91,242,.46)}
+.audit-in{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:1rem;font-weight:600;color:var(--ink);padding:0 14px;text-align:right}
+.audit-in::placeholder{color:var(--muted);font-weight:500}
+.audit .btn-primary{white-space:nowrap;padding:13px 20px}
+.audit-sub{margin-top:13px;color:var(--muted);font-size:.9rem;font-weight:600}
+.audit-sub a{color:var(--brand-2);font-weight:700}
 .trust{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:600}
 .stars{color:#F5A623;letter-spacing:1px;font-size:.98rem}
 .trust .div{width:1px;height:16px;background:var(--line-2)}
@@ -525,12 +532,13 @@ footer ul a:hover{color:#fff}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow reveal"><span class="dot"></span> שותפה מוסמכת של גוגל · פעילים מאז 2014</span>
-      <h1 class="reveal" data-d="1">חברת קידום אתרים <em class="grad-text">SEO &amp; GEO</em><br>להוביל את תוצאות החיפוש בגוגל ובמנועי ה-AI</h1>
-      <p class="lead reveal" data-d="2">היי, אנחנו מסה מדיה דיגיטל, סוכנות בוטיק המתמחה בהגדלת החשיפה של חברות וארגונים בתוצאות החיפוש של גוגל ובמנועי בינה מלאכותית. אנו משלבים בין קידום אתרים (SEO) לבין אסטרטגיות מתקדמות להגדלת הנראות במנועי AI (GEO), כדי לייצר צמיחה אמיתית, לחזק את הנוכחות הדיגיטלית שלכם ולהשיג את היעדים העסקיים החשובים לכם.</p>
-      <div class="hero-cta reveal" data-d="2">
-        <a href="#contact" class="btn btn-primary">בואו נדבר על האתר שלכם <span class="arr">←</span></a>
-        <a href="#results" class="btn btn-ghost">לראות תוצאות</a>
-      </div>
+      <h1 class="reveal" data-d="1">חברת קידום אתרים<br>שמביאה <em class="grad-text">לקוחות</em>, לא רק תנועה</h1>
+      <p class="lead reveal" data-d="2">SEO ו-GEO שממצבים אתכם ראשונים בגוגל ובמנועי ה-AI, והופכים חיפושים ללקוחות משלמים.</p>
+      <form class="audit reveal" data-d="2" id="auditForm">
+        <input type="url" class="audit-in" id="auditUrl" placeholder="הזינו כתובת אתר לאבחון חינם" aria-label="כתובת האתר שלכם" required>
+        <button type="submit" class="btn btn-primary">אבחון SEO חינם <span class="arr">←</span></button>
+      </form>
+      <div class="audit-sub reveal" data-d="2">ניתוח מותאם של מצב הקידום שלכם, ללא עלות וללא התחייבות · <a href="#results">לראות תוצאות אמיתיות</a></div>
       <div class="trust reveal" data-d="3">
         <span><span class="stars">★★★★★</span> 5.0 · 69 ביקורות בגוגל</span>
         <span class="div"></span>
@@ -1103,6 +1111,8 @@ document.querySelectorAll('.res-card:not(.cta)').forEach(c=>{
 })();
 
 function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='תודה! נחזור אליכם בקרוב ✓';b.style.pointerEvents='none';return false;}
+const auditForm=document.getElementById('auditForm');
+if(auditForm)auditForm.addEventListener('submit',e=>{e.preventDefault();const url=document.getElementById('auditUrl').value.trim();const msg=document.getElementById('f-msg');if(msg&&url)msg.value='אבחון לאתר: '+url;document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>{const n=document.getElementById('f-name');if(n)n.focus({preventScroll:true});},650);});
 </script>
 </body>
 </html>
