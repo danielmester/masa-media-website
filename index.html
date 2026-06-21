@@ -106,17 +106,17 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .trust{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:600}
 .stars{color:#F5A623;letter-spacing:1px;font-size:.98rem}
 .trust .div{width:1px;height:16px;background:var(--line-2)}
-.hero-visual{position:relative;height:500px}
+.hero-visual{position:relative;height:548px}
 .orb{position:absolute;border-radius:50%;filter:blur(46px);opacity:.5;animation:float 14s ease-in-out infinite}
 .orb.a{width:320px;height:320px;background:radial-gradient(circle,#12C2E9,transparent 70%);top:-30px;inset-inline-start:-20px}
 .orb.b{width:300px;height:300px;background:radial-gradient(circle,#8E2DE2,transparent 70%);bottom:-20px;inset-inline-end:-10px;animation-delay:-5s}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(0,-26px)}}
 .glass-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);padding:19px 21px;animation:cardFloat 6.5s ease-in-out infinite}
 @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
-.founder-disc{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 50% 42%,rgba(79,91,242,.22),rgba(142,45,226,.12) 58%,transparent 72%);z-index:0}
-.founder-img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:494px;width:auto;max-width:none;z-index:1;filter:drop-shadow(0 30px 50px rgba(40,30,80,.45));pointer-events:none}
-.card-search{top:20px;right:-20px;left:auto;width:212px;z-index:3;animation-delay:-1.2s}
-.rating-chip{position:absolute;bottom:44px;left:-14px;z-index:3;display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 15px;box-shadow:var(--shadow-lg);animation:cardFloat 6.5s ease-in-out infinite;animation-delay:-3.4s}
+.founder-disc{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:372px;height:372px;border-radius:50%;background:radial-gradient(circle at 50% 42%,rgba(79,91,242,.22),rgba(142,45,226,.12) 58%,transparent 72%);z-index:0}
+.founder-img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:544px;width:auto;max-width:none;z-index:1;filter:drop-shadow(0 30px 50px rgba(40,30,80,.45));pointer-events:none}
+.card-ai{bottom:42px;left:-22px;right:auto;width:246px;z-index:3;animation-delay:-1.2s}
+.rating-chip{position:absolute;top:30px;right:-10px;left:auto;z-index:3;display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:9px 14px;box-shadow:var(--shadow-lg);animation:cardFloat 6.5s ease-in-out infinite;animation-delay:-3.4s}
 .rating-chip .gmark{width:22px;height:22px}
 .rating-chip b{font-family:"Ploni","Heebo";font-weight:900;font-size:1.3rem;line-height:1}
 .rating-chip .stars{color:#FBBC05;font-size:.82rem;letter-spacing:1px}
@@ -375,8 +375,8 @@ footer ul a:hover{color:#fff}
 @media(max-width:1024px){nav.links{gap:16px;font-size:.88rem}.nav-phone{display:none}}
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr;gap:38px}
-  .hero-visual{height:474px;max-width:440px;margin-inline:auto;width:100%}
-  .founder-img{height:466px}.founder-disc{width:306px;height:306px}
+  .hero-visual{height:516px;max-width:450px;margin-inline:auto;width:100%}
+  .founder-img{height:512px}.founder-disc{width:330px;height:330px}
   .geo-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
   .stats{grid-template-columns:repeat(2,1fr);gap:32px}
   .bento{grid-template-columns:repeat(2,1fr)}
@@ -577,13 +577,9 @@ footer ul a:hover{color:#fff}
       <div class="orb a"></div><div class="orb b"></div>
       <span class="founder-disc"></span>
       <img src="assets/daniel-master.png" alt="דניאל מסטר, מייסד ובעלים של מסה מדיה דיגיטל" class="founder-img" />
-      <div class="glass-card card-search">
-        <div class="search-bar"><span class="mg"></span> חברת קידום אתרים מומלצת</div>
-        <div class="serp">
-          <div class="row"><span class="rank">1</span><span class="name">מסה מדיה</span><span class="bar" style="max-width:60px"></span></div>
-          <div class="row dim"><span class="rank">2</span><span class="bar"></span></div>
-          <div class="row dim"><span class="rank">3</span><span class="bar" style="max-width:140px"></span></div>
-        </div>
+      <div class="glass-card card-ai">
+        <div class="ai-head"><span class="spark">✦</span> תשובת AI</div>
+        <div class="ai-body">בין חברות קידום האתרים המובילות בישראל בולטת <b>מסה מדיה</b>, המתמחה בקידום אורגני ובאופטימיזציה למנועי בינה מלאכותית.</div>
       </div>
       <div class="rating-chip"><svg class="gmark" aria-hidden="true"><use href="#gG"/></svg><b>5.0</b><span class="stars">★★★★★</span></div>
     </div>
