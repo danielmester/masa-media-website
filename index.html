@@ -50,7 +50,7 @@ header.nav.scrolled{padding:7px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;gap:14px;padding-inline:8px 10px;background:rgba(255,255,255,.6);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border:1px solid rgba(255,255,255,.55);border-radius:999px;box-shadow:0 6px 24px -12px rgba(20,28,60,.18),inset 0 1px 0 rgba(255,255,255,.5);transition:box-shadow .35s var(--ease),background .35s}
 header.nav.scrolled .nav-inner{background:rgba(255,255,255,.85);box-shadow:0 14px 44px -16px rgba(20,28,60,.30),inset 0 1px 0 rgba(255,255,255,.6);border-color:var(--line)}
 .brand{display:flex;align-items:center;padding-inline-start:6px}
-.logo-badge{display:inline-flex;align-items:center;justify-content:center;background:#0b0e22;border-radius:999px;padding:8px 15px;transition:transform .3s var(--ease)}
+.logo-badge{display:inline-flex;align-items:center;justify-content:center;background:#1a0f3a;border-radius:999px;padding:8px 15px;transition:transform .3s var(--ease)}
 .brand:hover .logo-badge{transform:translateY(-1px) scale(1.02)}
 .logo-badge img{height:33px;width:auto;display:block}
 nav.links{display:flex;gap:3px;font-weight:600;font-size:.93rem;color:var(--ink-2);align-items:center}
@@ -117,16 +117,22 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .spark-line{height:28px;margin-top:9px}
 
 /* ============================ CLIENTS MARQUEE ============================ */
-.clients{padding:26px 0 8px}
+.clients{padding:58px 0 8px}
 .clients .cap{text-align:center;color:var(--ink-2);font-weight:800;font-size:clamp(1.05rem,1.7vw,1.32rem);margin-bottom:26px}
 .tools-strip{text-align:center}
 .tools-cap{color:var(--muted);font-weight:700;font-size:.92rem;margin-bottom:22px}
 .tools-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px}
 .tlogo{display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:800;font-size:.95rem;color:var(--ink);box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
 .tlogo:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:transparent}
-.tlogo svg{width:22px;height:22px;flex:none}
-.tlogo .si{fill:#4F5BF2}
-.tlogo .lu{fill:none;stroke:#4F5BF2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tlogo svg{width:28px;height:28px;flex:none;color:#4F5BF2}
+.tlogo .si{fill:currentColor}
+.tlogo .lu{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tools-row .tlogo:nth-child(1) svg{color:#E37400}
+.tools-row .tlogo:nth-child(2) svg{color:#458CF5}
+.tools-row .tlogo:nth-child(3) svg{color:#054ADA}
+.tools-row .tlogo:nth-child(4) svg{color:#4285F4}
+.tools-row .tlogo:nth-child(5) svg{color:#246FDB}
+.tools-row .tlogo:nth-child(6) svg{color:#1A73E8}
 .logo-marquee{overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .logo-track{display:flex;align-items:center;width:max-content;animation:scroll 48s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
@@ -142,7 +148,10 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .sec-head.center{margin-inline:auto;text-align:center}
 .sec-head.wide{max-width:none;margin-inline:auto;text-align:center}
 .sec-head.wide p{max-width:760px;margin-inline:auto}
-.kicker{font-weight:800;font-size:.84rem;letter-spacing:.05em;color:var(--c-blue);margin-bottom:13px;display:inline-block}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.82rem;letter-spacing:.02em;color:#3a3f8f;background:var(--grad-soft);border:1px solid rgba(79,91,242,.2);padding:.5em 1em;border-radius:999px;margin-bottom:18px}
+.kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--grad);flex:none}
+.geo .kicker,.sec.dark-sec .kicker{background:rgba(127,227,255,.12);border-color:rgba(127,227,255,.28)}
+.geo .kicker::before,.sec.dark-sec .kicker::before{background:#7fe3ff}
 .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.95rem);font-weight:900;line-height:1.22;margin-bottom:16px}
 .sec-head p{font-size:1.1rem;line-height:1.75;color:var(--ink-2)}
 
@@ -170,11 +179,11 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .tile.feat .glow{position:absolute;inset-inline-end:-60px;bottom:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(18,194,233,.6),transparent 70%);filter:blur(30px)}
 
 /* GEO */
-.geo{background:linear-gradient(180deg,#0b0e22,#11152e);color:#fff;border-radius:34px;overflow:hidden;position:relative}
+.geo{background:linear-gradient(180deg,#1a0f3a,#11152e);color:#fff;border-radius:34px;overflow:hidden;position:relative}
 .geo .wrap{padding-block:80px;position:relative;z-index:2}
 .geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
 .geo .kicker{color:#7fe3ff}
-.geo h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:900;margin-bottom:16px}
+.geo h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;margin-bottom:16px;text-wrap:balance}
 .geo p.lead{color:rgba(255,255,255,.74);font-size:1.06rem;margin-bottom:24px}
 .geo .engines{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
 .engine{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-weight:700;font-size:.88rem}
@@ -296,11 +305,12 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 
 /* CONTACT */
 .contact{padding:90px 0}
-.contact-card{background:linear-gradient(120deg,#0b0e22,#241a52 60%,#3a1b6b);border-radius:34px;padding:60px 52px;color:#fff;position:relative;overflow:hidden}
+.contact-card{background:linear-gradient(120deg,#1a0f3a,#241a52 60%,#3a1b6b);border-radius:34px;padding:60px 52px;color:#fff;position:relative;overflow:hidden}
 .contact-card .mesh{position:absolute;inset:0;opacity:.6;background:radial-gradient(40% 70% at 90% 10%,rgba(18,194,233,.4),transparent),radial-gradient(50% 60% at 5% 100%,rgba(142,45,226,.45),transparent)}
-.contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:48px;align-items:start}
 .contact h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;margin-bottom:15px}
-.contact .lead{color:rgba(255,255,255,.78);font-size:1.06rem;margin-bottom:28px;max-width:38ch}
+.contact .lead{color:rgba(255,255,255,.8);font-size:1.08rem;margin-bottom:28px;max-width:none}
+.contact h2{text-wrap:balance}
 .cinfo{display:flex;flex-direction:column;gap:16px}
 .cinfo a,.cinfo div{display:flex;align-items:center;gap:13px;color:rgba(255,255,255,.9);font-weight:600}
 .cinfo .ci{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex:none;font-size:1.05rem}
@@ -313,7 +323,7 @@ form.lead-form .btn{justify-content:center;margin-top:6px}
 .form-note{font-size:.8rem;color:rgba(255,255,255,.6);text-align:center}
 
 /* FOOTER */
-footer{background:#0b0e1a;color:rgba(255,255,255,.7);padding:58px 0 28px}
+footer{background:linear-gradient(180deg,#1d1142,#140b2c);color:rgba(255,255,255,.72);padding:58px 0 28px}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:34px;margin-bottom:38px}
 footer .about{color:rgba(255,255,255,.6);font-size:.93rem;max-width:36ch;margin:16px 0 18px}
 footer h4{color:#fff;font-size:.98rem;margin-bottom:15px}
@@ -361,7 +371,7 @@ footer ul a:hover{color:#fff}
 .drawer .panel a{padding:13px 4px;font-weight:700;font-size:1.05rem;border-bottom:1px solid var(--line)}
 .drawer .panel .btn{margin-top:16px;justify-content:center}
 /* VIDEO */
-.video-wrap{max-width:920px;margin-inline:auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);position:relative;aspect-ratio:16/9;background:#0b0e22}
+.video-wrap{max-width:920px;margin-inline:auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);position:relative;aspect-ratio:16/9;background:#1a0f3a}
 .video-facade{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background-size:cover;background-position:center;display:grid;place-items:center;padding:0}
 .video-facade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,34,.12),rgba(11,14,34,.5))}
 .video-facade .play{position:relative;z-index:2;width:86px;height:86px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 14px 44px -8px rgba(79,91,242,.7);transition:transform .3s var(--ease)}
@@ -382,7 +392,7 @@ footer ul a:hover{color:#fff}
 /* DIFFERENTIATORS */
 .diff{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 /* SECTION RHYTHM & SPECIAL TRANSITIONS */
-.sec.dark-sec{background:linear-gradient(160deg,#0b0e22,#161235 58%,#26195a);color:#fff;position:relative;overflow:hidden}
+.sec.dark-sec{background:linear-gradient(160deg,#1a0f3a,#161235 58%,#26195a);color:#fff;position:relative;overflow:hidden}
 .sec.dark-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(38% 60% at 12% 18%,rgba(18,194,233,.22),transparent),radial-gradient(40% 60% at 88% 92%,rgba(142,45,226,.26),transparent);opacity:.7;pointer-events:none}
 .sec.dark-sec .wrap{position:relative;z-index:2}
 .sec.dark-sec .kicker{color:#7fe3ff}
@@ -551,7 +561,7 @@ footer ul a:hover{color:#fff}
 
 <!-- ============================ CLIENTS ============================ -->
 <section class="clients">
-  <div class="wrap"><p class="cap reveal">אתם בחברה טובה. אלה רק חלק מהמותגים והארגונים שכבר צומחים איתנו</p></div>
+  <div class="wrap"><div class="sec-head center reveal" style="margin-bottom:32px"><span class="kicker">לקוחות נבחרים</span><h2>אתם בחברה טובה</h2><p>אלה רק חלק מהמותגים והארגונים שכבר צומחים איתנו</p></div></div>
   <div class="logo-marquee reveal" data-d="1">
     <div class="logo-track" id="logoTrack">
       <span class="lg"><img src="assets/clients/triple-c.png" alt="Triple C"></span>
@@ -577,7 +587,7 @@ footer ul a:hover{color:#fff}
     <div class="stat reveal"><div class="n grad-text" data-count="2014" data-raw="1">0</div><div class="l">פעילים מאז</div></div>
     <div class="stat reveal" data-d="1"><div class="n grad-text" data-count="5" data-suffix=".0">0</div><div class="l">דירוג בגוגל</div></div>
     <div class="stat reveal" data-d="2"><div class="n grad-text" data-count="69">0</div><div class="l">ביקורות אמיתיות</div></div>
-    <div class="stat reveal" data-d="3"><div class="n grad-text">+<span data-count="530" data-suffix="%">0</span></div><div class="l">שיא גידול בתנועה אורגנית</div></div>
+    <div class="stat reveal" data-d="3"><div class="n grad-text"><span data-count="18">0</span></div><div class="l">מקרי בוחן מוכחים</div></div>
   </div></div>
 </section>
 
@@ -711,7 +721,7 @@ footer ul a:hover{color:#fff}
 <section class="sec" style="padding:48px 0">
   <div class="wrap">
     <div class="tools-strip reveal" data-d="2">
-    <p class="tools-cap">עובדים עם הכלים המקצועיים המובילים בתעשייה</p>
+    <div class="sec-head center" style="margin-bottom:28px"><span class="kicker">הסטאק המקצועי שלנו</span><h2 style="font-size:clamp(1.45rem,2.4vw,1.95rem)">עובדים עם הכלים המובילים בתעשייה</h2></div>
     <div class="tools-row">
         <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></svg>Google Analytics</span>
         <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M8.548 1.156L6.832 2.872v1.682h1.716zm0 3.398v.035H6.832v-.035H3.386L0 7.844v3.577h2.826V8.94c0-.525.429-.954.954-.954h16.476c.525 0 .954.43.954.954v2.48h2.754V7.844l-3.386-3.29H17.3v.035h-1.717v-.035zm7.035 0H17.3V2.872l-1.717-1.716zM8.679 1.188V2.84h6.773V1.188zm11.471 7.07a.834.834 0 00-.132.01l-.543.002c-5.216.014-10.432-.008-15.648.01-.435-.063-.794.436-.716.883v2.264h17.812c-.016-.888.045-1.782-.034-2.666-.104-.342-.427-.502-.739-.502zm-15.422.634a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zm2.134 0a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zM.036 11.645v9.156c0 1.05.858 1.908 1.907 1.908h.883V11.645zm21.174 0v11.064h.882c1.05 0 1.908-.858 1.908-1.908v-9.156zM4.057 13.133v6.85h6.137v-6.85zm13.243.021v3.777l-1.708.977-1.708-.977v-3.758a4.006 4.006 0 000 7.23v2.441h3.457v-2.442a4.006 4.006 0 00-.041-7.248zm-13.243 8.26v1.43h7.925v-1.43z"/></svg>Search Console</span>
@@ -730,7 +740,7 @@ footer ul a:hover{color:#fff}
     <div class="video-grid">
       <div class="video-copy reveal">
         <span class="kicker">נעים להכיר</span>
-        <h2>היי, נעים מאוד</h2>
+        <h2>היי, נעים מאוד.</h2>
         <p>שמי דניאל מסטר, המייסד והבעלים של חברת מסה מדיה דיגיטל. הקמתי את החברה מתוך רצון לייצר סטנדרט חדש בתחום, ולבנות סוכנות דיגיטל מקצועית, איכותית ויעילה שתוכלו לסמוך עליה.</p>
         <p>אנחנו כאן כדי לספק לכם שירותי קידום אתרים אורגני בגוגל ופתרונות דיגיטל חכמים בהתאמה אישית. באמצעות שילוב של טכנולוגיה, ניסיון והרבה עבודה קשה, אנחנו משיגים תוצאות נפלאות באופן שיטתי ללקוחותינו.</p>
         <p class="vsign">נשמח לעשות זאת גם עבורכם.</p>
@@ -957,7 +967,7 @@ footer ul a:hover{color:#fff}
       </div>
       <form class="lead-form" onsubmit="return handleSubmit(event)">
         <label for="f-name">שם מלא</label>
-        <input id="f-name" type="text" placeholder="איך קוראים לכם?" required>
+        <input id="f-name" type="text" placeholder="איך קוראים לך?" required>
         <label for="f-phone">טלפון</label>
         <input id="f-phone" type="tel" placeholder="05X-XXXXXXX" required>
         <label for="f-email">אימייל</label>
