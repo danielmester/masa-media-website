@@ -106,19 +106,20 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .trust{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:600}
 .stars{color:#F5A623;letter-spacing:1px;font-size:.98rem}
 .trust .div{width:1px;height:16px;background:var(--line-2)}
-.hero-visual{position:relative;height:440px}
+.hero-visual{position:relative;height:500px}
 .orb{position:absolute;border-radius:50%;filter:blur(46px);opacity:.5;animation:float 14s ease-in-out infinite}
 .orb.a{width:320px;height:320px;background:radial-gradient(circle,#12C2E9,transparent 70%);top:-30px;inset-inline-start:-20px}
 .orb.b{width:300px;height:300px;background:radial-gradient(circle,#8E2DE2,transparent 70%);bottom:-20px;inset-inline-end:-10px;animation-delay:-5s}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(0,-26px)}}
 .glass-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);padding:19px 21px;animation:cardFloat 6.5s ease-in-out infinite}
 @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
-.card-search{top:10px;right:-24px;left:auto;width:208px;z-index:3;animation-delay:-1.2s}
-.card-ai{bottom:30px;left:-24px;right:auto;width:216px;z-index:3;animation-delay:-4s}
-.founder-img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:418px;width:auto;max-width:none;z-index:1;filter:drop-shadow(0 26px 46px rgba(40,30,80,.42));pointer-events:none}
-.founder-tag{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:4;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:7px 17px;box-shadow:var(--shadow-lg);text-align:center;white-space:nowrap}
-.founder-tag b{display:block;font-weight:800;font-size:.95rem}
-.founder-tag span{font-size:.78rem;color:var(--muted);font-weight:600}
+.founder-disc{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 50% 42%,rgba(79,91,242,.22),rgba(142,45,226,.12) 58%,transparent 72%);z-index:0}
+.founder-img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:494px;width:auto;max-width:none;z-index:1;filter:drop-shadow(0 30px 50px rgba(40,30,80,.45));pointer-events:none}
+.card-search{top:20px;right:-20px;left:auto;width:212px;z-index:3;animation-delay:-1.2s}
+.rating-chip{position:absolute;bottom:44px;left:-14px;z-index:3;display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 15px;box-shadow:var(--shadow-lg);animation:cardFloat 6.5s ease-in-out infinite;animation-delay:-3.4s}
+.rating-chip .gmark{width:22px;height:22px}
+.rating-chip b{font-family:"Ploni","Heebo";font-weight:900;font-size:1.3rem;line-height:1}
+.rating-chip .stars{color:#FBBC05;font-size:.82rem;letter-spacing:1px}
 .mini-stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:14px 14px;text-align:center;min-width:108px}
 .mini-stat b{font-family:"Ploni","Heebo";font-weight:900;font-size:1.5rem;display:block;line-height:1}
 .mini-stat .u{font-size:.66rem;color:var(--ink-2);font-weight:800;display:block;margin-top:6px;white-space:nowrap}
@@ -374,8 +375,8 @@ footer ul a:hover{color:#fff}
 @media(max-width:1024px){nav.links{gap:16px;font-size:.88rem}.nav-phone{display:none}}
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr;gap:38px}
-  .hero-visual{height:400px;max-width:430px;margin-inline:auto;width:100%}
-  .founder-img{height:392px}
+  .hero-visual{height:474px;max-width:440px;margin-inline:auto;width:100%}
+  .founder-img{height:466px}.founder-disc{width:306px;height:306px}
   .geo-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
   .stats{grid-template-columns:repeat(2,1fr);gap:32px}
   .bento{grid-template-columns:repeat(2,1fr)}
@@ -391,7 +392,7 @@ footer ul a:hover{color:#fff}
   .contact-card{padding:38px 24px}.geo .wrap{padding-block:52px}
   .card-search,.card-ai,.card-metric{position:relative;inset:auto;width:100%;margin-bottom:13px}
   .hero-visual{height:auto}.orb{display:none}
-  .founder-img{position:static;transform:none;height:auto;max-height:330px;display:block;margin:0 auto 14px}.founder-tag{display:none}
+  .founder-img{position:static;transform:none;height:auto;max-height:380px;display:block;margin:0 auto 10px}.founder-disc,.rating-chip{display:none}
 }
 /* mobile drawer */
 .drawer{position:fixed;inset:0;z-index:80;background:rgba(11,14,26,.5);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:.3s}
@@ -481,6 +482,7 @@ footer ul a:hover{color:#fff}
     <stop offset="0" stop-color="#12C2E9"/><stop offset=".5" stop-color="#4F5BF2"/><stop offset="1" stop-color="#8E2DE2"/>
   </linearGradient>
   <symbol id="gG" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12z"/></symbol>
 </defs></svg>
 
 <!-- ============================ NAV ============================ -->
@@ -558,8 +560,8 @@ footer ul a:hover{color:#fff}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow reveal"><span class="dot"></span> שותפה מוסמכת של גוגל · פעילים מאז 2014</span>
-      <h1 class="reveal" data-d="1">חברת קידום אתרים<br>שמביאה <em class="grad-text">לקוחות</em>, לא רק תנועה</h1>
-      <p class="lead reveal" data-d="2">SEO ו-GEO שממצבים אתכם ראשונים בגוגל ובמנועי ה-AI, והופכים חיפושים ללקוחות משלמים.</p>
+      <h1 class="reveal" data-d="1">חברת קידום אתרים<br>שמביאה <em class="grad-text">לקוחות ומכירות</em>, לא רק תנועה</h1>
+      <p class="lead reveal" data-d="2">SEO ו-GEO שממצבים אתכם ראשונים בגוגל ובמנועי ה-AI, והופכים חיפושים ללקוחות ולמכירות.</p>
       <form class="audit reveal" data-d="2" id="auditForm">
         <input type="url" class="audit-in" id="auditUrl" placeholder="הזינו כתובת אתר לאבחון חינם" aria-label="כתובת האתר שלכם" required>
         <button type="submit" class="btn btn-primary">אבחון SEO חינם <span class="arr">←</span></button>
@@ -573,6 +575,7 @@ footer ul a:hover{color:#fff}
     </div>
     <div class="hero-visual reveal" data-d="2">
       <div class="orb a"></div><div class="orb b"></div>
+      <span class="founder-disc"></span>
       <img src="assets/daniel-master.png" alt="דניאל מסטר, מייסד ובעלים של מסה מדיה דיגיטל" class="founder-img" />
       <div class="glass-card card-search">
         <div class="search-bar"><span class="mg"></span> חברת קידום אתרים מומלצת</div>
@@ -582,11 +585,7 @@ footer ul a:hover{color:#fff}
           <div class="row dim"><span class="rank">3</span><span class="bar" style="max-width:140px"></span></div>
         </div>
       </div>
-      <div class="glass-card card-ai">
-        <div class="ai-head"><span class="spark">✦</span> תשובת AI</div>
-        <div class="ai-body">בין חברות קידום האתרים המובילות בישראל בולטת <b>מסה מדיה</b>, המתמחה בקידום אורגני ובאופטימיזציה למנועי בינה מלאכותית.</div>
-      </div>
-      <div class="founder-tag"><b>דניאל מסטר</b><span>מייסד · מסה מדיה</span></div>
+      <div class="rating-chip"><svg class="gmark" aria-hidden="true"><use href="#gG"/></svg><b>5.0</b><span class="stars">★★★★★</span></div>
     </div>
   </div>
 </section>
