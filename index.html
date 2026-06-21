@@ -103,6 +103,28 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .pd-kpi{flex:1;min-width:130px;background:var(--bg-warm);border:1px solid var(--line);border-radius:14px;padding:12px 15px}
 .pd-kpi b{display:block;font-size:1.2rem;font-weight:900;color:var(--ink)}
 .pd-kpi span{color:var(--muted);font-size:.82rem;font-weight:600}
+.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto 36px}
+.ba-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 18px;box-shadow:0 14px 36px -22px rgba(40,30,80,.3)}
+.ba-label{font-size:.8rem;color:var(--muted);font-weight:700;margin-bottom:12px}
+.ba-vals{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.ba-b,.ba-a{display:flex;flex-direction:column;font-family:"Ploni","Heebo";font-weight:900;font-size:1.5rem;line-height:1}
+.ba-b{color:var(--muted)}
+.ba-b span,.ba-a span{font-size:.7rem;font-weight:700;color:var(--muted);margin-bottom:5px}
+.ba-a b{font-size:1.75rem;font-family:"Ploni","Heebo"}
+.ba-arr{font-size:1.35rem;color:var(--brand-2);font-weight:900;flex:none}
+@media(max-width:760px){.ba-row{grid-template-columns:1fr;max-width:420px}}
+.checkup-card{max-width:720px;margin:0 auto;background:linear-gradient(140deg,#ffffff,#f7f6ff);border:1px solid var(--line);border-radius:24px;padding:42px 40px;box-shadow:0 34px 80px -42px rgba(40,30,80,.4)}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin:0 0 24px;padding:0}
+.check-list label{display:flex;align-items:center;gap:14px;cursor:pointer;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);transition:border-color .2s,background .2s;font-weight:600;font-size:1.02rem}
+.check-list label:hover{border-color:var(--brand-2);background:#fff}
+.check-list input{position:absolute;opacity:0;pointer-events:none}
+.cbox{width:25px;height:25px;border-radius:8px;border:2px solid var(--line);flex:none;display:grid;place-items:center;transition:.2s}
+.cbox::after{content:"✓";color:#fff;font-size:.82rem;font-weight:900;opacity:0;transform:scale(.4);transition:.2s}
+.check-list input:checked+.cbox{background:var(--grad);border-color:transparent}
+.check-list input:checked+.cbox::after{opacity:1;transform:scale(1)}
+.check-result{text-align:center;font-weight:800;font-size:1.12rem;margin-bottom:24px;min-height:1.6em;color:var(--ink);transition:.2s}
+.check-result.warn{color:var(--brand-2)}
+.check-cta{display:flex;width:fit-content;margin-inline:auto}
 .trust{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:600}
 .stars{color:#F5A623;letter-spacing:1px;font-size:.98rem}
 .trust .div{width:1px;height:16px;background:var(--line-2)}
@@ -779,6 +801,24 @@ footer ul a:hover{color:#fff}
   </div>
 </section>
 
+<!-- ============================ CHECKUP ============================ -->
+<section class="sec checkup" id="checkup">
+  <div class="wrap">
+    <div class="checkup-card reveal">
+      <div class="sec-head center" style="margin-bottom:26px"><span class="kicker">בדקו את עצמכם</span><h2>5 סימנים שהאתר שלכם מפסיד לקוחות</h2></div>
+      <ul class="check-list" id="checkList">
+        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">האתר נטען ביותר מ-3 שניות</span></label></li>
+        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">אין לכם עמודים שמדורגים על ביטויי מפתח חשובים בתחום</span></label></li>
+        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">רוב הכניסות מגיעות מחיפוש על שם המותג, ולא מחיפושים חדשים</span></label></li>
+        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">אין קריאה לפעולה (CTA) ברורה בכל עמוד</span></label></li>
+        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">אין מדידה מסודרת של המרות ולידים</span></label></li>
+      </ul>
+      <div class="check-result" id="checkResult">סמנו את הסעיפים שמתארים את האתר שלכם</div>
+      <a href="#contact" class="btn btn-primary check-cta">קבלו בדיקת אתר ללא עלות <span class="arr">←</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ RESULTS ============================ -->
 <section class="sec" id="results" style="background:var(--bg-warm)">
   <div class="wrap">
@@ -808,6 +848,20 @@ footer ul a:hover{color:#fff}
         <div class="pd-kpi"><b dir="ltr">23 → 105</b><span>מילות מפתח בטופ 10</span></div>
         <div class="pd-kpi"><b>×5.4</b><span>גידול בתנועה האורגנית</span></div>
         <div class="pd-kpi"><b>93</b><span>הופעות ב-AI Overview</span></div>
+      </div>
+    </div>
+    <div class="ba-row reveal">
+      <div class="ba-card">
+        <div class="ba-label">מבקרים ייחודיים בשנה · Muscle &amp; Motion</div>
+        <div class="ba-vals"><div class="ba-b"><span>לפני</span>105K</div><span class="ba-arr">↗</span><div class="ba-a"><span>אחרי</span><b class="grad-text">160K</b></div></div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-label">מילות מפתח בטופ 10 · DNG Medical</div>
+        <div class="ba-vals"><div class="ba-b"><span>לפני</span>23</div><span class="ba-arr">↗</span><div class="ba-a"><span>אחרי</span><b class="grad-text">105</b></div></div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-label">מילות מפתח חדשות בעמ׳ 1 · דליס</div>
+        <div class="ba-vals"><div class="ba-b"><span>לפני</span>0</div><span class="ba-arr">↗</span><div class="ba-a"><span>אחרי</span><b class="grad-text">110</b></div></div>
       </div>
     </div>
     <div class="results">
@@ -996,8 +1050,8 @@ footer ul a:hover{color:#fff}
   <div class="wrap"><div class="contact-card"><div class="mesh"></div>
     <div class="contact-grid">
       <div>
-        <h2>מחפשים חברת קידום אתרים מקצועית? השאירו פרטים ונדבר</h2>
-        <p class="lead">נחזור אליכם עם אבחון ראשוני, בלי התחייבות, רק תכל׳ס.</p>
+        <h2>בואו נגלה מה מונע מהאתר שלכם להביא יותר לקוחות ומכירות</h2>
+        <p class="lead">קבלו בדיקת אתר ראשונית ללא עלות וללא התחייבות. נראה לכם איפה מפסידים לקוחות, ומה הכי כדאי לתקן קודם.</p>
         <div class="cinfo">
           <a href="tel:0723384444"><span class="ci">📞</span> 072-338-4444</a>
           <a href="mailto:contact@masamedia.co.il"><span class="ci">✉️</span> contact@masamedia.co.il</a>
@@ -1014,7 +1068,7 @@ footer ul a:hover{color:#fff}
         <input id="f-email" type="email" placeholder="name@example.com">
         <label for="f-msg">קצת על העסק שלכם</label>
         <textarea id="f-msg" rows="3" placeholder="כתובת האתר, התחום, ומה תרצו להשיג"></textarea>
-        <button type="submit" class="btn btn-primary">שלחו ונחזור אליכם <span class="arr">←</span></button>
+        <button type="submit" class="btn btn-primary">קבלו בדיקת אתר ללא עלות <span class="arr">←</span></button>
         <p class="form-note">בלחיצה על שליחה אתם מאשרים שניצור איתכם קשר.</p>
       </form>
     </div>
@@ -1144,6 +1198,8 @@ document.querySelectorAll('.res-card:not(.cta)').forEach(c=>{
 function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='תודה! נחזור אליכם בקרוב ✓';b.style.pointerEvents='none';return false;}
 const auditForm=document.getElementById('auditForm');
 if(auditForm)auditForm.addEventListener('submit',e=>{e.preventDefault();const url=document.getElementById('auditUrl').value.trim();const msg=document.getElementById('f-msg');if(msg&&url)msg.value='אבחון לאתר: '+url;document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>{const n=document.getElementById('f-name');if(n)n.focus({preventScroll:true});},650);});
+const checkList=document.getElementById('checkList');
+if(checkList){const cr=document.getElementById('checkResult');checkList.addEventListener('change',()=>{const n=checkList.querySelectorAll('input:checked').length;if(n===0){cr.textContent='סמנו את הסעיפים שמתארים את האתר שלכם';cr.classList.remove('warn');}else if(n===1){cr.textContent='סימנתם סעיף אחד. כדאי לבדוק את זה לעומק.';cr.classList.add('warn');}else{cr.textContent='סימנתם '+n+' מתוך 5. כנראה שיש פוטנציאל משמעותי לשיפור.';cr.classList.add('warn');}});}
 </script>
 </body>
 </html>
