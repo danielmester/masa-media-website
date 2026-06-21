@@ -95,9 +95,10 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .card-search{top:14px;inset-inline-end:0;width:320px;animation-delay:-1.2s}
 .card-ai{bottom:10px;inset-inline-start:0;width:320px;animation-delay:-4s}
 .mini-stats{position:absolute;top:150px;inset-inline:0;display:flex;gap:11px;justify-content:center;animation:cardFloat 6.5s ease-in-out infinite;animation-delay:-2.6s}
-.mini-stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:15px 13px;text-align:center;min-width:96px}
+.mini-stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:14px 14px;text-align:center;min-width:108px}
 .mini-stat b{font-family:"Heebo";font-weight:900;font-size:1.5rem;display:block;line-height:1}
-.mini-stat span{font-size:.7rem;color:var(--muted);font-weight:700;display:block;margin-top:5px;white-space:nowrap}
+.mini-stat .u{font-size:.66rem;color:var(--ink-2);font-weight:800;display:block;margin-top:6px;white-space:nowrap}
+.mini-stat .c{font-size:.66rem;color:var(--muted);font-weight:600;display:block;margin-top:2px;white-space:nowrap}
 .search-bar{display:flex;align-items:center;gap:10px;background:var(--bg-cool);border-radius:999px;padding:10px 15px;font-size:.9rem;color:var(--ink-2);font-weight:600}
 .search-bar .mg{width:15px;height:15px;border:2px solid var(--c-blue);border-radius:50%;position:relative;flex:none}
 .search-bar .mg::after{content:"";position:absolute;width:7px;height:2px;background:var(--c-blue);transform:rotate(45deg);bottom:-2px;inset-inline-start:10px}
@@ -118,14 +119,14 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 /* ============================ CLIENTS MARQUEE ============================ */
 .clients{padding:26px 0 8px}
 .clients .cap{text-align:center;color:var(--ink-2);font-weight:800;font-size:clamp(1.05rem,1.7vw,1.32rem);margin-bottom:26px}
-.tools-strip{margin-top:54px;border-top:1px solid var(--line);padding-top:34px}
-.tools-cap{text-align:center;color:var(--ink-2);font-weight:700;font-size:.95rem;margin-bottom:22px}
-.tools-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 40px}
-.tlogo{display:inline-flex;align-items:center;gap:10px;color:var(--ink-2);font-weight:800;font-size:1.02rem;white-space:nowrap;opacity:.8;transition:opacity .3s,color .3s}
-.tlogo:hover{opacity:1;color:var(--ink)}
-.tlogo svg{width:26px;height:26px;flex:none}
-.tlogo .si{fill:currentColor}
-.tlogo .lu{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tools-strip{text-align:center}
+.tools-cap{color:var(--muted);font-weight:700;font-size:.92rem;margin-bottom:22px}
+.tools-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px}
+.tlogo{display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:800;font-size:.95rem;color:var(--ink);box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.tlogo:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:transparent}
+.tlogo svg{width:22px;height:22px;flex:none}
+.tlogo .si{fill:#4F5BF2}
+.tlogo .lu{fill:none;stroke:#4F5BF2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .logo-marquee{overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .logo-track{display:flex;align-items:center;width:max-content;animation:scroll 48s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
@@ -411,6 +412,22 @@ footer ul a:hover{color:#fff}
 .plan.pop::before{content:"";position:absolute;inset:-2px;border-radius:calc(var(--radius) + 3px);background:linear-gradient(135deg,#12C2E9,#4F5BF2,#8E2DE2);z-index:-1;animation:popGlow 3.2s ease-in-out infinite}
 @keyframes popGlow{0%,100%{opacity:.5;filter:blur(8px)}50%{opacity:.9;filter:blur(15px)}}
 @media(prefers-reduced-motion:reduce){.plan.pop::before{animation:none;opacity:.6}}
+
+/* PROBLEM 2-col + comparison visual */
+.prob-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.prob-copy p{color:var(--ink-2);font-size:1.04rem;line-height:1.85;margin-bottom:16px}
+.prob-copy p:last-child{margin-bottom:0}
+.prob-copy strong{color:var(--ink);font-weight:800}
+.prob-visual{display:flex;flex-direction:column;gap:18px}
+.pv-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow-sm)}
+.pv-card.pv-good{border-color:transparent;box-shadow:var(--shadow)}
+.pv-h{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.06rem}
+.pv-ic{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:900;flex:none}
+.pv-x{background:var(--bg-warm);color:var(--muted)}
+.pv-v{background:var(--grad);color:#fff}
+.pv-line{width:100%;height:54px;display:block;margin-top:12px}
+.pv-card p{color:var(--muted);font-size:.92rem;line-height:1.6;margin:12px 0 0}
+@media(max-width:820px){.prob-grid{grid-template-columns:1fr;gap:30px}}
 </style>
 </head>
 <body>
@@ -497,7 +514,7 @@ footer ul a:hover{color:#fff}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow reveal"><span class="dot"></span> שותפה מוסמכת של גוגל · פעילים מאז 2014</span>
-      <h1 class="reveal" data-d="1">חברת קידום אתרים <em class="grad-text">SEO &amp; GEO</em> להוביל את תוצאות החיפוש בגוגל ובמנועי ה-AI</h1>
+      <h1 class="reveal" data-d="1">חברת קידום אתרים <em class="grad-text">SEO &amp; GEO</em><br>להוביל את תוצאות החיפוש בגוגל ובמנועי ה-AI</h1>
       <p class="lead reveal" data-d="2">היי, אנחנו מסה מדיה דיגיטל, סוכנות בוטיק המתמחה בהגדלת החשיפה של חברות וארגונים בתוצאות החיפוש של גוגל ובמנועי בינה מלאכותית. אנו משלבים בין קידום אתרים (SEO) לבין אסטרטגיות מתקדמות להגדלת הנראות במנועי AI (GEO), כדי לייצר צמיחה אמיתית, לחזק את הנוכחות הדיגיטלית שלכם ולהשיג את היעדים העסקיים החשובים לכם.</p>
       <div class="hero-cta reveal" data-d="2">
         <a href="#contact" class="btn btn-primary">בואו נדבר על האתר שלכם <span class="arr">←</span></a>
@@ -520,9 +537,9 @@ footer ul a:hover{color:#fff}
         </div>
       </div>
       <div class="mini-stats reveal">
-        <div class="mini-stat"><b class="grad-text">+436%</b><span>DNG Medical</span></div>
-        <div class="mini-stat"><b class="grad-text">+220%</b><span>Outdoor</span></div>
-        <div class="mini-stat"><b class="grad-text">+104%</b><span>בינת תקשורת</span></div>
+        <div class="mini-stat"><b class="grad-text">+436%</b><span class="u">תנועה אורגנית</span><span class="c">DNG Medical</span></div>
+        <div class="mini-stat"><b class="grad-text">+220%</b><span class="u">תנועה אורגנית</span><span class="c">Outdoor</span></div>
+        <div class="mini-stat"><b class="grad-text">+104%</b><span class="u">מילות מפתח</span><span class="c">בינת תקשורת</span></div>
       </div>
       <div class="glass-card card-ai">
         <div class="ai-head"><span class="spark">✦</span> תשובת AI</div>
@@ -552,17 +569,6 @@ footer ul a:hover{color:#fff}
       <span class="lg"><img src="assets/clients/p7.png" alt="לקוח מסה מדיה"></span>
     </div>
   </div>
-  <div class="tools-strip reveal" data-d="2">
-    <p class="tools-cap">הכלים והטכנולוגיות שאיתם אנחנו עובדים</p>
-    <div class="tools-row">
-        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></svg>Google Analytics</span>
-        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M8.548 1.156L6.832 2.872v1.682h1.716zm0 3.398v.035H6.832v-.035H3.386L0 7.844v3.577h2.826V8.94c0-.525.429-.954.954-.954h16.476c.525 0 .954.43.954.954v2.48h2.754V7.844l-3.386-3.29H17.3v.035h-1.717v-.035zm7.035 0H17.3V2.872l-1.717-1.716zM8.679 1.188V2.84h6.773V1.188zm11.471 7.07a.834.834 0 00-.132.01l-.543.002c-5.216.014-10.432-.008-15.648.01-.435-.063-.794.436-.716.883v2.264h17.812c-.016-.888.045-1.782-.034-2.666-.104-.342-.427-.502-.739-.502zm-15.422.634a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zm2.134 0a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zM.036 11.645v9.156c0 1.05.858 1.908 1.907 1.908h.883V11.645zm21.174 0v11.064h.882c1.05 0 1.908-.858 1.908-1.908v-9.156zM4.057 13.133v6.85h6.137v-6.85zm13.243.021v3.777l-1.708.977-1.708-.977v-3.758a4.006 4.006 0 000 7.23v2.441h3.457v-2.442a4.006 4.006 0 00-.041-7.248zm-13.243 8.26v1.43h7.925v-1.43z"/></svg>Search Console</span>
-        <span class="tlogo"><svg viewBox="0 0 24 24" class="lu" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Ahrefs</span>
-        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/></svg>Google Ads</span>
-        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M12.003 0a3 3 0 0 0-2.121 5.121l6.865 6.865-4.446 4.541 1.745 1.836a3.432 3.432 0 0 1 .7.739l.012.011-.001.002a3.432 3.432 0 0 1 .609 1.953 3.432 3.432 0 0 1-.09.78l7.75-7.647c.031-.029.067-.05.098-.08.023-.023.038-.052.06-.076a2.994 2.994 0 0 0-.06-4.166l-9-9A2.99 2.99 0 0 0 12.003 0zM8.63 2.133L.88 9.809a2.998 2.998 0 0 0 0 4.238l7.7 7.75a3.432 3.432 0 0 1-.077-.729 3.432 3.432 0 0 1 3.431-3.431 3.432 3.432 0 0 1 .826.101l-5.523-5.81 4.371-4.373-2.08-2.08c-.903-.904-1.193-2.183-.898-3.342zm3.304 16.004a2.932 2.932 0 0 0-2.931 2.931A2.932 2.932 0 0 0 11.934 24a2.932 2.932 0 0 0 2.932-2.932 2.932 2.932 0 0 0-2.932-2.931z"/></svg>Google Tag Manager</span>
-        <span class="tlogo"><svg viewBox="0 0 24 24" class="lu" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>Google Merchant</span>
-    </div>
-  </div>
 </section>
 
 <!-- ============================ STATS ============================ -->
@@ -579,11 +585,23 @@ footer ul a:hover{color:#fff}
 <section class="sec tint">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="kicker">איכות עושה את ההבדל</span><h2>חברת קידום אתרים איכותית, ההבדל בין כישלון להצלחה</h2></div>
-    <div class="prose reveal" data-d="1">
-      <p>חברות ובעלי עסקים רבים חוששים מתחום ה-SEO או חושבים שקידום אתרים אורגני לא באמת עובד. יש כאלו שאף ירחיקו לכת ויאמרו שמדובר באחיזת עיניים ותו לא.</p>
+    <div class="prob-grid">
+      <div class="prob-copy reveal"><p>חברות ובעלי עסקים רבים חוששים מתחום ה-SEO או חושבים שקידום אתרים אורגני לא באמת עובד. יש כאלו שאף ירחיקו לכת ויאמרו שמדובר באחיזת עיניים ותו לא.</p>
       <p>התפיסה השגויה הזו לא מגיעה יש מאין. עסקים לא מעטים ניסו לקדם את האתר שלהם עם מקדם אתרים או חברה לקידום אתרים אבל נכשלו, לפעמים יותר מפעם אחת, וכל ניסיון כזה היה כרוך בהרבה זמן וכסף שירדו לטמיון.</p>
       <p>אנחנו יודעים, זו הרגשה מתסכלת. אבל האמת היא שאם נבחן את האתר שלכם, נגלה שהוא לא שונה בהרבה מהאתרים שנמצאים היום בעמוד הראשון בגוגל. <strong>הסיבה לחוסר ההצלחה של קמפיין קידום אתרים טמונה כמעט תמיד במקדם עצמו, בתקציב ובזמן שעמדו לרשותו.</strong></p>
-      <p>איך משנים את המצב לטובתכם? על ידי הפקדת עבודת הקידום האורגני בידי חברת קידום אתרים מנוסה עם הצלחות מוכחות, שיודעת לבנות תהליך מסודר לפרויקט בהתאם למטרות, לבצע תיאום ציפיות ריאלי, ולהוציא את הדברים לפועל בצורה מקצועית.</p>
+      <p>איך משנים את המצב לטובתכם? על ידי הפקדת עבודת הקידום האורגני בידי חברת קידום אתרים מנוסה עם הצלחות מוכחות, שיודעת לבנות תהליך מסודר לפרויקט בהתאם למטרות, לבצע תיאום ציפיות ריאלי, ולהוציא את הדברים לפועל בצורה מקצועית.</p></div>
+      <div class="prob-visual reveal" data-d="1">
+        <div class="pv-card pv-bad">
+          <div class="pv-h"><span class="pv-ic pv-x">✕</span> מקדם לא מקצועי</div>
+          <svg class="pv-line" viewBox="0 0 220 60" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,16 55,23 110,20 165,31 220,42" fill="none" stroke="#c7ccd6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>הרבה זמן וכסף שיורדים לטמיון, בלי תוצאות אמיתיות.</p>
+        </div>
+        <div class="pv-card pv-good">
+          <div class="pv-h"><span class="pv-ic pv-v">✓</span> עם מסה מדיה</div>
+          <svg class="pv-line" viewBox="0 0 220 60" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,50 55,41 110,30 165,16 220,5" fill="none" stroke="url(#mGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>תהליך מסודר, תיאום ציפיות ריאלי וצמיחה מדידה לאורך זמן.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -664,7 +682,7 @@ footer ul a:hover{color:#fff}
 <!-- ============================ APPROACH ============================ -->
 <section class="sec" style="background:var(--bg-warm)">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="kicker">למה מסה מדיה</span><h2>חברה לקידום אתרים שעובדת אחרת</h2><p>שותפה מוסמכת של גוגל, פעילה מאז 2014, עם רקורד הצלחות עשיר, והדרך שלנו לעבוד היא מה שעושה את ההבדל.</p></div>
+    <div class="sec-head wide reveal"><span class="kicker">למה מסה מדיה</span><h2>חברה לקידום אתרים שעובדת אחרת</h2><p>שותפה מוסמכת של גוגל, פעילה מאז 2014, עם רקורד הצלחות עשיר, והדרך שלנו לעבוד היא מה שעושה את ההבדל.</p></div>
     <div class="approach">
       <div class="app-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></div><h3>שותפה מוסמכת של גוגל</h3><p>חברה חדשנית הפעילה מאז 2014, עם רקורד הצלחות עשיר במגוון תחומים בישראל ובעולם.</p></div>
       <div class="app-card reveal" data-d="1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="url(#mGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div><h3>ללא התחייבות</h3><p>הסכם ההתקשרות תקף כל עוד אתם מרוצים. בלי אותיות קטנות ובלי כוכביות.</p></div>
@@ -686,6 +704,23 @@ footer ul a:hover{color:#fff}
       <div class="step reveal" data-d="2"><div class="no">03</div><h3>בניית סמכות</h3><p>קישורים, אזכורים ומיצוב שהופכים אתכם למקור שמחפשים, ושמצטטים.</p></div>
       <div class="step reveal" data-d="3"><div class="no">04</div><h3>מדידה ושיפור</h3><p>דו״ח חודשי שקוף, מעקב אחר התוצאות ואופטימיזציה מתמשכת.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- ============================ TOOLS ============================ -->
+<section class="sec" style="padding:48px 0">
+  <div class="wrap">
+    <div class="tools-strip reveal" data-d="2">
+    <p class="tools-cap">עובדים עם הכלים המקצועיים המובילים בתעשייה</p>
+    <div class="tools-row">
+        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></svg>Google Analytics</span>
+        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M8.548 1.156L6.832 2.872v1.682h1.716zm0 3.398v.035H6.832v-.035H3.386L0 7.844v3.577h2.826V8.94c0-.525.429-.954.954-.954h16.476c.525 0 .954.43.954.954v2.48h2.754V7.844l-3.386-3.29H17.3v.035h-1.717v-.035zm7.035 0H17.3V2.872l-1.717-1.716zM8.679 1.188V2.84h6.773V1.188zm11.471 7.07a.834.834 0 00-.132.01l-.543.002c-5.216.014-10.432-.008-15.648.01-.435-.063-.794.436-.716.883v2.264h17.812c-.016-.888.045-1.782-.034-2.666-.104-.342-.427-.502-.739-.502zm-15.422.634a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zm2.134 0a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zM.036 11.645v9.156c0 1.05.858 1.908 1.907 1.908h.883V11.645zm21.174 0v11.064h.882c1.05 0 1.908-.858 1.908-1.908v-9.156zM4.057 13.133v6.85h6.137v-6.85zm13.243.021v3.777l-1.708.977-1.708-.977v-3.758a4.006 4.006 0 000 7.23v2.441h3.457v-2.442a4.006 4.006 0 00-.041-7.248zm-13.243 8.26v1.43h7.925v-1.43z"/></svg>Search Console</span>
+        <span class="tlogo"><svg viewBox="0 0 24 24" class="lu" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Ahrefs</span>
+        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/></svg>Google Ads</span>
+        <span class="tlogo"><svg viewBox="0 0 24 24" class="si" aria-hidden="true"><path d="M12.003 0a3 3 0 0 0-2.121 5.121l6.865 6.865-4.446 4.541 1.745 1.836a3.432 3.432 0 0 1 .7.739l.012.011-.001.002a3.432 3.432 0 0 1 .609 1.953 3.432 3.432 0 0 1-.09.78l7.75-7.647c.031-.029.067-.05.098-.08.023-.023.038-.052.06-.076a2.994 2.994 0 0 0-.06-4.166l-9-9A2.99 2.99 0 0 0 12.003 0zM8.63 2.133L.88 9.809a2.998 2.998 0 0 0 0 4.238l7.7 7.75a3.432 3.432 0 0 1-.077-.729 3.432 3.432 0 0 1 3.431-3.431 3.432 3.432 0 0 1 .826.101l-5.523-5.81 4.371-4.373-2.08-2.08c-.903-.904-1.193-2.183-.898-3.342zm3.304 16.004a2.932 2.932 0 0 0-2.931 2.931A2.932 2.932 0 0 0 11.934 24a2.932 2.932 0 0 0 2.932-2.932 2.932 2.932 0 0 0-2.932-2.931z"/></svg>Google Tag Manager</span>
+        <span class="tlogo"><svg viewBox="0 0 24 24" class="lu" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>Google Merchant</span>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -871,7 +906,7 @@ footer ul a:hover{color:#fff}
 <!-- ============================ FAQ ============================ -->
 <section class="sec" id="faq">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="kicker">שאלות נפוצות</span><h2>כל מה שרציתם לדעת על קידום אתרים</h2></div>
+    <div class="sec-head wide reveal"><span class="kicker">שאלות נפוצות</span><h2>כל מה שרציתם לדעת על קידום אתרים</h2></div>
     <div class="faq reveal" data-d="1">
       <details><summary>מה זה קידום אתרים (SEO)? <span class="pm">+</span></summary><div class="ans">קידום אתרים במנועי החיפוש או אופטימיזציה עבור מנועי חיפוש, היא הנגזרת העברית למונח המקורי Search Engine Optimization או בווריאציה המקוצרת והרווחת שלו – SEO. בבסיסו, מטרת ה-SEO היא כפי שמשתמע משמו – להתאים את האתר בצורה מיטבית למנועי החיפוש, כאשר מנוע החיפוש הפופולארי הוא כמובן גוגל. איך עושים זאת? התאמת האתר לטובת גוגל ויתר מנועי החיפוש נעשית קודם כל על ידי עבודת אופטימיזציה אשר מסייעת לגוגל לסרוק אותו בצורה תקינה, להבין טוב יותר על מה הוא מדבר ובהתאם לכך למקם אותו בתוצאות האורגניות עבור מילות מפתח מסוימות. ברוב המקרים זהו רק השלב הראשון בתהליך קידום אתרים, מכיוון שהתאמה בסיסית של האתר עבור גוגל לא תספיק כדי לעלות במקומות הראשונים במנוע החיפוש על מילות מפתח תחרותיות. לשם כך נדרשת עבודה שוטפת הכוללת מגוון אלמנטים, כאשר העיקריים שבהם הם העשרה של האתר בתכנים רלוונטיים לתחום העיסוק שלכם ובנייה של מערך קישורים איכותי ורלוונטי, מאתרים סמכותיים בתחום עיסוקכם, חזרה לאתר שלכם. כאן בדרך כלל נכנסת לתמונה חברה לקידום אתרים או מקדמי אתרים שיהיו אמונים על קידום האתר שלכם. מטרת העל של קידום בגוגל היא להציב את העסק שלכם בראש תוצאות החיפוש הלא ממומנות, על מילות מפתח נבחרות, ובכך לייצר זרם של גולשים ממנועי החיפוש ישירות אליכם.</div></details>
       <details><summary>למה דווקא קידום אתרים אורגני? <span class="pm">+</span></summary><div class="ans">ישנן המון סיבות אשר הופכות את אפיק הקידום האורגני למוצלח ולמשתלם ביותר עבור רוב העסקים והחברות אשר בונות את עצמן לטווח הארוך. יחד עם זאת, כדאי לציין כי לא בטוח שזהו האפיק הנכון לעסקים קטנים אשר עושים את צעדיהם הראשונים בשוק וזקוקים לעבודה באופן מיידי. עבור כל היתר, קידום אתרים בגוגל יכול לעשות פלאים. את גוגל כולנו מכירים. גוגל הוא מנוע החיפוש המוצלח והפופולארי ביותר בפער ניכר ממתחריו. בכל יום מתבצעים בגוגל מעל 5 מיליארד חיפושים (למעלה מ-60,000 חיפושים בכל שניה). סביר להניח שגם אתם כמו כולנו, פונים לגוגל כאשר אתם מחפשים מוצר או שירות כלשהו. כך עושים גם הלקוחות שלכם: למעלה מ-70% מהאנשים שמגיעים לבית עסק, מצאו אותו אחרי חיפוש בגוגל. הם רוצים לדעת מי אתם והאם אפשר לסמוך עליכם לפני שיתנו לכם את כספם. יתרה מכך, גם הם, כמוכם, מדלגים לרוב על התוצאות הממומנות וגוללים ישירות לתוצאות האורגניות. זאת הסיבה שהנתונים מראים כי למעלה מ-80% מהגולשים מקליקים על התוצאות האורגניות כאשר הם מחפשים משהו בגוגל. מתחילים להרגיש את הפוטנציאל? נוסיף לכך עובדה שידועה לכל העוסקים במלאכה: לא רק שהקידום האורגני יכול להזרים לכם כמויות אדירות של גולשים, אלא שברוב המכריע של המקרים, אותם גולשים יהיו משמעותית איכותיים יותר (יקנו יותר ובאחוזים גבוהים יותר) בהשוואה למקורות תנועה ממומנים. אם למרות זאת עדיין לא השתכנעתם שכדאי להתחיל לקדם את האתר שלכם בגוגל, זה המקום לציין שעבור רוב העסקים קידום אורגני הוא גם האפיק המשתלם ביותר ומצריך השקעה כספית נמוכה יותר ביחס לאפיקי השיווק והפרסום האחרים.</div></details>
