@@ -89,6 +89,18 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .audit .btn-primary{white-space:nowrap;padding:13px 20px}
 .audit-sub{margin-top:13px;color:var(--muted);font-size:.9rem;font-weight:600}
 .audit-sub a{color:var(--brand-2);font-weight:700}
+.proof-dash{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 22px 20px;box-shadow:0 26px 64px -32px rgba(40,30,80,.34);margin:0 auto 38px;max-width:760px}
+.pd-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.pd-title{display:flex;align-items:center;gap:12px}
+.pd-dot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.16);flex:none}
+.pd-title b{display:block;font-size:1rem;font-weight:800;color:var(--ink)}
+.pd-title small{color:var(--muted);font-size:.8rem;font-weight:600}
+.pd-badge{font-weight:900;font-size:1.6rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;flex:none}
+.pd-chart svg{width:100%;height:auto;display:block}
+.pd-foot{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.pd-kpi{flex:1;min-width:130px;background:var(--bg-warm);border:1px solid var(--line);border-radius:14px;padding:12px 15px}
+.pd-kpi b{display:block;font-size:1.2rem;font-weight:900;color:var(--ink)}
+.pd-kpi span{color:var(--muted);font-size:.82rem;font-weight:600}
 .trust{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:600}
 .stars{color:#F5A623;letter-spacing:1px;font-size:.98rem}
 .trust .div{width:1px;height:16px;background:var(--line-2)}
@@ -765,6 +777,33 @@ footer ul a:hover{color:#fff}
 <section class="sec" id="results" style="background:var(--bg-warm)">
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">תוצאות אמיתיות</span><h2>מספרים שמדברים בעד עצמם</h2><p>תוצאות אמיתיות של לקוחות שלנו. למקרי הבוחן המלאים, קפצו לעמוד הקייס סטאדיז.</p></div>
+    <div class="proof-dash reveal">
+      <div class="pd-head">
+        <div class="pd-title">
+          <span class="pd-dot"></span>
+          <div><b>תנועה אורגנית · DNG Medical</b><small>Google Search Console · 12 חודשים</small></div>
+        </div>
+        <div class="pd-badge">+436%</div>
+      </div>
+      <div class="pd-chart">
+        <svg viewBox="0 0 600 210" role="img" aria-label="גרף עליית תנועה אורגנית של 436 אחוז לאורך 12 חודשים">
+          <defs>
+            <linearGradient id="pdFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F5BF2" stop-opacity=".26"/><stop offset="1" stop-color="#4F5BF2" stop-opacity="0"/></linearGradient>
+            <linearGradient id="pdLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12C2E9"/><stop offset=".5" stop-color="#4F5BF2"/><stop offset="1" stop-color="#8E2DE2"/></linearGradient>
+          </defs>
+          <line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/>
+          <line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/>
+          <path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26 L600,210 L0,210 Z" fill="url(#pdFill)"/>
+          <path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="600" cy="26" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="26" r="11" fill="#8E2DE2" opacity=".16"/>
+        </svg>
+      </div>
+      <div class="pd-foot">
+        <div class="pd-kpi"><b dir="ltr">23 → 105</b><span>מילות מפתח בטופ 10</span></div>
+        <div class="pd-kpi"><b>×5.4</b><span>גידול בתנועה האורגנית</span></div>
+        <div class="pd-kpi"><b>93</b><span>הופעות ב-AI Overview</span></div>
+      </div>
+    </div>
     <div class="results">
       <div class="res-card reveal">
         <div class="tag">בינת תקשורת מחשבים</div>
