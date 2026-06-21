@@ -104,6 +104,12 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .pd-kpi{flex:1;min-width:0;background:var(--bg-warm);border:1px solid var(--line);border-radius:14px;padding:13px 10px;text-align:center}
 .pd-kpi b{display:block;font-size:1.3rem;font-weight:900;color:var(--ink)}
 .pd-kpi span{color:var(--muted);font-size:.78rem;font-weight:600;display:block;margin-top:3px}
+.dash-gallery{max-width:720px;margin:0 auto 38px}
+.dash-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.dash-tab{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-family:inherit;font-weight:700;font-size:.86rem;color:var(--ink-2);cursor:pointer;transition:.2s}
+.dash-tab:hover{border-color:var(--brand-2);color:var(--ink)}
+.dash-tab.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 20px -8px rgba(79,91,242,.5)}
+.dash-gallery .proof-dash{margin:0 auto}
 .ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto 36px}
 .ba-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 18px;box-shadow:0 14px 36px -22px rgba(40,30,80,.3)}
 .ba-label{font-size:.8rem;color:var(--muted);font-weight:700;margin-bottom:12px}
@@ -232,10 +238,12 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .geo .wrap{padding-block:80px;position:relative;z-index:2}
 .geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
 .geo .kicker{color:#7fe3ff}
-.geo h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;margin-bottom:16px;text-wrap:balance}
+.geo h2{font-size:clamp(1.5rem,2.4vw,2.05rem);font-weight:900;margin-bottom:16px;line-height:1.28}
+.geo h2 br{display:block}
+@media(max-width:560px){.geo .engines{grid-template-columns:repeat(2,1fr)}}
 .geo p.lead{color:rgba(255,255,255,.74);font-size:1.06rem;margin-bottom:24px}
-.geo .engines{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
-.engine{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-weight:700;font-size:.88rem}
+.geo .engines{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:28px}
+.engine{display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-weight:700;font-size:.86rem;white-space:nowrap}
 .engine .d{width:8px;height:8px;border-radius:50%;background:var(--grad)}
 .geo-list{display:flex;flex-direction:column;gap:15px}
 .geo-list .li{display:flex;gap:13px;align-items:flex-start}
@@ -504,6 +512,8 @@ footer ul a:hover{color:#fff}
   <linearGradient id="mGrad" x1="0" y1="1" x2="1" y2="0">
     <stop offset="0" stop-color="#12C2E9"/><stop offset=".5" stop-color="#4F5BF2"/><stop offset="1" stop-color="#8E2DE2"/>
   </linearGradient>
+  <linearGradient id="pdFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F5BF2" stop-opacity=".26"/><stop offset="1" stop-color="#4F5BF2" stop-opacity="0"/></linearGradient>
+  <linearGradient id="pdLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12C2E9"/><stop offset=".5" stop-color="#4F5BF2"/><stop offset="1" stop-color="#8E2DE2"/></linearGradient>
   <symbol id="gG" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></symbol>
   <symbol id="fb" viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12z"/></symbol>
 </defs></svg>
@@ -729,13 +739,14 @@ footer ul a:hover{color:#fff}
     <div class="wrap geo-grid">
       <div class="reveal">
         <span class="kicker">Generative Engine Optimization</span>
-        <h2>אופן החיפוש משתנה. אתם חייבים להיות בתוך התשובה.</h2>
+        <h2>אופן החיפוש משתנה.<br>אתם חייבים להיות בתוך התשובה.</h2>
         <p class="lead">יותר ויותר אנשים מקבלים תשובה ישירה ממנוע AI, בלי להיכנס לאף אתר. מי שלא מופיע בתשובה, פשוט לא קיים. GEO היא הדרך החדשה להבטיח שהמותג שלכם הוא זה שה-AI ממליץ ומצטט.</p>
         <div class="engines">
           <span class="engine"><span class="d"></span> ChatGPT</span>
           <span class="engine"><span class="d"></span> Google Gemini</span>
           <span class="engine"><span class="d"></span> Perplexity</span>
           <span class="engine"><span class="d"></span> Claude</span>
+          <span class="engine"><span class="d"></span> Microsoft Copilot</span>
           <span class="engine"><span class="d"></span> AI Overviews</span>
         </div>
         <div class="geo-list">
@@ -774,30 +785,12 @@ footer ul a:hover{color:#fff}
 <section class="sec" id="results" style="background:var(--bg-warm)">
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">תוצאות אמיתיות</span><h2>מספרים שמדברים בעד עצמם</h2><p>תוצאות אמיתיות של לקוחות שלנו. למקרי הבוחן המלאים, קפצו לעמוד הקייס סטאדיז.</p></div>
-    <div class="proof-dash reveal">
-      <div class="pd-head">
-        <div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · DNG Medical</div>
-        <div class="pd-sub">Google Search Console · 12 חודשים אחרונים</div>
-        <div class="pd-metric"><span class="pd-badge">+436%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div>
-      </div>
-      <div class="pd-chart">
-        <svg viewBox="0 0 600 210" role="img" aria-label="גרף עליית תנועה אורגנית של 436 אחוז לאורך 12 חודשים">
-          <defs>
-            <linearGradient id="pdFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F5BF2" stop-opacity=".26"/><stop offset="1" stop-color="#4F5BF2" stop-opacity="0"/></linearGradient>
-            <linearGradient id="pdLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12C2E9"/><stop offset=".5" stop-color="#4F5BF2"/><stop offset="1" stop-color="#8E2DE2"/></linearGradient>
-          </defs>
-          <line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/>
-          <line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/>
-          <path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26 L600,210 L0,210 Z" fill="url(#pdFill)"/>
-          <path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="600" cy="26" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="26" r="11" fill="#8E2DE2" opacity=".16"/>
-        </svg>
-      </div>
-      <div class="pd-foot">
-        <div class="pd-kpi"><b dir="ltr">23 → 105</b><span>מילות מפתח בטופ 10</span></div>
-        <div class="pd-kpi"><b>93</b><span>הופעות ב-AI Overview</span></div>
-        <div class="pd-kpi"><b>12</b><span>חודשי עבודה</span></div>
-      </div>
+    <div class="dash-gallery reveal">
+      <div class="dash-tabs" role="tablist"><button class="dash-tab active" data-dash="0">DNG Medical</button><button class="dash-tab" data-dash="1">Merkel Technologies</button><button class="dash-tab" data-dash="2">קבוצת אאוטדור</button><button class="dash-tab" data-dash="3">Muscle & Motion</button></div>
+      <div class="proof-dash" data-dash="0"><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · DNG Medical</div><div class="pd-sub">Google Search Console · 12 חודשים אחרונים</div><div class="pd-metric"><span class="pd-badge">+436%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף עליית DNG Medical"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="26" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="26" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b dir="ltr">23 → 105</b><span>מילות מפתח בטופ 10</span></div><div class="pd-kpi"><b>93</b><span>הופעות ב-AI Overview</span></div><div class="pd-kpi"><b>12</b><span>חודשי עבודה</span></div></div></div>
+      <div class="proof-dash" data-dash="1" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> כניסות אורגניות · Merkel Technologies</div><div class="pd-sub">Google Analytics · 12 חודשים</div><div class="pd-metric"><span class="pd-badge">+530%</span><span class="pd-metric-label">גידול בכניסות האורגניות</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף עליית Merkel Technologies"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,192 L70,188 L140,180 L210,169 L280,150 L350,120 L420,86 L490,56 L545,38 L600,18 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,192 L70,188 L140,180 L210,169 L280,150 L350,120 L420,86 L490,56 L545,38 L600,18" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="18" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="18" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>×6.3</b><span>כניסות אורגניות</span></div><div class="pd-kpi"><b>12</b><span>חודשי עבודה</span></div></div></div>
+      <div class="proof-dash" data-dash="2" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · קבוצת אאוטדור</div><div class="pd-sub">אורגני + ממומן · 12 חודשים</div><div class="pd-metric"><span class="pd-badge">+220%</span><span class="pd-metric-label">גידול בתנועה</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף עליית קבוצת אאוטדור"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,176 L80,165 L160,153 L240,135 L320,117 L400,97 L480,73 L600,48 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,176 L80,165 L160,153 L240,135 L320,117 L400,97 L480,73 L600,48" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="48" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="48" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>×3.2</b><span>תנועה אורגנית</span></div><div class="pd-kpi"><b>12</b><span>חודשי עבודה</span></div></div></div>
+      <div class="proof-dash" data-dash="3" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> מבקרים ייחודיים · Muscle &amp; Motion</div><div class="pd-sub">Google Analytics · בשנה</div><div class="pd-metric"><span class="pd-badge">+52%</span><span class="pd-metric-label">גידול במבקרים הייחודיים</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף עליית Muscle & Motion"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,158 L100,150 L200,138 L300,121 L400,103 L500,86 L600,70 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,158 L100,150 L200,138 L300,121 L400,103 L500,86 L600,70" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="70" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="70" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b dir="ltr">105K → 160K</b><span>מבקרים ייחודיים בשנה</span></div><div class="pd-kpi"><b>+55K</b><span>מבקרים חדשים</span></div></div></div>
     </div>
     <div class="results">
       <div class="res-card reveal">
@@ -1185,6 +1178,7 @@ const auditForm=document.getElementById('auditForm');
 if(auditForm)auditForm.addEventListener('submit',e=>{e.preventDefault();const url=document.getElementById('auditUrl').value.trim();const msg=document.getElementById('f-msg');if(msg&&url)msg.value='אבחון לאתר: '+url;document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>{const n=document.getElementById('f-name');if(n)n.focus({preventScroll:true});},650);});
 const checkList=document.getElementById('checkList');
 if(checkList){const cr=document.getElementById('checkResult');checkList.addEventListener('change',()=>{const n=checkList.querySelectorAll('input:checked').length;if(n===0){cr.textContent='סמנו את הסעיפים שמתארים את האתר שלכם';cr.classList.remove('warn');}else if(n===1){cr.textContent='סימנתם סעיף אחד. כדאי לבדוק את זה לעומק.';cr.classList.add('warn');}else{cr.textContent='סימנתם '+n+' מתוך 5. כנראה שיש פוטנציאל משמעותי לשיפור.';cr.classList.add('warn');}});}
+document.querySelectorAll('.dash-tab').forEach(t=>t.addEventListener('click',()=>{const i=t.dataset.dash;document.querySelectorAll('.dash-tab').forEach(x=>x.classList.toggle('active',x.dataset.dash===i));document.querySelectorAll('.dash-gallery .proof-dash').forEach(d=>{d.hidden=(d.dataset.dash!==i);});}));
 </script>
 </body>
 </html>
