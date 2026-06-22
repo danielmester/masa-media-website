@@ -175,11 +175,11 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .clients .cap{text-align:center;color:var(--ink-2);font-weight:800;font-size:clamp(1.05rem,1.7vw,1.32rem);margin-bottom:26px}
 .tools-strip{text-align:center}
 .tools-cap{color:var(--muted);font-weight:700;font-size:.92rem;margin-bottom:22px}
-.tools-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px}
-.tlogo{display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:800;font-size:.95rem;color:var(--ink);box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
-.tlogo:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:transparent}
+.tools-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 30px;max-width:1180px;margin-inline:auto}
+.tlogo{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;color:var(--ink-2);white-space:nowrap;transition:transform .25s var(--ease)}
+.tlogo:hover{transform:translateY(-2px);color:var(--ink)}
 .tlogo svg{width:28px;height:28px;flex:none;color:#4F5BF2}
-.tlogo img{width:26px;height:26px;flex:none;object-fit:contain}
+.tlogo img{width:24px;height:24px;flex:none;object-fit:contain}
 .tlogo .si{fill:currentColor}
 .tlogo .lu{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tools-row .tlogo:nth-child(1) svg{color:#E37400}
@@ -314,8 +314,8 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .quote .who span{color:var(--muted);font-size:.84rem}
 .review-marquee{margin-top:40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;direction:ltr;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
 .review-row{display:flex;align-items:flex-start;width:max-content}
-.review-row.r1{animation:revscroll 64s linear infinite}
-.review-row.r2{animation:revscroll 80s linear infinite reverse}
+.review-row.r1{animation:revscroll 340s linear infinite}
+.review-row.r2{animation:revscroll 400s linear infinite reverse}
 .review-marquee:hover .review-row{animation-play-state:paused}
 @keyframes revscroll{to{transform:translateX(-50%)}}
 .review-row .quote{width:340px;flex:none;margin-left:20px;direction:rtl;text-align:right;padding:24px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
@@ -501,6 +501,15 @@ footer ul a:hover{color:#fff}
 .pv-x{background:var(--bg-warm);color:var(--muted)}
 .pv-v{background:var(--grad);color:#fff}
 .pv-line{width:100%;height:54px;display:block;margin-top:12px}
+.pv-card{position:relative}
+.pv-chart{margin-top:12px;border-radius:10px;overflow:hidden}
+.pv-chart svg{width:100%;height:auto;display:block}
+.pv-card.pv-good{border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;box-shadow:0 24px 52px -28px rgba(79,91,242,.5)}
+.pv-card.pv-bad .pv-chart{opacity:.85}
+.pv-badge{position:absolute;top:16px;inset-inline-start:24px;background:var(--grad);color:#fff;font-weight:800;font-size:.76rem;padding:5px 12px;border-radius:999px}
+.pv-tag{display:inline-block;margin-top:13px;font-weight:700;font-size:.84rem;padding:5px 13px;border-radius:8px}
+.pv-tag-bad{background:var(--bg-warm);color:var(--muted)}
+.pv-tag-good{background:#f3effe;color:#8E2DE2}
 .pv-card p{color:var(--muted);font-size:.92rem;line-height:1.6;margin:12px 0 0}
 @media(max-width:820px){.prob-grid{grid-template-columns:1fr;gap:30px}}
 .founder-sign{display:flex;align-items:center;gap:14px;margin-top:26px}
@@ -605,7 +614,7 @@ footer ul a:hover{color:#fff}
       </form>
       <div class="audit-sub reveal" data-d="2">ניתוח מותאם של מצב הקידום שלכם, ללא עלות וללא התחייבות · <a href="#results">לראות תוצאות אמיתיות</a></div>
       <div class="trust reveal" data-d="3">
-        <span><span class="stars">★★★★★</span> 5.0 · 69 ביקורות בגוגל</span>
+        <span><span class="stars">★★★★★</span> 5.0 · 69 ביקורות בגוגל ובפייסבוק</span>
         <span class="div"></span>
         <span>המלצות מעשרות לקוחות מרוצים</span>
       </div>
@@ -625,7 +634,7 @@ footer ul a:hover{color:#fff}
 
 <!-- ============================ CLIENTS ============================ -->
 <section class="clients">
-  <div class="wrap"><div class="sec-head center reveal" style="margin-bottom:32px"><span class="kicker">לקוחות נבחרים</span><h2>אתם בחברה טובה</h2><p>אלה רק חלק מהמותגים והארגונים שכבר צומחים איתנו</p></div></div>
+  <div class="wrap"><div class="sec-head center reveal" style="margin-bottom:32px"><span class="kicker">לקוחות נבחרים</span><h2>ברוכים הבאים, אתם בחברה טובה</h2></div></div>
   <div class="logo-marquee reveal" data-d="1">
     <div class="logo-track" id="logoTrack">
       <span class="lg"><img src="assets/clients-cur/cur01.jpg" alt="canapés" loading="lazy"></span>
@@ -655,15 +664,15 @@ footer ul a:hover{color:#fff}
   <div class="wrap"><div class="stats">
     <div class="stat reveal"><div class="n grad-text" data-count="2014" data-raw="1">0</div><div class="l">פעילים מאז</div></div>
     <div class="stat reveal" data-d="1"><div class="n grad-text" data-count="5" data-suffix=".0">0</div><div class="l">דירוג בגוגל</div></div>
-    <div class="stat reveal" data-d="2"><div class="n grad-text" data-count="69">0</div><div class="l">ביקורות אמיתיות</div></div>
-    <div class="stat reveal" data-d="3"><div class="n grad-text"><span data-count="18">0</span></div><div class="l">מקרי בוחן מוכחים</div></div>
+    <div class="stat reveal" data-d="2"><div class="n grad-text" data-count="1000" data-suffix="+">0</div><div class="l">ביטויים בעמוד ראשון</div></div>
+    <div class="stat reveal" data-d="3"><div class="n grad-text"><span data-count="150" data-suffix="+">0</span></div><div class="l">לקוחות מרוצים</div></div>
   </div></div>
 </section>
 
 <!-- ============================ WHY / DIFFERENCE ============================ -->
 <section class="sec tint">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="kicker">איכות עושה את ההבדל</span><h2>חברת קידום אתרים איכותית, ההבדל בין כישלון להצלחה</h2></div>
+    <div class="sec-head center reveal"><span class="kicker">בוחרים נכון</span><h2>חברת קידום אתרים איכותית, ההבדל בין כישלון להצלחה</h2></div>
     <div class="prob-grid">
       <div class="prob-copy reveal"><p>חברות ובעלי עסקים רבים חוששים מתחום ה-SEO או חושבים שקידום אתרים אורגני לא באמת עובד. יש כאלו שאף ירחיקו לכת ויאמרו שמדובר באחיזת עיניים ותו לא.</p>
       <p>התפיסה השגויה הזו לא מגיעה יש מאין. עסקים לא מעטים ניסו לקדם את האתר שלהם עם מקדם אתרים או חברה לקידום אתרים אבל נכשלו, לפעמים יותר מפעם אחת, וכל ניסיון כזה היה כרוך בהרבה זמן וכסף שירדו לטמיון.</p>
@@ -672,13 +681,16 @@ footer ul a:hover{color:#fff}
       <div class="prob-visual reveal" data-d="1">
         <div class="pv-card pv-bad">
           <div class="pv-h"><span class="pv-ic pv-x">✕</span> מקדם לא מקצועי</div>
-          <svg class="pv-line" viewBox="0 0 220 60" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,16 55,23 110,20 165,31 220,42" fill="none" stroke="#c7ccd6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="pv-chart"><svg viewBox="0 0 280 96" aria-hidden="true"><path d="M0,30 L70,36 L140,31 L210,45 L280,53 L280,96 L0,96 Z" fill="#edebf1"/><polyline points="0,30 70,36 140,31 210,45 280,53" fill="none" stroke="#bcb8c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="pv-tag pv-tag-bad">תקוע במקום · בזבוז תקציב</span>
           <p>הרבה זמן וכסף שיורדים לטמיון, בלי תוצאות אמיתיות.</p>
         </div>
         <div class="pv-card pv-good">
+          <span class="pv-badge">צמיחה מתמדת ↗</span>
           <div class="pv-h"><span class="pv-ic pv-v">✓</span> עם מסה מדיה</div>
-          <svg class="pv-line" viewBox="0 0 220 60" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,50 55,41 110,30 165,16 220,5" fill="none" stroke="url(#mGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <p>תהליך מסודר, תיאום ציפיות ריאלי וצמיחה מדידה לאורך זמן.</p>
+          <div class="pv-chart"><svg viewBox="0 0 280 96" aria-hidden="true"><path d="M0,80 L70,67 L140,50 L210,28 L280,10 L280,96 L0,96 Z" fill="url(#pdFill)"/><polyline points="0,80 70,67 140,50 210,28 280,10" fill="none" stroke="url(#pdLine)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="280" cy="10" r="5" fill="#8E2DE2"/></svg></div>
+          <span class="pv-tag pv-tag-good">תוצאות מדידות לאורך זמן</span>
+          <p>תהליך מסודר, תיאום ציפיות ריאלי וצמיחה מדידה.</p>
         </div>
       </div>
     </div>
@@ -688,7 +700,7 @@ footer ul a:hover{color:#fff}
 <!-- ============================ PROCESS ============================ -->
 <section class="sec" id="process" style="background:var(--bg-warm)">
   <div class="wrap">
-    <div class="sec-head wide reveal"><span class="kicker">איך עובדים איתנו</span><h2>תהליך ברור, מהאבחון ועד הצמרת</h2></div>
+    <div class="sec-head wide reveal"><span class="kicker">איך אנחנו עושים את זה</span><h2>תהליך ברור, מהאבחון ועד הצמרת</h2></div>
     <div class="steps">
       <div class="step reveal"><div class="no">01</div><h3>אבחון ואסטרטגיה</h3><p>מחקר מילות מפתח ומתחרים, ניתוח האתר ובניית תוכנית עבודה מותאמת.</p></div>
       <div class="step reveal" data-d="1"><div class="no">02</div><h3>אופטימיזציה ותוכן</h3><p>שיפורים טכניים ותוכן איכותי שמדבר גם לגוגל וגם למנועי ה-AI.</p></div>
@@ -795,11 +807,12 @@ footer ul a:hover{color:#fff}
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">תוצאות אמיתיות</span><h2>מספרים שמדברים בעד עצמם</h2><p>תוצאות אמיתיות של לקוחות שלנו. למקרי הבוחן המלאים, קפצו לעמוד הקייס סטאדיז.</p></div>
     <div class="dash-gallery reveal">
-      <div class="dash-tabs" role="tablist"><button class="dash-tab active" data-dash="0">DNG Medical</button><button class="dash-tab" data-dash="1">Merkel Technologies</button><button class="dash-tab" data-dash="2">ביאמבה</button><button class="dash-tab" data-dash="3">בינת תקשורת</button></div>
-      <div class="proof-dash" data-dash="0"><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · DNG Medical</div><div class="pd-sub">גוגל סרץ׳ קונסול · קליניקה להשתלת שיער</div><div class="pd-metric"><span class="pd-badge">+436%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף DNG Medical"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="26" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="26" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>×5.4</b><span>יותר תנועה אורגנית</span></div><div class="pd-kpi"><b>+356%</b><span>מילות מפתח בעמ׳ 1</span></div></div></div>
-      <div class="proof-dash" data-dash="1" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · Merkel Technologies</div><div class="pd-sub">גוגל אנליטיקס · תחום B2B תחרותי</div><div class="pd-metric"><span class="pd-badge">+530%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף Merkel Technologies"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,192 L70,188 L140,180 L210,169 L280,150 L350,120 L420,86 L490,56 L545,38 L600,18 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,192 L70,188 L140,180 L210,169 L280,150 L350,120 L420,86 L490,56 L545,38 L600,18" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="18" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="18" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>×6.3</b><span>יותר תנועה אורגנית</span></div></div></div>
-      <div class="proof-dash" data-dash="2" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · ביאמבה</div><div class="pd-sub">גוגל אנליטיקס · שנה של קידום אורגני</div><div class="pd-metric"><span class="pd-badge">+183%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף ביאמבה"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,176 L80,165 L160,153 L240,135 L320,117 L400,97 L480,73 L600,48 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,176 L80,165 L160,153 L240,135 L320,117 L400,97 L480,73 L600,48" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="48" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="48" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>×2.8</b><span>יותר תנועה אורגנית</span></div><div class="pd-kpi"><b>+70%</b><span>כבר בשנה הראשונה</span></div></div></div>
-      <div class="proof-dash" data-dash="3" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> מילות מפתח בעמ׳ 1 · בינת תקשורת מחשבים</div><div class="pd-sub">גוגל סרץ׳ קונסול · תחומים תחרותיים</div><div class="pd-metric"><span class="pd-badge">280</span><span class="pd-metric-label">מילות מפתח בעמוד הראשון</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף בינת תקשורת"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,172 L90,161 L180,150 L270,133 L360,113 L450,87 L540,58 L600,42 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,172 L90,161 L180,150 L270,133 L360,113 L450,87 L540,58 L600,42" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="42" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="42" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>10</b><span>חודשי עבודה</span></div></div></div>
+      <div class="dash-tabs" role="tablist"><button class="dash-tab active" data-dash="0">בינת תקשורת</button><button class="dash-tab" data-dash="1">DNG Medical</button><button class="dash-tab" data-dash="2">קבוצת אאוטדור</button><button class="dash-tab" data-dash="3">רשת הגנה</button><button class="dash-tab" data-dash="4">Merkel Technologies</button></div>
+      <div class="proof-dash" data-dash="0"><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> מילות מפתח בעמ׳ 1 · בינת תקשורת מחשבים</div><div class="pd-sub">גוגל סרץ׳ קונסול · תחומים תחרותיים מאוד</div><div class="pd-metric"><span class="pd-badge">280</span><span class="pd-metric-label">מילות מפתח בעמוד הראשון</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף בינת תקשורת"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,172 L90,161 L180,150 L270,133 L360,113 L450,87 L540,58 L600,42 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,172 L90,161 L180,150 L270,133 L360,113 L450,87 L540,58 L600,42" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="42" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="42" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>+63%</b><span>קישורים נכנסים</span></div><div class="pd-kpi"><b>10</b><span>חודשי עבודה</span></div></div></div>
+      <div class="proof-dash" data-dash="1" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · DNG Medical</div><div class="pd-sub">גוגל סרץ׳ קונסול · קליניקה להשתלת שיער</div><div class="pd-metric"><span class="pd-badge">+436%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף DNG Medical"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,179 L54,174 L109,167 L163,151 L218,141 L272,119 L327,105 L381,82 L436,70 L490,50 L545,38 L600,26" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="26" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="26" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>+356%</b><span>מילות מפתח בעמ׳ 1</span></div><div class="pd-kpi"><b dir="ltr">23 → 105</b><span>דירוג בטופ 10</span></div></div></div>
+      <div class="proof-dash" data-dash="2" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> מבקרים חדשים · קבוצת אאוטדור</div><div class="pd-sub">גוגל אנליטיקס · אורגני + ממומן</div><div class="pd-metric"><span class="pd-badge">4,309</span><span class="pd-metric-label">מבקרים חדשים במהלך הקמפיין</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף קבוצת אאוטדור"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,176 L80,165 L160,153 L240,135 L320,117 L400,97 L480,73 L600,48 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,176 L80,165 L160,153 L240,135 L320,117 L400,97 L480,73 L600,48" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="48" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="48" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>10</b><span>חודשי עבודה</span></div><div class="pd-kpi"><b>אורגני + ממומן</b><span>שילוב ערוצים</span></div></div></div>
+      <div class="proof-dash" data-dash="3" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · רשת הגנה</div><div class="pd-sub">גוגל אנליטיקס · ביסוס שליטה בתחום</div><div class="pd-metric"><span class="pd-badge">+71%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף רשת הגנה"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,170 L90,160 L180,150 L270,136 L360,120 L450,100 L540,80 L600,66 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,170 L90,160 L180,150 L270,136 L360,120 L450,100 L540,80 L600,66" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="66" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="66" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>מקיף</b><span>שיפור טכני באתר</span></div></div></div>
+      <div class="proof-dash" data-dash="4" hidden><div class="pd-head"><div class="pd-title"><span class="pd-dot"></span> תנועה אורגנית · Merkel Technologies</div><div class="pd-sub">גוגל אנליטיקס · B2B תחרותי</div><div class="pd-metric"><span class="pd-badge">+530%</span><span class="pd-metric-label">גידול בתנועה האורגנית</span></div></div><div class="pd-chart"><svg viewBox="0 0 600 210" role="img" aria-label="גרף Merkel Technologies"><line x1="0" y1="55" x2="600" y2="55" stroke="#ecebf3"/><line x1="0" y1="116" x2="600" y2="116" stroke="#ecebf3"/><line x1="0" y1="178" x2="600" y2="178" stroke="#cdd3e0" stroke-dasharray="3 6"/><path d="M0,192 L70,188 L140,180 L210,169 L280,150 L350,120 L420,86 L490,56 L545,38 L600,18 L600,210 L0,210 Z" fill="url(#pdFill)"/><path d="M0,192 L70,188 L140,180 L210,169 L280,150 L350,120 L420,86 L490,56 L545,38 L600,18" fill="none" stroke="url(#pdLine)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="600" cy="18" r="5.5" fill="#8E2DE2"/><circle cx="600" cy="18" r="11" fill="#8E2DE2" opacity=".16"/></svg></div><div class="pd-foot"><div class="pd-kpi"><b>91</b><span>מילות מפתח בעמ׳ 1</span></div><div class="pd-kpi"><b>2,270</b><span>מבקרים חדשים</span></div></div></div>
     </div>
     <div class="results">
       
@@ -874,15 +887,15 @@ footer ul a:hover{color:#fff}
     <div class="tools-strip reveal" data-d="2">
     <div class="sec-head center" style="margin-bottom:28px"><span class="kicker">הסטאק המקצועי שלנו</span><h2 style="font-size:clamp(1.45rem,2.4vw,1.95rem)">עובדים עם הכלים המובילים בתעשייה</h2></div>
     <div class="tools-row">
-        <span class="tlogo"><img src="assets/tools/analytics.svg" alt="Google Analytics" loading="lazy" />Google Analytics</span>
-        <span class="tlogo"><img src="assets/tools/searchconsole.svg" alt="Search Console" loading="lazy" />Search Console</span>
-        <span class="tlogo"><img src="assets/tools/ahrefs.svg" alt="Ahrefs" loading="lazy" />Ahrefs</span>
-        <span class="tlogo"><img src="assets/tools/ads.svg" alt="Google Ads" loading="lazy" />Google Ads</span>
-        <span class="tlogo"><img src="assets/tools/tagmanager.svg" alt="Google Tag Manager" loading="lazy" />Google Tag Manager</span>
-        <span class="tlogo"><img src="assets/tools/merchant.svg" alt="Google Merchant" loading="lazy" />Google Merchant</span>
-        <span class="tlogo"><img src="assets/tools/chatgpt.svg" alt="ChatGPT" loading="lazy" />ChatGPT</span>
-        <span class="tlogo"><img src="assets/tools/claude-code.svg" alt="Claude Code" loading="lazy" />Claude Code</span>
-        <span class="tlogo"><img src="assets/tools/openclaw.png" alt="OpenClaw" loading="lazy" />OpenClaw</span>
+        <span class="tlogo">Google Analytics <img src="assets/tools/analytics.svg" alt="Google Analytics" loading="lazy" /></span>
+        <span class="tlogo">Search Console <img src="assets/tools/searchconsole.svg" alt="Search Console" loading="lazy" /></span>
+        <span class="tlogo">Ahrefs <img src="assets/tools/ahrefs.svg" alt="Ahrefs" loading="lazy" /></span>
+        <span class="tlogo">Google Ads <img src="assets/tools/ads.svg" alt="Google Ads" loading="lazy" /></span>
+        <span class="tlogo">Google Tag Manager <img src="assets/tools/tagmanager.svg" alt="Google Tag Manager" loading="lazy" /></span>
+        <span class="tlogo">Google Merchant <img src="assets/tools/merchant.svg" alt="Google Merchant" loading="lazy" /></span>
+        <span class="tlogo">ChatGPT <img src="assets/tools/chatgpt.svg" alt="ChatGPT" loading="lazy" /></span>
+        <span class="tlogo">Claude Code <img src="assets/tools/claude-code.svg" alt="Claude Code" loading="lazy" /></span>
+        <span class="tlogo">OpenClaw <img src="assets/tools/openclaw.png" alt="OpenClaw" loading="lazy" /></span>
     </div>
   </div>
   </div>
@@ -911,7 +924,7 @@ footer ul a:hover{color:#fff}
   <div class="wrap">
     <div class="t-top">
       <div class="sec-head reveal" style="margin-bottom:0"><span class="kicker">מה הלקוחות אומרים</span><h2>לקוחות ממליצים</h2></div>
-      <a class="rating-badge reveal" data-d="1" href="https://www.google.com/search?q=מסה+מדיה+דיגיטל" target="_blank" rel="noopener"><svg class="gbadge" aria-hidden="true"><use href="#gG"/></svg><div class="score grad-text">5.0</div><div><div class="stars">★★★★★</div><div style="font-size:.84rem;color:var(--muted);font-weight:600">מתוך 69 ביקורות בגוגל</div></div></a>
+      <a class="rating-badge reveal" data-d="1" href="https://www.google.com/search?q=מסה+מדיה+דיגיטל" target="_blank" rel="noopener"><svg class="gbadge" aria-hidden="true"><use href="#gG"/></svg><div class="score grad-text">5.0</div><div><div class="stars">★★★★★</div><div style="font-size:.84rem;color:var(--muted);font-weight:600">מתוך 69 ביקורות בגוגל ובפייסבוק</div></div></a>
     </div>
     <div class="review-marquee reveal" data-d="1">
       <div class="review-row r1" id="reviewRow1">
