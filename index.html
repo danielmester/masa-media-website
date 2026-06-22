@@ -120,18 +120,6 @@ nav.links > a:hover,nav.links > .has-mega:hover > span{color:#2c2f8f;background:
 .ba-a b{font-size:1.75rem;font-family:"Ploni","Heebo"}
 .ba-arr{font-size:1.35rem;color:var(--brand-2);font-weight:900;flex:none}
 @media(max-width:760px){.ba-row{grid-template-columns:1fr;max-width:420px}}
-.checkup-card{max-width:720px;margin:0 auto;background:linear-gradient(140deg,#ffffff,#f7f6ff);border:1px solid var(--line);border-radius:24px;padding:42px 40px;box-shadow:0 34px 80px -42px rgba(40,30,80,.4)}
-.check-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin:0 0 24px;padding:0}
-.check-list label{display:flex;align-items:center;gap:14px;cursor:pointer;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);transition:border-color .2s,background .2s;font-weight:600;font-size:1.02rem}
-.check-list label:hover{border-color:var(--brand-2);background:#fff}
-.check-list input{position:absolute;opacity:0;pointer-events:none}
-.cbox{width:25px;height:25px;border-radius:8px;border:2px solid var(--line);flex:none;display:grid;place-items:center;transition:.2s}
-.cbox::after{content:"✓";color:#fff;font-size:.82rem;font-weight:900;opacity:0;transform:scale(.4);transition:.2s}
-.check-list input:checked+.cbox{background:var(--grad);border-color:transparent}
-.check-list input:checked+.cbox::after{opacity:1;transform:scale(1)}
-.check-result{text-align:center;font-weight:800;font-size:1.12rem;margin-bottom:24px;min-height:1.6em;color:var(--ink);transition:.2s}
-.check-result.warn{color:var(--brand-2)}
-.check-cta{display:flex;width:fit-content;margin-inline:auto}
 .trust{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:600}
 .stars{color:#F5A623;letter-spacing:1px;font-size:.98rem}
 .trust .div{width:1px;height:16px;background:var(--line-2)}
@@ -821,24 +809,6 @@ footer ul a:hover{color:#fff}
   </div></div>
 </section>
 
-<!-- ============================ CHECKUP ============================ -->
-<section class="sec checkup" id="checkup">
-  <div class="wrap">
-    <div class="checkup-card reveal">
-      <div class="sec-head center" style="margin-bottom:26px"><span class="kicker">בדקו את עצמכם</span><h2>5 סימנים שהאתר שלכם מפסיד לקוחות</h2></div>
-      <ul class="check-list" id="checkList">
-        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">האתר נטען ביותר מ-3 שניות</span></label></li>
-        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">אין לכם עמודים שמדורגים על ביטויי מפתח חשובים בתחום</span></label></li>
-        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">רוב הכניסות מגיעות מחיפוש על שם המותג, ולא מחיפושים חדשים</span></label></li>
-        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">אין קריאה לפעולה (CTA) ברורה בכל עמוד</span></label></li>
-        <li><label><input type="checkbox"><span class="cbox"></span><span class="ctxt">אין מדידה מסודרת של המרות ולידים</span></label></li>
-      </ul>
-      <div class="check-result" id="checkResult">סמנו את הסעיפים שמתארים את האתר שלכם</div>
-      <a href="#contact" class="btn btn-primary check-cta">קבלו בדיקת אתר ללא עלות <span class="arr">←</span></a>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ RESULTS ============================ -->
 <section class="sec" id="results" style="background:var(--bg-warm)">
   <div class="wrap">
@@ -1240,8 +1210,6 @@ document.querySelectorAll('.res-card:not(.cta)').forEach(c=>{
 function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='תודה! נחזור אליכם בקרוב ✓';b.style.pointerEvents='none';return false;}
 const auditForm=document.getElementById('auditForm');
 if(auditForm)auditForm.addEventListener('submit',e=>{e.preventDefault();const url=document.getElementById('auditUrl').value.trim();const msg=document.getElementById('f-msg');if(msg&&url)msg.value='אבחון לאתר: '+url;document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>{const n=document.getElementById('f-name');if(n)n.focus({preventScroll:true});},650);});
-const checkList=document.getElementById('checkList');
-if(checkList){const cr=document.getElementById('checkResult');checkList.addEventListener('change',()=>{const n=checkList.querySelectorAll('input:checked').length;if(n===0){cr.textContent='סמנו את הסעיפים שמתארים את האתר שלכם';cr.classList.remove('warn');}else if(n===1){cr.textContent='סימנתם סעיף אחד. כדאי לבדוק את זה לעומק.';cr.classList.add('warn');}else{cr.textContent='סימנתם '+n+' מתוך 5. כנראה שיש פוטנציאל משמעותי לשיפור.';cr.classList.add('warn');}});}
 document.querySelectorAll('.dash-tab').forEach(t=>t.addEventListener('click',()=>{const i=t.dataset.dash;document.querySelectorAll('.dash-tab').forEach(x=>x.classList.toggle('active',x.dataset.dash===i));document.querySelectorAll('.dash-gallery .proof-dash').forEach(d=>{d.hidden=(d.dataset.dash!==i);});}));
 </script>
 </body>
