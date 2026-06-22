@@ -1,0 +1,570 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "מסה מדיה דיגיטל" [ref=e5] [cursor=pointer]:
+          - /url: /#top
+          - img "מסה מדיה דיגיטל" [ref=e7]
+        - navigation [ref=e8]:
+          - link "דף הבית" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e11] [cursor=pointer]: שירותי קידום אתרים
+          - link "קייס סטאדיז" [ref=e13] [cursor=pointer]:
+            - /url: /casestudy/
+          - link "מיקומי לקוחותינו" [ref=e14] [cursor=pointer]:
+            - /url: /client-rankings/
+          - link "מן התקשורת" [ref=e15] [cursor=pointer]:
+            - /url: /from-the-media/
+          - link "אודות" [ref=e16] [cursor=pointer]:
+            - /url: /about/
+          - link "מידע מקצועי" [ref=e17] [cursor=pointer]:
+            - /url: /blog/
+        - generic [ref=e18]:
+          - link "072-338-4444" [ref=e19] [cursor=pointer]:
+            - /url: tel:0723384444
+          - link "דברו איתי" [ref=e20] [cursor=pointer]:
+            - /url: /#contact
+    - generic:
+      - generic:
+        - link "דף הבית":
+          - /url: /
+        - link "שירותי קידום אתרים":
+          - /url: /seo/
+        - link "GEO, קידום למנועי AI":
+          - /url: /ai-seo/geo/
+        - link "קייס סטאדיז":
+          - /url: /casestudy/
+        - link "מיקומי לקוחותינו":
+          - /url: /client-rankings/
+        - link "מן התקשורת":
+          - /url: /from-the-media/
+        - link "אודות":
+          - /url: /about/
+        - link "מידע מקצועי":
+          - /url: /blog/
+        - link "דברו איתי":
+          - /url: /#contact
+  - main [ref=e21]:
+    - navigation [ref=e22]:
+      - link "בית" [ref=e23] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e24]: ›
+      - generic [ref=e25]: מיקומי לקוחותינו
+    - generic [ref=e27]:
+      - generic [ref=e28]: מתעדכן בכל יום
+      - heading "מיקומי לקוחותינו בגוגל" [level=1] [ref=e29]
+      - paragraph [ref=e30]: מעקב חי אחר מיקומי הביטויים של לקוחותינו בתוצאות החיפוש של גוגל, מתעדכן אוטומטית מדי יום.
+    - table [ref=e33]:
+      - rowgroup [ref=e34]:
+        - row "שם האתר מילת מפתח מיקום נוכחי עדכון אחרון" [ref=e35]:
+          - columnheader "שם האתר" [ref=e36]
+          - columnheader "מילת מפתח" [ref=e37]
+          - columnheader "מיקום נוכחי" [ref=e38]
+          - columnheader "עדכון אחרון" [ref=e39]
+        - row [ref=e40]:
+          - cell [ref=e41]
+          - cell [ref=e42]
+          - cell [ref=e43]
+          - cell [ref=e44]
+      - rowgroup [ref=e45]:
+        - row "arpil-tech.com ראשי הדבקה 1 היום" [ref=e46]:
+          - cell "arpil-tech.com" [ref=e47]
+          - cell "ראשי הדבקה" [ref=e48]
+          - cell "1" [ref=e49]
+          - cell "היום" [ref=e50]
+        - row "מכונה להדבקת מדבקות 1 היום" [ref=e51]:
+          - cell "מכונה להדבקת מדבקות" [ref=e52]
+          - cell "1" [ref=e53]
+          - cell "היום" [ref=e54]
+        - row "bynet.co.il אומני צ'אנל 1 היום" [ref=e55]:
+          - cell "bynet.co.il" [ref=e56]
+          - cell "אומני צ'אנל" [ref=e57]
+          - cell "1" [ref=e58]
+          - cell "היום" [ref=e59]
+        - row "חדרי ישיבות חכמים 1 היום" [ref=e60]:
+          - cell "חדרי ישיבות חכמים" [ref=e61]
+          - cell "1" [ref=e62]
+          - cell "היום" [ref=e63]
+        - row "מערכות אוטומציה 1 היום" [ref=e64]:
+          - cell "מערכות אוטומציה" [ref=e65]
+          - cell "1" [ref=e66]
+          - cell "היום" [ref=e67]
+        - row "שירותי devops 1 היום" [ref=e68]:
+          - cell "שירותי devops" [ref=e69]
+          - cell "1" [ref=e70]
+          - cell "היום" [ref=e71]
+        - row "mft 1 היום" [ref=e72]:
+          - cell "mft" [ref=e73]
+          - cell "1" [ref=e74]
+          - cell "היום" [ref=e75]
+        - row "msp 1 היום" [ref=e76]:
+          - cell "msp" [ref=e77]
+          - cell "1" [ref=e78]
+          - cell "היום" [ref=e79]
+        - row "פתרונות סייבר 1 היום" [ref=e80]:
+          - cell "פתרונות סייבר" [ref=e81]
+          - cell "1" [ref=e82]
+          - cell "היום" [ref=e83]
+        - row "מיגרציה לענן 1 היום" [ref=e84]:
+          - cell "מיגרציה לענן" [ref=e85]
+          - cell "1" [ref=e86]
+          - cell "היום" [ref=e87]
+        - row "פתרונות אבטחת מידע 1 היום" [ref=e88]:
+          - cell "פתרונות אבטחת מידע" [ref=e89]
+          - cell "1" [ref=e90]
+          - cell "היום" [ref=e91]
+        - row "aiops 1 היום" [ref=e92]:
+          - cell "aiops" [ref=e93]
+          - cell "1" [ref=e94]
+          - cell "היום" [ref=e95]
+        - row "טלפוניה בענן 1 היום" [ref=e96]:
+          - cell "טלפוניה בענן" [ref=e97]
+          - cell "1" [ref=e98]
+          - cell "היום" [ref=e99]
+        - row "omni channel 1 היום" [ref=e100]:
+          - cell "omni channel" [ref=e101]
+          - cell "1" [ref=e102]
+          - cell "היום" [ref=e103]
+        - row "ot 1 היום" [ref=e104]:
+          - cell "ot" [ref=e105]
+          - cell "1" [ref=e106]
+          - cell "היום" [ref=e107]
+        - row "narkis-law.com הסדר חוב עם הבנק 1 היום" [ref=e108]:
+          - cell "narkis-law.com" [ref=e109]
+          - cell "הסדר חוב עם הבנק" [ref=e110]
+          - cell "1" [ref=e111]
+          - cell "היום" [ref=e112]
+        - row "הסדרי חובות מול הבנקים 1 היום" [ref=e113]:
+          - cell "הסדרי חובות מול הבנקים" [ref=e114]
+          - cell "1" [ref=e115]
+          - cell "היום" [ref=e116]
+        - row "עורכי דין תביעות נגד בנקים 1 היום" [ref=e117]:
+          - cell "עורכי דין תביעות נגד בנקים" [ref=e118]
+          - cell "1" [ref=e119]
+          - cell "היום" [ref=e120]
+        - row "עורך דין פשיטת רגל 1 היום" [ref=e121]:
+          - cell "עורך דין פשיטת רגל" [ref=e122]
+          - cell "1" [ref=e123]
+          - cell "היום" [ref=e124]
+        - row "תביעות בנקים 1 היום" [ref=e125]:
+          - cell "תביעות בנקים" [ref=e126]
+          - cell "1" [ref=e127]
+          - cell "היום" [ref=e128]
+        - row "הסדר חובות לבנקים 1 היום" [ref=e129]:
+          - cell "הסדר חובות לבנקים" [ref=e130]
+          - cell "1" [ref=e131]
+          - cell "היום" [ref=e132]
+        - row "הסדר חובות מול בנקים 1 היום" [ref=e133]:
+          - cell "הסדר חובות מול בנקים" [ref=e134]
+          - cell "1" [ref=e135]
+          - cell "היום" [ref=e136]
+        - row "merkel.co.il algae measure 1 היום" [ref=e137]:
+          - cell "merkel.co.il" [ref=e138]
+          - cell "algae measure" [ref=e139]
+          - cell "1" [ref=e140]
+          - cell "היום" [ref=e141]
+        - row "topairsystems.com wet scrubber fume hood 1 היום" [ref=e142]:
+          - cell "topairsystems.com" [ref=e143]
+          - cell "wet scrubber fume hood" [ref=e144]
+          - cell "1" [ref=e145]
+          - cell "היום" [ref=e146]
+        - row "fume hood scrubber 1 היום" [ref=e147]:
+          - cell "fume hood scrubber" [ref=e148]
+          - cell "1" [ref=e149]
+          - cell "היום" [ref=e150]
+        - row "acid fume 1 היום" [ref=e151]:
+          - cell "acid fume" [ref=e152]
+          - cell "1" [ref=e153]
+          - cell "היום" [ref=e154]
+        - row "jack-kuba.co.il חזיות תחרה שקופות 1 היום" [ref=e155]:
+          - cell "jack-kuba.co.il" [ref=e156]
+          - cell "חזיות תחרה שקופות" [ref=e157]
+          - cell "1" [ref=e158]
+          - cell "היום" [ref=e159]
+        - row "חזיות נדבקות 1 היום" [ref=e160]:
+          - cell "חזיות נדבקות" [ref=e161]
+          - cell "1" [ref=e162]
+          - cell "היום" [ref=e163]
+        - row "חזיות שקופות 1 היום" [ref=e164]:
+          - cell "חזיות שקופות" [ref=e165]
+          - cell "1" [ref=e166]
+          - cell "היום" [ref=e167]
+        - row "חזיות סקסיות 1 היום" [ref=e168]:
+          - cell "חזיות סקסיות" [ref=e169]
+          - cell "1" [ref=e170]
+          - cell "היום" [ref=e171]
+        - row "מחטב ירכיים 1 היום" [ref=e172]:
+          - cell "מחטב ירכיים" [ref=e173]
+          - cell "1" [ref=e174]
+          - cell "היום" [ref=e175]
+        - row "חזיות 1 היום" [ref=e176]:
+          - cell "חזיות" [ref=e177]
+          - cell "1" [ref=e178]
+          - cell "היום" [ref=e179]
+        - row "חנות חזיות במידות גדולות 1 היום" [ref=e180]:
+          - cell "חנות חזיות במידות גדולות" [ref=e181]
+          - cell "1" [ref=e182]
+          - cell "היום" [ref=e183]
+        - row "מחטב לגבר 1 היום" [ref=e184]:
+          - cell "מחטב לגבר" [ref=e185]
+          - cell "1" [ref=e186]
+          - cell "היום" [ref=e187]
+        - row "reshethagana.com רשת הגנה 1 היום" [ref=e188]:
+          - cell "reshethagana.com" [ref=e189]
+          - cell "רשת הגנה" [ref=e190]
+          - cell "1" [ref=e191]
+          - cell "היום" [ref=e192]
+        - row "סורגים 1 היום" [ref=e193]:
+          - cell "סורגים" [ref=e194]
+          - cell "1" [ref=e195]
+          - cell "היום" [ref=e196]
+        - row "grebelsky.com קופינג לחומה 1 היום" [ref=e197]:
+          - cell "grebelsky.com" [ref=e198]
+          - cell "קופינג לחומה" [ref=e199]
+          - cell "1" [ref=e200]
+          - cell "היום" [ref=e201]
+        - row "אבן מצפה רמון 1 היום" [ref=e202]:
+          - cell "אבן מצפה רמון" [ref=e203]
+          - cell "1" [ref=e204]
+          - cell "היום" [ref=e205]
+        - row "narkis-law.com הסדר חוב 2 היום" [ref=e206]:
+          - cell "narkis-law.com" [ref=e207]
+          - cell "הסדר חוב" [ref=e208]
+          - cell "2" [ref=e209]
+          - cell "היום" [ref=e210]
+        - row "לקוח מוגבל בבנק 2 היום" [ref=e211]:
+          - cell "לקוח מוגבל בבנק" [ref=e212]
+          - cell "2" [ref=e213]
+          - cell "היום" [ref=e214]
+        - row "עו\"ד פשיטת רגל 2 היום" [ref=e215]:
+          - cell "עו\"ד פשיטת רגל" [ref=e216]
+          - cell "2" [ref=e217]
+          - cell "היום" [ref=e218]
+        - row "לקוח מוגבל חמור 2 היום" [ref=e219]:
+          - cell "לקוח מוגבל חמור" [ref=e220]
+          - cell "2" [ref=e221]
+          - cell "היום" [ref=e222]
+        - row "עורך דין בנקים 2 היום" [ref=e223]:
+          - cell "עורך דין בנקים" [ref=e224]
+          - cell "2" [ref=e225]
+          - cell "היום" [ref=e226]
+        - row "הסדר חוב מול הבנק 2 היום" [ref=e227]:
+          - cell "הסדר חוב מול הבנק" [ref=e228]
+          - cell "2" [ref=e229]
+          - cell "היום" [ref=e230]
+        - row "לקוח מוגבל 2 היום" [ref=e231]:
+          - cell "לקוח מוגבל" [ref=e232]
+          - cell "2" [ref=e233]
+          - cell "היום" [ref=e234]
+        - row "תביעות נגד בנקים 2 היום" [ref=e235]:
+          - cell "תביעות נגד בנקים" [ref=e236]
+          - cell "2" [ref=e237]
+          - cell "היום" [ref=e238]
+        - row "reshethagana.com התקנת רשת לחלון 2 היום" [ref=e239]:
+          - cell "reshethagana.com" [ref=e240]
+          - cell "התקנת רשת לחלון" [ref=e241]
+          - cell "2" [ref=e242]
+          - cell "היום" [ref=e243]
+        - row "סורג רשת 2 היום" [ref=e244]:
+          - cell "סורג רשת" [ref=e245]
+          - cell "2" [ref=e246]
+          - cell "היום" [ref=e247]
+        - row "רשתות הגנה נגד חרקים 2 היום" [ref=e248]:
+          - cell "רשתות הגנה נגד חרקים" [ref=e249]
+          - cell "2" [ref=e250]
+          - cell "היום" [ref=e251]
+        - row "רשת יתושים שקופה 2 היום" [ref=e252]:
+          - cell "רשת יתושים שקופה" [ref=e253]
+          - cell "2" [ref=e254]
+          - cell "היום" [ref=e255]
+        - row "רשת גלילה חשמלית 2 היום" [ref=e256]:
+          - cell "רשת גלילה חשמלית" [ref=e257]
+          - cell "2" [ref=e258]
+          - cell "היום" [ref=e259]
+        - row "arpil-tech.com מערכות אריזה ואוטומציה 2 היום" [ref=e260]:
+          - cell "arpil-tech.com" [ref=e261]
+          - cell "מערכות אריזה ואוטומציה" [ref=e262]
+          - cell "2" [ref=e263]
+          - cell "היום" [ref=e264]
+        - row "מכונות הרכבה לתעשייה 2 היום" [ref=e265]:
+          - cell "מכונות הרכבה לתעשייה" [ref=e266]
+          - cell "2" [ref=e267]
+          - cell "היום" [ref=e268]
+        - row "מערכות הדפסה והדבקת תוויות 2 היום" [ref=e269]:
+          - cell "מערכות הדפסה והדבקת תוויות" [ref=e270]
+          - cell "2" [ref=e271]
+          - cell "היום" [ref=e272]
+        - row "מכונת הדבקת תוויות 2 היום" [ref=e273]:
+          - cell "מכונת הדבקת תוויות" [ref=e274]
+          - cell "2" [ref=e275]
+          - cell "היום" [ref=e276]
+        - row "bynet.co.il DevOps Services 2 היום" [ref=e277]:
+          - cell "bynet.co.il" [ref=e278]
+          - cell "DevOps Services" [ref=e279]
+          - cell "2" [ref=e280]
+          - cell "היום" [ref=e281]
+        - row "oem 2 היום" [ref=e282]:
+          - cell "oem" [ref=e283]
+          - cell "2" [ref=e284]
+          - cell "היום" [ref=e285]
+        - row "שירותי siem soc 2 היום" [ref=e286]:
+          - cell "שירותי siem soc" [ref=e287]
+          - cell "2" [ref=e288]
+          - cell "היום" [ref=e289]
+        - row "MDR 2 היום" [ref=e290]:
+          - cell "MDR" [ref=e291]
+          - cell "2" [ref=e292]
+          - cell "היום" [ref=e293]
+        - row "MSSP 2 היום" [ref=e294]:
+          - cell "MSSP" [ref=e295]
+          - cell "2" [ref=e296]
+          - cell "היום" [ref=e297]
+        - row "ace contact center 2 היום" [ref=e298]:
+          - cell "ace contact center" [ref=e299]
+          - cell "2" [ref=e300]
+          - cell "היום" [ref=e301]
+        - row "grebelsky.com אבן מצפה 2 היום" [ref=e302]:
+          - cell "grebelsky.com" [ref=e303]
+          - cell "אבן מצפה" [ref=e304]
+          - cell "2" [ref=e305]
+          - cell "היום" [ref=e306]
+        - row "אבן בזלת שחורה 2 היום" [ref=e307]:
+          - cell "אבן בזלת שחורה" [ref=e308]
+          - cell "2" [ref=e309]
+          - cell "היום" [ref=e310]
+        - row "אבן ירושלמית 2 היום" [ref=e311]:
+          - cell "אבן ירושלמית" [ref=e312]
+          - cell "2" [ref=e313]
+          - cell "היום" [ref=e314]
+        - row "jack-kuba.co.il חזיית מינימייזר הכי טובה 2 היום" [ref=e315]:
+          - cell "jack-kuba.co.il" [ref=e316]
+          - cell "חזיית מינימייזר הכי טובה" [ref=e317]
+          - cell "2" [ref=e318]
+          - cell "היום" [ref=e319]
+        - row "בגד ים מחטב 2 היום" [ref=e320]:
+          - cell "בגד ים מחטב" [ref=e321]
+          - cell "2" [ref=e322]
+          - cell "היום" [ref=e323]
+        - row "גרביונים שקופים 2 היום" [ref=e324]:
+          - cell "גרביונים שקופים" [ref=e325]
+          - cell "2" [ref=e326]
+          - cell "היום" [ref=e327]
+        - row "חזיות גדולות 2 היום" [ref=e328]:
+          - cell "חזיות גדולות" [ref=e329]
+          - cell "2" [ref=e330]
+          - cell "היום" [ref=e331]
+        - row "בגד ים 2 היום" [ref=e332]:
+          - cell "בגד ים" [ref=e333]
+          - cell "2" [ref=e334]
+          - cell "היום" [ref=e335]
+        - row "בגד ים שלם מחטב 2 היום" [ref=e336]:
+          - cell "בגד ים שלם מחטב" [ref=e337]
+          - cell "2" [ref=e338]
+          - cell "היום" [ref=e339]
+        - row "בגדי ים יפים 2 היום" [ref=e340]:
+          - cell "בגדי ים יפים" [ref=e341]
+          - cell "2" [ref=e342]
+          - cell "היום" [ref=e343]
+        - row "מחטב בטן לגבר 2 היום" [ref=e344]:
+          - cell "מחטב בטן לגבר" [ref=e345]
+          - cell "2" [ref=e346]
+          - cell "היום" [ref=e347]
+        - row "הלבשה תחתונה איכותית 2 היום" [ref=e348]:
+          - cell "הלבשה תחתונה איכותית" [ref=e349]
+          - cell "2" [ref=e350]
+          - cell "היום" [ref=e351]
+        - row "בגדי ים מחטבים 2 היום" [ref=e352]:
+          - cell "בגדי ים מחטבים" [ref=e353]
+          - cell "2" [ref=e354]
+          - cell "היום" [ref=e355]
+        - row "חזיות במידות גדולות 2 היום" [ref=e356]:
+          - cell "חזיות במידות גדולות" [ref=e357]
+          - cell "2" [ref=e358]
+          - cell "היום" [ref=e359]
+        - row "תחתונים ללא תפר 2 היום" [ref=e360]:
+          - cell "תחתונים ללא תפר" [ref=e361]
+          - cell "2" [ref=e362]
+          - cell "היום" [ref=e363]
+        - row "בגדי ים 2 היום" [ref=e364]:
+          - cell "בגדי ים" [ref=e365]
+          - cell "2" [ref=e366]
+          - cell "היום" [ref=e367]
+        - row "גרביוני לחץ 2 היום" [ref=e368]:
+          - cell "גרביוני לחץ" [ref=e369]
+          - cell "2" [ref=e370]
+          - cell "היום" [ref=e371]
+        - row "חזיה לגב פתוח 2 היום" [ref=e372]:
+          - cell "חזיה לגב פתוח" [ref=e373]
+          - cell "2" [ref=e374]
+          - cell "היום" [ref=e375]
+        - row "חזיות טובות 2 היום" [ref=e376]:
+          - cell "חזיות טובות" [ref=e377]
+          - cell "2" [ref=e378]
+          - cell "היום" [ref=e379]
+        - row "canapes.co.il קייטרינג חלבי ל 20 איש 2 היום" [ref=e380]:
+          - cell "canapes.co.il" [ref=e381]
+          - cell "קייטרינג חלבי ל 20 איש" [ref=e382]
+          - cell "2" [ref=e383]
+          - cell "היום" [ref=e384]
+        - row "קייטרינג חלבי לאירועים קטנים 2 היום" [ref=e385]:
+          - cell "קייטרינג חלבי לאירועים קטנים" [ref=e386]
+          - cell "2" [ref=e387]
+          - cell "היום" [ref=e388]
+        - row "topairsystems.com perchloric fume hood 3 היום" [ref=e389]:
+          - cell "topairsystems.com" [ref=e390]
+          - cell "perchloric fume hood" [ref=e391]
+          - cell "3" [ref=e392]
+          - cell "היום" [ref=e393]
+        - row "perchloric acid hood 3 היום" [ref=e394]:
+          - cell "perchloric acid hood" [ref=e395]
+          - cell "3" [ref=e396]
+          - cell "היום" [ref=e397]
+        - row "cyanoacrylate fuming chamber 3 היום" [ref=e398]:
+          - cell "cyanoacrylate fuming chamber" [ref=e399]
+          - cell "3" [ref=e400]
+          - cell "היום" [ref=e401]
+        - row "grebelsky.com אבן גיר ירושלמית 3 היום" [ref=e402]:
+          - cell "grebelsky.com" [ref=e403]
+          - cell "אבן גיר ירושלמית" [ref=e404]
+          - cell "3" [ref=e405]
+          - cell "היום" [ref=e406]
+        - row "arpil-tech.com מכונה להדבקת תוויות 3 היום" [ref=e407]:
+          - cell "arpil-tech.com" [ref=e408]
+          - cell "מכונה להדבקת תוויות" [ref=e409]
+          - cell "3" [ref=e410]
+          - cell "היום" [ref=e411]
+        - row "מכונות הדבקה 3 היום" [ref=e412]:
+          - cell "מכונות הדבקה" [ref=e413]
+          - cell "3" [ref=e414]
+          - cell "היום" [ref=e415]
+        - row "jack-kuba.co.il מחטב שמלה 3 היום" [ref=e416]:
+          - cell "jack-kuba.co.il" [ref=e417]
+          - cell "מחטב שמלה" [ref=e418]
+          - cell "3" [ref=e419]
+          - cell "היום" [ref=e420]
+        - row "תחתונים לנשים 3 היום" [ref=e421]:
+          - cell "תחתונים לנשים" [ref=e422]
+          - cell "3" [ref=e423]
+          - cell "היום" [ref=e424]
+        - row "תחתונים ברזילאים 3 היום" [ref=e425]:
+          - cell "תחתונים ברזילאים" [ref=e426]
+          - cell "3" [ref=e427]
+          - cell "היום" [ref=e428]
+        - row "חזיות תחרה 3 היום" [ref=e429]:
+          - cell "חזיות תחרה" [ref=e430]
+          - cell "3" [ref=e431]
+          - cell "היום" [ref=e432]
+        - row "שמלות מחטבות 3 היום" [ref=e433]:
+          - cell "שמלות מחטבות" [ref=e434]
+          - cell "3" [ref=e435]
+          - cell "היום" [ref=e436]
+        - row "bynet.co.il שירות it 3 היום" [ref=e437]:
+          - cell "bynet.co.il" [ref=e438]
+          - cell "שירות it" [ref=e439]
+          - cell "3" [ref=e440]
+          - cell "היום" [ref=e441]
+        - row "SIEM SOC 3 היום" [ref=e442]:
+          - cell "SIEM SOC" [ref=e443]
+          - cell "3" [ref=e444]
+          - cell "היום" [ref=e445]
+        - row "cyberdome 3 היום" [ref=e446]:
+          - cell "cyberdome" [ref=e447]
+          - cell "3" [ref=e448]
+          - cell "היום" [ref=e449]
+        - row "it as a service 3 היום" [ref=e450]:
+          - cell "it as a service" [ref=e451]
+          - cell "3" [ref=e452]
+          - cell "היום" [ref=e453]
+        - row "reshethagana.com התקנת רשתות לחלונות 3 היום" [ref=e454]:
+          - cell "reshethagana.com" [ref=e455]
+          - cell "התקנת רשתות לחלונות" [ref=e456]
+          - cell "3" [ref=e457]
+          - cell "היום" [ref=e458]
+        - row "narkis-law.com שיק מוגבל 3 היום" [ref=e459]:
+          - cell "narkis-law.com" [ref=e460]
+          - cell "שיק מוגבל" [ref=e461]
+          - cell "3" [ref=e462]
+          - cell "היום" [ref=e463]
+        - row "מוגבל בבנק 3 היום" [ref=e464]:
+          - cell "מוגבל בבנק" [ref=e465]
+          - cell "3" [ref=e466]
+          - cell "היום" [ref=e467]
+        - row "הנתונים מתוך מערכת" [ref=e468]:
+          - cell "הנתונים מתוך מערכת" [ref=e469]:
+            - link "הנתונים מתוך מערכת" [ref=e473] [cursor=pointer]:
+              - /url: https://www.zefo.co.il/
+              - text: הנתונים מתוך מערכת
+              - emphasis
+  - contentinfo [ref=e475]:
+    - generic [ref=e476]:
+      - generic [ref=e477]:
+        - generic [ref=e478]:
+          - link "מסה מדיה דיגיטל" [ref=e479] [cursor=pointer]:
+            - /url: /#top
+            - img "מסה מדיה דיגיטל" [ref=e480]
+          - paragraph [ref=e481]: מסה מדיה דיגיטל בע״מ, חברת קידום אתרים חדשנית הפעילה משנת 2014, המספקת שירותים בהתאמה אישית לחברות ועסקים בישראל ובעולם. שותפים מוסמכים של גוגל.
+          - generic [ref=e482]:
+            - link "Facebook" [ref=e483] [cursor=pointer]:
+              - /url: https://www.facebook.com/masa.media.seo
+              - text: f
+            - link "LinkedIn" [ref=e484] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/masamedia/
+              - text: in
+            - link "YouTube" [ref=e485] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCEu388lXPkE9w1t5VXGktMA
+              - text: ▶
+        - generic [ref=e486]:
+          - heading "שירותים" [level=4] [ref=e487]
+          - list [ref=e488]:
+            - listitem [ref=e489]:
+              - link "קידום אתרים אורגני" [ref=e490] [cursor=pointer]:
+                - /url: /organic-seo/
+            - listitem [ref=e491]:
+              - link "GEO, קידום למנועי AI" [ref=e492] [cursor=pointer]:
+                - /url: /ai-seo/geo/
+            - listitem [ref=e493]:
+              - link "פרסום ממומן בגוגל" [ref=e494] [cursor=pointer]:
+                - /url: /ppc/
+            - listitem [ref=e495]:
+              - link "בניית אתרים" [ref=e496] [cursor=pointer]:
+                - /url: /web-development/
+            - listitem [ref=e497]:
+              - link "ניהול מוניטין" [ref=e498] [cursor=pointer]:
+                - /url: /reputation-management/
+            - listitem [ref=e499]:
+              - link "יועץ קידום אתרים" [ref=e500] [cursor=pointer]:
+                - /url: /seo-consultant/
+        - generic [ref=e501]:
+          - heading "דפים פופולריים" [level=4] [ref=e502]
+          - list [ref=e503]:
+            - listitem [ref=e504]:
+              - link "קידום אתרי חנות" [ref=e505] [cursor=pointer]:
+                - /url: /ecommerce-seo/
+            - listitem [ref=e506]:
+              - link "קידום אתרים בחו״ל" [ref=e507] [cursor=pointer]:
+                - /url: /global-seo/
+            - listitem [ref=e508]:
+              - link "קידום אתרים לעורכי דין" [ref=e509] [cursor=pointer]:
+                - /url: /lawyers-seo/
+            - listitem [ref=e510]:
+              - link "קידום אתרים לרופאים" [ref=e511] [cursor=pointer]:
+                - /url: /doctors-seo/
+            - listitem [ref=e512]:
+              - link "כמה עולה קידום אתרים?" [ref=e513] [cursor=pointer]:
+                - /url: /seo-pricing/
+            - listitem [ref=e514]:
+              - link "מילון מונחים" [ref=e515] [cursor=pointer]:
+                - /url: /seo-glossaire/
+        - generic [ref=e516]:
+          - heading "יצירת קשר" [level=4] [ref=e517]
+          - generic [ref=e518]:
+            - link "📞 072-338-4444" [ref=e519] [cursor=pointer]:
+              - /url: tel:0723384444
+            - link "✉️ contact@masamedia.co.il" [ref=e520] [cursor=pointer]:
+              - /url: mailto:contact@masamedia.co.il
+            - generic [ref=e521]: 📍 ברשבסקי 3, ראשון לציון
+            - generic [ref=e522]: 🕘 ראשון–חמישי · 9:00–18:00
+      - generic [ref=e523]:
+        - generic [ref=e524]: © מסה מדיה דיגיטל בע״מ, כל הזכויות שמורות. אין להשתמש בתוכן או בתמונות ללא אישור מפורש.
+        - generic [ref=e525]: נבנה לעידן ה-AI ✦
+  - alert [ref=e526]

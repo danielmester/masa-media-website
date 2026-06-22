@@ -1,0 +1,184 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "מסה מדיה דיגיטל" [ref=e5] [cursor=pointer]:
+          - /url: /#top
+          - img "מסה מדיה דיגיטל" [ref=e7]
+        - navigation [ref=e8]:
+          - link "דף הבית" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e11] [cursor=pointer]: שירותי קידום אתרים
+          - link "קייס סטאדיז" [ref=e13] [cursor=pointer]:
+            - /url: /casestudy/
+          - link "מיקומי לקוחותינו" [ref=e14] [cursor=pointer]:
+            - /url: /client-rankings/
+          - link "מן התקשורת" [ref=e15] [cursor=pointer]:
+            - /url: /from-the-media/
+          - link "אודות" [ref=e16] [cursor=pointer]:
+            - /url: /about/
+          - link "מידע מקצועי" [ref=e17] [cursor=pointer]:
+            - /url: /blog/
+        - generic [ref=e18]:
+          - link "072-338-4444" [ref=e19] [cursor=pointer]:
+            - /url: tel:0723384444
+          - link "דברו איתי" [ref=e20] [cursor=pointer]:
+            - /url: /#contact
+    - generic:
+      - generic:
+        - link "דף הבית":
+          - /url: /
+        - link "שירותי קידום אתרים":
+          - /url: /seo/
+        - link "GEO, קידום למנועי AI":
+          - /url: /ai-seo/geo/
+        - link "קייס סטאדיז":
+          - /url: /casestudy/
+        - link "מיקומי לקוחותינו":
+          - /url: /client-rankings/
+        - link "מן התקשורת":
+          - /url: /from-the-media/
+        - link "אודות":
+          - /url: /about/
+        - link "מידע מקצועי":
+          - /url: /blog/
+        - link "דברו איתי":
+          - /url: /#contact
+  - main [ref=e21]:
+    - navigation [ref=e22]:
+      - link "בית" [ref=e23] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e24]: ›
+      - generic [ref=e25]: קייס סטאדיז
+    - generic [ref=e27]:
+      - generic [ref=e28]: תיק עבודות
+      - heading "קייס סטאדיז — סיפורי הצלחה של לקוחות" [level=1] [ref=e29]
+      - paragraph [ref=e30]: הצצה לתהליכי קידום שהובלנו ולתוצאות שהשגנו עבור לקוחות במגוון תחומים.
+    - generic [ref=e32]:
+      - link "בינת תקשורת מחשבים" [ref=e33] [cursor=pointer]:
+        - /url: /casestudy/bynet/
+        - generic [ref=e35]: בינת תקשורת מחשבים
+      - link "DNG Medical" [ref=e36] [cursor=pointer]:
+        - /url: /casestudy/dng-medical/
+        - generic [ref=e38]: DNG Medical
+      - link "קבוצת אאוטדור" [ref=e39] [cursor=pointer]:
+        - /url: /casestudy/outdoor/
+        - generic [ref=e41]: קבוצת אאוטדור
+      - link "רשת הגנה" [ref=e42] [cursor=pointer]:
+        - /url: /casestudy/reshet-hagana/
+        - generic [ref=e44]: רשת הגנה
+      - link "Merkel Technologies" [ref=e45] [cursor=pointer]:
+        - /url: /casestudy/merkel/
+        - generic [ref=e47]: Merkel Technologies
+      - link "Muscle & Motion" [ref=e48] [cursor=pointer]:
+        - /url: /casestudy/muscle-motion/
+        - generic [ref=e50]: Muscle & Motion
+      - link "דליס" [ref=e51] [cursor=pointer]:
+        - /url: /casestudy/delis/
+        - generic [ref=e53]: דליס
+      - link "ביאמבה" [ref=e54] [cursor=pointer]:
+        - /url: /casestudy/biamba/
+        - generic [ref=e56]: ביאמבה
+      - link "משרד עורכי דין גלעד נרקיס" [ref=e57] [cursor=pointer]:
+        - /url: /casestudy/narkis-law/
+        - generic [ref=e59]: משרד עורכי דין גלעד נרקיס
+      - link "טריפל סי" [ref=e60] [cursor=pointer]:
+        - /url: /casestudy/ccc/
+        - generic [ref=e62]: טריפל סי
+      - link "תקשוב" [ref=e63] [cursor=pointer]:
+        - /url: /casestudy/tikshoov/
+        - generic [ref=e65]: תקשוב
+      - link "עמותת נטע" [ref=e66] [cursor=pointer]:
+        - /url: /casestudy/netta/
+        - generic [ref=e68]: עמותת נטע
+      - link "Shopping IO" [ref=e69] [cursor=pointer]:
+        - /url: /casestudy/shopping-io/
+        - generic [ref=e71]: Shopping IO
+      - link "Top Air Systems" [ref=e72] [cursor=pointer]:
+        - /url: /casestudy/top-air-systems/
+        - generic [ref=e74]: Top Air Systems
+      - link "ג׳ק קובה" [ref=e75] [cursor=pointer]:
+        - /url: /casestudy/jack-kuba/
+        - generic [ref=e77]: ג׳ק קובה
+      - link "עורך דין עמית ורד" [ref=e78] [cursor=pointer]:
+        - /url: /casestudy/amit-vered/
+        - generic [ref=e80]: עורך דין עמית ורד
+      - link "פורטל הבריאות מדיקו" [ref=e81] [cursor=pointer]:
+        - /url: /casestudy/medico/
+        - generic [ref=e83]: פורטל הבריאות מדיקו
+      - link "מחמדי שירותי רפואה וטרינרית" [ref=e84] [cursor=pointer]:
+        - /url: /casestudy/mahmadi/
+        - generic [ref=e86]: מחמדי שירותי רפואה וטרינרית
+  - contentinfo [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - link "מסה מדיה דיגיטל" [ref=e92] [cursor=pointer]:
+            - /url: /#top
+            - img "מסה מדיה דיגיטל" [ref=e93]
+          - paragraph [ref=e94]: מסה מדיה דיגיטל בע״מ, חברת קידום אתרים חדשנית הפעילה משנת 2014, המספקת שירותים בהתאמה אישית לחברות ועסקים בישראל ובעולם. שותפים מוסמכים של גוגל.
+          - generic [ref=e95]:
+            - link "Facebook" [ref=e96] [cursor=pointer]:
+              - /url: https://www.facebook.com/masa.media.seo
+              - text: f
+            - link "LinkedIn" [ref=e97] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/masamedia/
+              - text: in
+            - link "YouTube" [ref=e98] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCEu388lXPkE9w1t5VXGktMA
+              - text: ▶
+        - generic [ref=e99]:
+          - heading "שירותים" [level=4] [ref=e100]
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - link "קידום אתרים אורגני" [ref=e103] [cursor=pointer]:
+                - /url: /organic-seo/
+            - listitem [ref=e104]:
+              - link "GEO, קידום למנועי AI" [ref=e105] [cursor=pointer]:
+                - /url: /ai-seo/geo/
+            - listitem [ref=e106]:
+              - link "פרסום ממומן בגוגל" [ref=e107] [cursor=pointer]:
+                - /url: /ppc/
+            - listitem [ref=e108]:
+              - link "בניית אתרים" [ref=e109] [cursor=pointer]:
+                - /url: /web-development/
+            - listitem [ref=e110]:
+              - link "ניהול מוניטין" [ref=e111] [cursor=pointer]:
+                - /url: /reputation-management/
+            - listitem [ref=e112]:
+              - link "יועץ קידום אתרים" [ref=e113] [cursor=pointer]:
+                - /url: /seo-consultant/
+        - generic [ref=e114]:
+          - heading "דפים פופולריים" [level=4] [ref=e115]
+          - list [ref=e116]:
+            - listitem [ref=e117]:
+              - link "קידום אתרי חנות" [ref=e118] [cursor=pointer]:
+                - /url: /ecommerce-seo/
+            - listitem [ref=e119]:
+              - link "קידום אתרים בחו״ל" [ref=e120] [cursor=pointer]:
+                - /url: /global-seo/
+            - listitem [ref=e121]:
+              - link "קידום אתרים לעורכי דין" [ref=e122] [cursor=pointer]:
+                - /url: /lawyers-seo/
+            - listitem [ref=e123]:
+              - link "קידום אתרים לרופאים" [ref=e124] [cursor=pointer]:
+                - /url: /doctors-seo/
+            - listitem [ref=e125]:
+              - link "כמה עולה קידום אתרים?" [ref=e126] [cursor=pointer]:
+                - /url: /seo-pricing/
+            - listitem [ref=e127]:
+              - link "מילון מונחים" [ref=e128] [cursor=pointer]:
+                - /url: /seo-glossaire/
+        - generic [ref=e129]:
+          - heading "יצירת קשר" [level=4] [ref=e130]
+          - generic [ref=e131]:
+            - link "📞 072-338-4444" [ref=e132] [cursor=pointer]:
+              - /url: tel:0723384444
+            - link "✉️ contact@masamedia.co.il" [ref=e133] [cursor=pointer]:
+              - /url: mailto:contact@masamedia.co.il
+            - generic [ref=e134]: 📍 ברשבסקי 3, ראשון לציון
+            - generic [ref=e135]: 🕘 ראשון–חמישי · 9:00–18:00
+      - generic [ref=e136]:
+        - generic [ref=e137]: © מסה מדיה דיגיטל בע״מ, כל הזכויות שמורות. אין להשתמש בתוכן או בתמונות ללא אישור מפורש.
+        - generic [ref=e138]: נבנה לעידן ה-AI ✦
+  - alert [ref=e139]

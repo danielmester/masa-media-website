@@ -1,0 +1,387 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "מסה מדיה דיגיטל" [ref=e5] [cursor=pointer]:
+          - /url: /#top
+          - img "מסה מדיה דיגיטל" [ref=e7]
+        - navigation [ref=e8]:
+          - link "דף הבית" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e11] [cursor=pointer]: שירותי קידום אתרים
+          - link "קייס סטאדיז" [ref=e13] [cursor=pointer]:
+            - /url: /casestudy/
+          - link "מיקומי לקוחותינו" [ref=e14] [cursor=pointer]:
+            - /url: /client-rankings/
+          - link "מן התקשורת" [ref=e15] [cursor=pointer]:
+            - /url: /from-the-media/
+          - link "אודות" [ref=e16] [cursor=pointer]:
+            - /url: /about/
+          - link "מידע מקצועי" [ref=e17] [cursor=pointer]:
+            - /url: /blog/
+        - generic [ref=e18]:
+          - link "072-338-4444" [ref=e19] [cursor=pointer]:
+            - /url: tel:0723384444
+          - link "דברו איתי" [ref=e20] [cursor=pointer]:
+            - /url: /#contact
+    - generic:
+      - generic:
+        - link "דף הבית":
+          - /url: /
+        - link "שירותי קידום אתרים":
+          - /url: /seo/
+        - link "GEO, קידום למנועי AI":
+          - /url: /ai-seo/geo/
+        - link "קייס סטאדיז":
+          - /url: /casestudy/
+        - link "מיקומי לקוחותינו":
+          - /url: /client-rankings/
+        - link "מן התקשורת":
+          - /url: /from-the-media/
+        - link "אודות":
+          - /url: /about/
+        - link "מידע מקצועי":
+          - /url: /blog/
+        - link "דברו איתי":
+          - /url: /#contact
+  - main [ref=e21]:
+    - navigation [ref=e22]:
+      - link "בית" [ref=e23] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e24]: ›
+      - generic [ref=e25]: מידע מקצועי
+    - generic [ref=e27]:
+      - generic [ref=e28]: הבלוג
+      - heading "מידע מקצועי על קידום אתרים ושיווק דיגיטלי" [level=1] [ref=e29]
+      - paragraph [ref=e30]: מדריכים, טיפים וטרנדים מעולם ה-SEO וה-GEO — מהצוות של מסה מדיה.
+    - generic [ref=e31]:
+      - link "קידום אתרים לוקאלי" [ref=e32] [cursor=pointer]:
+        - /url: /local-seo/
+      - link "מדריך קידום אתרים למתחילים" [ref=e33] [cursor=pointer]:
+        - /url: /beginners-seo/
+      - link "מדריך קידום אתרים טכני" [ref=e34] [cursor=pointer]:
+        - /url: /technical-seo/
+      - link "כלים לקידום אתרים" [ref=e35] [cursor=pointer]:
+        - /url: /seo-tools/
+      - link "חדשות וטרנדים בקידום אורגני" [ref=e36] [cursor=pointer]:
+        - /url: /seo-trends/
+      - link "אופטימיזציה לאתרי אינטרנט" [ref=e37] [cursor=pointer]:
+        - /url: /website-optimization/
+      - link "AI SEO" [ref=e38] [cursor=pointer]:
+        - /url: /ai-seo/
+      - link "מדריך קידום אתרים למתקדמים" [ref=e39] [cursor=pointer]:
+        - /url: /category/advanced-seo/
+    - generic [ref=e41]:
+      - link "מדריך קידום אתרים טכני איך עושים בדיקת אתר (Website Audit) ולמה זה חשוב לקידום אורגני" [ref=e42] [cursor=pointer]:
+        - /url: /technical-seo/website-audit/
+        - generic [ref=e44]:
+          - generic [ref=e45]: מדריך קידום אתרים טכני
+          - generic [ref=e46]: איך עושים בדיקת אתר (Website Audit) ולמה זה חשוב לקידום אורגני
+      - 'link "אופטימיזציה לאתרי אינטרנט SEO לאתרי AI ו-Vibe Coding: איך לבנות אתר עם בינה מלאכותית שיכול להתקדם בגוגל" [ref=e47] [cursor=pointer]':
+        - /url: /website-optimization/vibe-coding-seo/
+        - generic [ref=e49]:
+          - generic [ref=e50]: אופטימיזציה לאתרי אינטרנט
+          - generic [ref=e51]: "SEO לאתרי AI ו-Vibe Coding: איך לבנות אתר עם בינה מלאכותית שיכול להתקדם בגוגל"
+      - link "AI SEO מה זה פיזור שאילתות (Query Fan-out) ואיך הוא משנה את כללי המשחק של חיפוש ב-AI?" [ref=e52] [cursor=pointer]:
+        - /url: /ai-seo/query-fan-out/
+        - generic [ref=e54]:
+          - generic [ref=e55]: AI SEO
+          - generic [ref=e56]: מה זה פיזור שאילתות (Query Fan-out) ואיך הוא משנה את כללי המשחק של חיפוש ב-AI?
+      - 'link "מדריך קידום אתרים למתקדמים מקורות מועדפים בגוגל: האם משתמשים יכולים להשפיע על מיקומי האתר שלכם?" [ref=e57] [cursor=pointer]':
+        - /url: /advanced-seo/google-preferred-sources/
+        - generic [ref=e59]:
+          - generic [ref=e60]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e61]: "מקורות מועדפים בגוגל: האם משתמשים יכולים להשפיע על מיקומי האתר שלכם?"
+      - 'link "מדריך קידום אתרים למתקדמים לא התוכן ולא הקישורים: מה גרם לאובדן 97% מהטראפיק באתר מוביל?" [ref=e62] [cursor=pointer]':
+        - /url: /advanced-seo/extreme-traffic-lose/
+        - generic [ref=e64]:
+          - generic [ref=e65]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e66]: "לא התוכן ולא הקישורים: מה גרם לאובדן 97% מהטראפיק באתר מוביל?"
+      - 'link "AI SEO המשתמשים הפסיקו להשוות: איך AI Mode משנה את החיפוש בגוגל" [ref=e67] [cursor=pointer]':
+        - /url: /ai-seo/ai-mode-vs-google-organic/
+        - generic [ref=e69]:
+          - generic [ref=e70]: AI SEO
+          - generic [ref=e71]: "המשתמשים הפסיקו להשוות: איך AI Mode משנה את החיפוש בגוגל"
+      - 'link "מדריך קידום אתרים למתקדמים 17 סוגי תוכן שגוגל עדיין אוהב: איך לשמור ולהגדיל את הטראפיק בעידן ה-AI" [ref=e72] [cursor=pointer]':
+        - /url: /advanced-seo/win-zero-click/
+        - generic [ref=e74]:
+          - generic [ref=e75]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e76]: "17 סוגי תוכן שגוגל עדיין אוהב: איך לשמור ולהגדיל את הטראפיק בעידן ה-AI"
+      - link "קידום אתרים לוקאלי המיקומים של פרופיל העסק בגוגל בירידה? אלו ככל הנראה הסיבות וכך תוכלו לתקן" [ref=e77] [cursor=pointer]:
+        - /url: /local-seo/gbp-ranking-fix/
+        - generic [ref=e79]:
+          - generic [ref=e80]: קידום אתרים לוקאלי
+          - generic [ref=e81]: המיקומים של פרופיל העסק בגוגל בירידה? אלו ככל הנראה הסיבות וכך תוכלו לתקן
+      - link "AI SEO האם ההתאמה למנועי בינה מלאכותית (GEO) פוגעת בקידום האורגני שלכם?" [ref=e82] [cursor=pointer]:
+        - /url: /ai-seo/geo-is-seo/
+        - generic [ref=e84]:
+          - generic [ref=e85]: AI SEO
+          - generic [ref=e86]: האם ההתאמה למנועי בינה מלאכותית (GEO) פוגעת בקידום האורגני שלכם?
+      - link "מדריך קידום אתרים למתקדמים איך האינטרקציה של גולשים עם תוצאות החיפוש בגוגל משפיעה על תשובות מנועי הבינה המלאכותית?" [ref=e87] [cursor=pointer]:
+        - /url: /advanced-seo/click-signals/
+        - generic [ref=e89]:
+          - generic [ref=e90]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e91]: איך האינטרקציה של גולשים עם תוצאות החיפוש בגוגל משפיעה על תשובות מנועי הבינה המלאכותית?
+      - 'link "מדריך קידום אתרים למתקדמים קידום מוצרים בחינם בגוגל: 5 סוגים של תוצאות חיפוש עשירות שזמינות לכולם" [ref=e92] [cursor=pointer]':
+        - /url: /advanced-seo/google-free-listings/
+        - generic [ref=e94]:
+          - generic [ref=e95]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e96]: "קידום מוצרים בחינם בגוגל: 5 סוגים של תוצאות חיפוש עשירות שזמינות לכולם"
+      - 'link "AI SEO קידום מוצרים בבינה מלאכותית (Agentic Commerce): מסחר אג''נטי עם UCP/ACP" [ref=e97] [cursor=pointer]':
+        - /url: /ai-seo/agentic-commerce/
+        - generic [ref=e99]:
+          - generic [ref=e100]: AI SEO
+          - generic [ref=e101]: "קידום מוצרים בבינה מלאכותית (Agentic Commerce): מסחר אג'נטי עם UCP/ACP"
+      - 'link "מדריך קידום אתרים למתקדמים קידום אתרי אינטרנט בטכניקה חדשנית: איך לקדם נושאים ולא (רק) מילות מפתח?" [ref=e102] [cursor=pointer]':
+        - /url: /advanced-seo/topics-vs-keywords/
+        - generic [ref=e104]:
+          - generic [ref=e105]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e106]: "קידום אתרי אינטרנט בטכניקה חדשנית: איך לקדם נושאים ולא (רק) מילות מפתח?"
+      - 'link "מדריך קידום אתרים טכני אינדוקס אתר בגוגל: האם אינדוקס בגוגל הפך למסנן המעיד על איכות דפי האתר?" [ref=e107] [cursor=pointer]':
+        - /url: /technical-seo/google-index-as-filter/
+        - generic [ref=e109]:
+          - generic [ref=e110]: מדריך קידום אתרים טכני
+          - generic [ref=e111]: "אינדוקס אתר בגוגל: האם אינדוקס בגוגל הפך למסנן המעיד על איכות דפי האתר?"
+      - 'link "AI SEO אזכורים ב-AI ומיקומים בגוגל: האם יש קורלציה בין אזכורי המותג במודולי בינה מלאכותית לבין המיקומים בגוגל?" [ref=e112] [cursor=pointer]':
+        - /url: /ai-seo/ai-citations-vs-organic-rankings/
+        - generic [ref=e114]:
+          - generic [ref=e115]: AI SEO
+          - generic [ref=e116]: "אזכורים ב-AI ומיקומים בגוגל: האם יש קורלציה בין אזכורי המותג במודולי בינה מלאכותית לבין המיקומים בגוגל?"
+      - 'link "AI SEO קידום פייק ניוז במנועי AI: האם אפשר לרמות את הבינה המלאכותית?" [ref=e117] [cursor=pointer]':
+        - /url: /ai-seo/ai-fake-info/
+        - generic [ref=e119]:
+          - generic [ref=e120]: AI SEO
+          - generic [ref=e121]: "קידום פייק ניוז במנועי AI: האם אפשר לרמות את הבינה המלאכותית?"
+      - link "פרסום בגוגל כמה עולה לפרסם בגוגל, האם זה נהיה יקר יותר ואיך משלמים פחות?" [ref=e122] [cursor=pointer]:
+        - /url: /google-ads/ppc-costs/
+        - generic [ref=e124]:
+          - generic [ref=e125]: פרסום בגוגל
+          - generic [ref=e126]: כמה עולה לפרסם בגוגל, האם זה נהיה יקר יותר ואיך משלמים פחות?
+      - link "AI SEO למה ChatGPT לא רואה את האתר שלכם? המדריך לטיפול בתוכן מוסתר וג׳אווה סקריפט" [ref=e127] [cursor=pointer]:
+        - /url: /ai-seo/ai-js-rendering/
+        - generic [ref=e129]:
+          - generic [ref=e130]: AI SEO
+          - generic [ref=e131]: למה ChatGPT לא רואה את האתר שלכם? המדריך לטיפול בתוכן מוסתר וג׳אווה סקריפט
+      - 'link "מדריך קידום אתרים למתקדמים קידום אתרים מבוסס ישויות (Entity SEO): מקידום מילות מפתח לבניית מותג חזק בגוגל ובמנועי AI" [ref=e132] [cursor=pointer]':
+        - /url: /advanced-seo/entity-seo/
+        - generic [ref=e134]:
+          - generic [ref=e135]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e136]: "קידום אתרים מבוסס ישויות (Entity SEO): מקידום מילות מפתח לבניית מותג חזק בגוגל ובמנועי AI"
+      - link "מדריך קידום אתרים למתחילים מתי מקדמים דף אחד לכל ביטוי ומתי מאחדים כמה ביטויים בדף אחד?" [ref=e137] [cursor=pointer]:
+        - /url: /beginners-seo/keywords-per-page/
+        - generic [ref=e139]:
+          - generic [ref=e140]: מדריך קידום אתרים למתחילים
+          - generic [ref=e141]: מתי מקדמים דף אחד לכל ביטוי ומתי מאחדים כמה ביטויים בדף אחד?
+      - link "שיווק דיגיטלי רוב האנשים לא קוראים את התוכן שאתם מפרסמים (אבל זה לא אומר שצריך להפסיק ליצור תוכן)" [ref=e142] [cursor=pointer]:
+        - /url: /digitalmarketing/visitors-interaction-with-content/
+        - generic [ref=e144]:
+          - generic [ref=e145]: שיווק דיגיטלי
+          - generic [ref=e146]: רוב האנשים לא קוראים את התוכן שאתם מפרסמים (אבל זה לא אומר שצריך להפסיק ליצור תוכן)
+      - 'link "מדריך קידום אתרים למתקדמים Google Web Guide: האם העתיד הוא חיפוש היברידי?" [ref=e147] [cursor=pointer]':
+        - /url: /advanced-seo/google-web-guide/
+        - generic [ref=e149]:
+          - generic [ref=e150]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e151]: "Google Web Guide: האם העתיד הוא חיפוש היברידי?"
+      - 'link "שיווק דיגיטלי ייעוץ אסטרטגי: איך לבחור יועץ אסטרטגי שמתאים לארגון ולאתגרים שלפניכם?" [ref=e152] [cursor=pointer]':
+        - /url: /digitalmarketing/strategic-consulting/
+        - generic [ref=e154]:
+          - generic [ref=e155]: שיווק דיגיטלי
+          - generic [ref=e156]: "ייעוץ אסטרטגי: איך לבחור יועץ אסטרטגי שמתאים לארגון ולאתגרים שלפניכם?"
+      - 'link "AI SEO קידום בג''מיני (Gemini): איך מופיעים בתשובות הבינה המלאכותית של גוגל?" [ref=e157] [cursor=pointer]':
+        - /url: /ai-seo/gemini-seo/
+        - generic [ref=e159]:
+          - generic [ref=e160]: AI SEO
+          - generic [ref=e161]: "קידום בג'מיני (Gemini): איך מופיעים בתשובות הבינה המלאכותית של גוגל?"
+      - 'link "מדריך קידום אתרים (SEO) מלא קידום אתרי מכירת מוצרים: איך אתרי חנות קטנים ובינוניים יכולים לנצח חנויות ענק?" [ref=e162] [cursor=pointer]':
+        - /url: /seo-guide/ecommerce-product-seo/
+        - generic [ref=e164]:
+          - generic [ref=e165]: מדריך קידום אתרים (SEO) מלא
+          - generic [ref=e166]: "קידום אתרי מכירת מוצרים: איך אתרי חנות קטנים ובינוניים יכולים לנצח חנויות ענק?"
+      - 'link "שיווק דיגיטלי בעיית הייחוס בדיגיטל: איך מודדים יעילות שיווקית בעידן הנוכחי?" [ref=e167] [cursor=pointer]':
+        - /url: /digitalmarketing/marketing-attribution/
+        - generic [ref=e169]:
+          - generic [ref=e170]: שיווק דיגיטלי
+          - generic [ref=e171]: "בעיית הייחוס בדיגיטל: איך מודדים יעילות שיווקית בעידן הנוכחי?"
+      - 'link "מדריך קידום אתרים טכני תגי סכמה (Schema) ונתונים מובנים: המדריך המלא להוספת סכמה וקבלת תוצאות עשירות בגוגל" [ref=e172] [cursor=pointer]':
+        - /url: /technical-seo/schema-markup/
+        - generic [ref=e174]:
+          - generic [ref=e175]: מדריך קידום אתרים טכני
+          - generic [ref=e176]: "תגי סכמה (Schema) ונתונים מובנים: המדריך המלא להוספת סכמה וקבלת תוצאות עשירות בגוגל"
+      - 'link "AI SEO אזכורי מותג הם חובה לקידום ב-AI: כך תדעו כמה אזכורים יש לכם והיכן" [ref=e177] [cursor=pointer]':
+        - /url: /ai-seo/ai-citations/
+        - generic [ref=e179]:
+          - generic [ref=e180]: AI SEO
+          - generic [ref=e181]: "אזכורי מותג הם חובה לקידום ב-AI: כך תדעו כמה אזכורים יש לכם והיכן"
+      - 'link "AI SEO כלי AI לקידום אתרים: 7 כלים שיחסכו לכם זמן וכסף" [ref=e182] [cursor=pointer]':
+        - /url: /ai-seo/ai-tools-for-seo/
+        - generic [ref=e184]:
+          - generic [ref=e185]: AI SEO
+          - generic [ref=e186]: "כלי AI לקידום אתרים: 7 כלים שיחסכו לכם זמן וכסף"
+      - link "AI SEO מה זה קובץ LLMs.txt והאם צריך כזה באתר לקידום ב-AI?" [ref=e187] [cursor=pointer]:
+        - /url: /ai-seo/llms-txt/
+        - generic [ref=e189]:
+          - generic [ref=e190]: AI SEO
+          - generic [ref=e191]: מה זה קובץ LLMs.txt והאם צריך כזה באתר לקידום ב-AI?
+      - 'link "AI SEO דפדפני AI: דרך חדשה, מהירה וחכמה להשתמש באינטרנט" [ref=e192] [cursor=pointer]':
+        - /url: /ai-seo/ai-browsers/
+        - generic [ref=e194]:
+          - generic [ref=e195]: AI SEO
+          - generic [ref=e196]: "דפדפני AI: דרך חדשה, מהירה וחכמה להשתמש באינטרנט"
+      - 'link "שיווק דיגיטלי ניהול מדיה דיגיטלית: הכלים, התהליכים והאסטרטגיות לניהול ושיווק המותג ברשת" [ref=e197] [cursor=pointer]':
+        - /url: /digitalmarketing/digital-media-management/
+        - generic [ref=e199]:
+          - generic [ref=e200]: שיווק דיגיטלי
+          - generic [ref=e201]: "ניהול מדיה דיגיטלית: הכלים, התהליכים והאסטרטגיות לניהול ושיווק המותג ברשת"
+      - 'link "שיווק דיגיטלי נוירומרקטינג: איך מדעי המוח משנים את כללי המשחק בשיווק המודרני?" [ref=e202] [cursor=pointer]':
+        - /url: /digitalmarketing/neuro-marketing/
+        - generic [ref=e204]:
+          - generic [ref=e205]: שיווק דיגיטלי
+          - generic [ref=e206]: "נוירומרקטינג: איך מדעי המוח משנים את כללי המשחק בשיווק המודרני?"
+      - 'link "מדריך קידום אתרים למתקדמים מילות מפתח LSI: מהן וכיצד הן עוזרות בקידום האורגני?" [ref=e207] [cursor=pointer]':
+        - /url: /advanced-seo/lsi-keywords/
+        - generic [ref=e209]:
+          - generic [ref=e210]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e211]: "מילות מפתח LSI: מהן וכיצד הן עוזרות בקידום האורגני?"
+      - 'link "מדריך קידום אתרים למתחילים האמת מאחורי המיתוסים על קידום אתרים: 20 תפיסות שגויות על SEO שהגיע הזמן לשחרר" [ref=e212] [cursor=pointer]':
+        - /url: /beginners-seo/seo-myths/
+        - generic [ref=e214]:
+          - generic [ref=e215]: מדריך קידום אתרים למתחילים
+          - generic [ref=e216]: "האמת מאחורי המיתוסים על קידום אתרים: 20 תפיסות שגויות על SEO שהגיע הזמן לשחרר"
+      - 'link "מדריך קידום אתרים למתקדמים החלפת קישורים: האם החלפות קישורים טובות או מסוכנות לקידום האורגני?" [ref=e217] [cursor=pointer]':
+        - /url: /advanced-seo/link-exchange/
+        - generic [ref=e219]:
+          - generic [ref=e220]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e221]: "החלפת קישורים: האם החלפות קישורים טובות או מסוכנות לקידום האורגני?"
+      - link "מדריך קידום אתרים למתקדמים איך להגדיל את כמות הביקורות בגוגל ולשפר את נראות הארגון בתוצאות החיפוש?" [ref=e222] [cursor=pointer]:
+        - /url: /advanced-seo/google-reviews/
+        - generic [ref=e224]:
+          - generic [ref=e225]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e226]: איך להגדיל את כמות הביקורות בגוגל ולשפר את נראות הארגון בתוצאות החיפוש?
+      - 'link "מדריך קידום אתרים למתקדמים קידום בגוגל דרך People Also Ask (אנשים שאלו גם): כך תכבשו עוד מקום בתוצאות החיפוש" [ref=e227] [cursor=pointer]':
+        - /url: /advanced-seo/google-paa/
+        - generic [ref=e229]:
+          - generic [ref=e230]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e231]: "קידום בגוגל דרך People Also Ask (אנשים שאלו גם): כך תכבשו עוד מקום בתוצאות החיפוש"
+      - 'link "מדריך קידום אתרים למתקדמים קידום אתרים שומרי שבת: איך לקדם אתר שומר שבת בגוגל?" [ref=e232] [cursor=pointer]':
+        - /url: /advanced-seo/shabbat-seo-guide/
+        - generic [ref=e234]:
+          - generic [ref=e235]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e236]: "קידום אתרים שומרי שבת: איך לקדם אתר שומר שבת בגוגל?"
+      - link "מדריך קידום אתרים טכני מדריך hreflang לתיוג נכון של שפות ומדינות בקידום אתרים בחו\"ל" [ref=e237] [cursor=pointer]:
+        - /url: /technical-seo/hreflang-guide/
+        - generic [ref=e239]:
+          - generic [ref=e240]: מדריך קידום אתרים טכני
+          - generic [ref=e241]: מדריך hreflang לתיוג נכון של שפות ומדינות בקידום אתרים בחו"ל
+      - 'link "מדריך קידום אתרים למתקדמים קידום אתר עם חומת תשלום (Paywall): איך עושים זאת בלי לפגוע ב-SEO?" [ref=e242] [cursor=pointer]':
+        - /url: /advanced-seo/paywall-seo/
+        - generic [ref=e244]:
+          - generic [ref=e245]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e246]: "קידום אתר עם חומת תשלום (Paywall): איך עושים זאת בלי לפגוע ב-SEO?"
+      - 'link "קידום אתרים לוקאלי קידום אתרים מקומי: איך מקדמים בגוגל מילות מפתח עם סיומת \"קרוב אליי\"?" [ref=e247] [cursor=pointer]':
+        - /url: /local-seo/near-me-seo/
+        - generic [ref=e249]:
+          - generic [ref=e250]: קידום אתרים לוקאלי
+          - generic [ref=e251]: "קידום אתרים מקומי: איך מקדמים בגוגל מילות מפתח עם סיומת \"קרוב אליי\"?"
+      - 'link "מדריך קידום אתרים למתקדמים קידום אתרים בחו\"ל: איך לעשות לוקליזציית SEO נכונה לאתר?" [ref=e252] [cursor=pointer]':
+        - /url: /advanced-seo/seo-localization/
+        - generic [ref=e254]:
+          - generic [ref=e255]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e256]: "קידום אתרים בחו\"ל: איך לעשות לוקליזציית SEO נכונה לאתר?"
+      - 'link "מדריך קידום אתרים למתקדמים הדרך לעמוד הראשון בגוגל: ניתוח של 3 מיליון אתרים והדרך שהם עשו" [ref=e257] [cursor=pointer]':
+        - /url: /advanced-seo/how-long-does-it-take-to-rank/
+        - generic [ref=e259]:
+          - generic [ref=e260]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e261]: "הדרך לעמוד הראשון בגוגל: ניתוח של 3 מיליון אתרים והדרך שהם עשו"
+      - 'link "מדריך קידום אתרים למתקדמים קידום אתרים סמנטי (Semantic SEO): כיצד משלבים סמנטיקה בקידום האורגני להשגת תוצאות טובות יותר?" [ref=e262] [cursor=pointer]':
+        - /url: /advanced-seo/semantic-seo/
+        - generic [ref=e264]:
+          - generic [ref=e265]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e266]: "קידום אתרים סמנטי (Semantic SEO): כיצד משלבים סמנטיקה בקידום האורגני להשגת תוצאות טובות יותר?"
+      - 'link "מדריך קידום אתרים למתחילים קידום אתרים חלקי: רכישת שירותים נקודתיים כמו תוכן או קישורים, האם זה עובד?" [ref=e267] [cursor=pointer]':
+        - /url: /beginners-seo/partial-seo/
+        - generic [ref=e269]:
+          - generic [ref=e270]: מדריך קידום אתרים למתחילים
+          - generic [ref=e271]: "קידום אתרים חלקי: רכישת שירותים נקודתיים כמו תוכן או קישורים, האם זה עובד?"
+      - 'link "AI SEO בניית קישורים חכמה בעידן ה-AI וה-LLM: האם הקישורים שלכם מותאמים לעידן הבינה המלאכותית?" [ref=e272] [cursor=pointer]':
+        - /url: /ai-seo/links-for-ai/
+        - generic [ref=e274]:
+          - generic [ref=e275]: AI SEO
+          - generic [ref=e276]: "בניית קישורים חכמה בעידן ה-AI וה-LLM: האם הקישורים שלכם מותאמים לעידן הבינה המלאכותית?"
+      - link "מדריך קידום אתרים למתקדמים איך יוצרים עמודי ליבה (Pillar Pages) באתר ומה חשיבותם לקידום האתר?" [ref=e277] [cursor=pointer]:
+        - /url: /advanced-seo/pillar-pages/
+        - generic [ref=e279]:
+          - generic [ref=e280]: מדריך קידום אתרים למתקדמים
+          - generic [ref=e281]: איך יוצרים עמודי ליבה (Pillar Pages) באתר ומה חשיבותם לקידום האתר?
+  - contentinfo [ref=e283]:
+    - generic [ref=e284]:
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - link "מסה מדיה דיגיטל" [ref=e287] [cursor=pointer]:
+            - /url: /#top
+            - img "מסה מדיה דיגיטל" [ref=e288]
+          - paragraph [ref=e289]: מסה מדיה דיגיטל בע״מ, חברת קידום אתרים חדשנית הפעילה משנת 2014, המספקת שירותים בהתאמה אישית לחברות ועסקים בישראל ובעולם. שותפים מוסמכים של גוגל.
+          - generic [ref=e290]:
+            - link "Facebook" [ref=e291] [cursor=pointer]:
+              - /url: https://www.facebook.com/masa.media.seo
+              - text: f
+            - link "LinkedIn" [ref=e292] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/masamedia/
+              - text: in
+            - link "YouTube" [ref=e293] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCEu388lXPkE9w1t5VXGktMA
+              - text: ▶
+        - generic [ref=e294]:
+          - heading "שירותים" [level=4] [ref=e295]
+          - list [ref=e296]:
+            - listitem [ref=e297]:
+              - link "קידום אתרים אורגני" [ref=e298] [cursor=pointer]:
+                - /url: /organic-seo/
+            - listitem [ref=e299]:
+              - link "GEO, קידום למנועי AI" [ref=e300] [cursor=pointer]:
+                - /url: /ai-seo/geo/
+            - listitem [ref=e301]:
+              - link "פרסום ממומן בגוגל" [ref=e302] [cursor=pointer]:
+                - /url: /ppc/
+            - listitem [ref=e303]:
+              - link "בניית אתרים" [ref=e304] [cursor=pointer]:
+                - /url: /web-development/
+            - listitem [ref=e305]:
+              - link "ניהול מוניטין" [ref=e306] [cursor=pointer]:
+                - /url: /reputation-management/
+            - listitem [ref=e307]:
+              - link "יועץ קידום אתרים" [ref=e308] [cursor=pointer]:
+                - /url: /seo-consultant/
+        - generic [ref=e309]:
+          - heading "דפים פופולריים" [level=4] [ref=e310]
+          - list [ref=e311]:
+            - listitem [ref=e312]:
+              - link "קידום אתרי חנות" [ref=e313] [cursor=pointer]:
+                - /url: /ecommerce-seo/
+            - listitem [ref=e314]:
+              - link "קידום אתרים בחו״ל" [ref=e315] [cursor=pointer]:
+                - /url: /global-seo/
+            - listitem [ref=e316]:
+              - link "קידום אתרים לעורכי דין" [ref=e317] [cursor=pointer]:
+                - /url: /lawyers-seo/
+            - listitem [ref=e318]:
+              - link "קידום אתרים לרופאים" [ref=e319] [cursor=pointer]:
+                - /url: /doctors-seo/
+            - listitem [ref=e320]:
+              - link "כמה עולה קידום אתרים?" [ref=e321] [cursor=pointer]:
+                - /url: /seo-pricing/
+            - listitem [ref=e322]:
+              - link "מילון מונחים" [ref=e323] [cursor=pointer]:
+                - /url: /seo-glossaire/
+        - generic [ref=e324]:
+          - heading "יצירת קשר" [level=4] [ref=e325]
+          - generic [ref=e326]:
+            - link "📞 072-338-4444" [ref=e327] [cursor=pointer]:
+              - /url: tel:0723384444
+            - link "✉️ contact@masamedia.co.il" [ref=e328] [cursor=pointer]:
+              - /url: mailto:contact@masamedia.co.il
+            - generic [ref=e329]: 📍 ברשבסקי 3, ראשון לציון
+            - generic [ref=e330]: 🕘 ראשון–חמישי · 9:00–18:00
+      - generic [ref=e331]:
+        - generic [ref=e332]: © מסה מדיה דיגיטל בע״מ, כל הזכויות שמורות. אין להשתמש בתוכן או בתמונות ללא אישור מפורש.
+        - generic [ref=e333]: נבנה לעידן ה-AI ✦
+  - alert [ref=e334]
